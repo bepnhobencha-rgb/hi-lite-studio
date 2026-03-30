@@ -15,35 +15,35 @@ export default function About() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative h-72 md:h-96 flex items-end overflow-hidden">
+      <section className="relative h-80 md:h-[420px] flex items-end overflow-hidden">
         <img
           src={IMAGES.interior}
           alt="HI-LITE HEAD SPA interior"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 w-full">
-          <p className="font-body text-xs tracking-[0.3em] uppercase text-white/70 mb-2">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 w-full">
+          <p className="font-body text-xs tracking-[0.35em] uppercase text-gold mb-3">
             Our Story
           </p>
-          <h1 className="font-heading text-4xl md:text-5xl font-light text-white tracking-wide">
+          <h1 className="font-heading text-4xl md:text-6xl font-light text-white tracking-wide">
             About {BUSINESS.name}
           </h1>
         </div>
       </section>
 
       {/* Story */}
-      <section className="py-20 md:py-28 px-4 bg-background">
-        <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <section className="py-28 md:py-40 px-4 bg-background">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div {...fadeUp}>
-            <p className="font-body text-xs tracking-[0.3em] uppercase text-muted-foreground mb-3">
+            <p className="font-body text-xs tracking-[0.35em] uppercase text-gold mb-4">
               Our Philosophy
             </p>
-            <h2 className="font-heading text-3xl md:text-4xl font-light text-foreground tracking-wide mb-6">
+            <h2 className="font-heading text-3xl md:text-4xl font-light text-foreground tracking-wide mb-8">
               More Than a Salon. <br />
               <span className="italic">A Sanctuary.</span>
             </h2>
-            <div className="space-y-4 font-body text-sm text-muted-foreground leading-relaxed">
+            <div className="space-y-5 font-body text-sm text-muted-foreground leading-relaxed">
               <p>
                 {BUSINESS.name} was created with a singular vision: to provide a space where you can truly let go. This is not a regular salon — it is a luxury experience focused on stress relief, scalp detox, mental reset, and deep relaxation.
               </p>
@@ -62,20 +62,20 @@ export default function About() {
             <img
               src={IMAGES.interior}
               alt="Inside HI-LITE HEAD SPA"
-              className="w-full h-[450px] object-cover rounded-sm"
+              className="w-full h-[480px] object-cover rounded-sm"
             />
           </motion.div>
         </div>
       </section>
 
       {/* Values */}
-      <section className="py-20 md:py-24 px-4 bg-card">
+      <section className="py-28 md:py-36 px-4 bg-card">
         <div className="max-w-5xl mx-auto">
           <SectionHeader
             eyebrow="What We Believe"
             title="Our Guiding Values"
           />
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {[
               {
                 title: "Calm",
@@ -94,9 +94,10 @@ export default function About() {
                 key={i}
                 {...fadeUp}
                 transition={{ ...fadeUp.transition, delay: i * 0.1 }}
-                className="text-center p-8"
+                className="text-center p-10 border border-border rounded-sm"
               >
-                <h3 className="font-heading text-2xl font-medium text-foreground mb-3 italic">
+                <div className="w-8 h-px bg-gold mx-auto mb-6" />
+                <h3 className="font-heading text-2xl font-medium text-foreground mb-4 italic">
                   {v.title}
                 </h3>
                 <p className="font-body text-sm text-muted-foreground leading-relaxed">

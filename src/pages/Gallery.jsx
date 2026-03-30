@@ -21,32 +21,32 @@ export default function Gallery() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative h-72 md:h-80 flex items-end overflow-hidden">
+      <section className="relative h-80 md:h-[420px] flex items-end overflow-hidden">
         <img
           src={IMAGES.interior}
           alt="HI-LITE HEAD SPA gallery"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 w-full">
-          <p className="font-body text-xs tracking-[0.3em] uppercase text-white/70 mb-2">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 w-full">
+          <p className="font-body text-xs tracking-[0.35em] uppercase text-gold mb-3">
             A Glimpse Inside
           </p>
-          <h1 className="font-heading text-4xl md:text-5xl font-light text-white tracking-wide">
+          <h1 className="font-heading text-4xl md:text-6xl font-light text-white tracking-wide">
             Gallery
           </h1>
         </div>
       </section>
 
       {/* Gallery Grid */}
-      <section className="py-20 md:py-28 px-4 bg-background">
+      <section className="py-28 md:py-40 px-4 bg-background">
         <div className="max-w-6xl mx-auto">
           <SectionHeader
             eyebrow="Our Space"
             title="See the Experience"
             subtitle="Step inside HI-LITE HEAD SPA and feel the calm before you arrive."
           />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {galleryImages.map((img, i) => (
               <motion.div
                 key={i}

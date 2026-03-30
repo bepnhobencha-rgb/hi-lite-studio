@@ -66,7 +66,7 @@ export default function Navbar() {
               href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-4 px-6 py-2.5 bg-primary text-primary-foreground text-sm font-body font-medium tracking-wider rounded-sm hover:opacity-90 transition-opacity"
+              className="ml-4 px-7 py-2.5 bg-foreground text-background text-sm font-body font-medium tracking-wider rounded-full hover:shadow-[0_0_16px_rgba(0,0,0,0.2)] hover:opacity-85 transition-all duration-300"
             >
               Book Now
             </a>
@@ -110,7 +110,7 @@ export default function Navbar() {
                 href={BOOKING_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 w-full py-3 bg-primary text-primary-foreground text-center text-sm font-body font-medium tracking-wider rounded-sm"
+                className="mt-5 w-full py-3.5 bg-foreground text-background text-center text-sm font-body font-medium tracking-wider rounded-full hover:opacity-85 transition-all duration-300"
               >
                 Book Now
               </a>

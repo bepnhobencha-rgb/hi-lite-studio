@@ -49,48 +49,48 @@ export default function Reviews() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative h-72 md:h-96 flex items-end overflow-hidden">
+      <section className="relative h-80 md:h-[420px] flex items-end overflow-hidden">
         <img
           src={IMAGES.treatment2}
           alt="Relaxing head spa"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 w-full">
-          <p className="font-body text-xs tracking-[0.3em] uppercase text-white/70 mb-2">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 w-full">
+          <p className="font-body text-xs tracking-[0.35em] uppercase text-gold mb-3">
             What Clients Say
           </p>
-          <h1 className="font-heading text-4xl md:text-5xl font-light text-white tracking-wide">
+          <h1 className="font-heading text-4xl md:text-6xl font-light text-white tracking-wide">
             Reviews
           </h1>
         </div>
       </section>
 
       {/* Reviews */}
-      <section className="py-20 md:py-28 px-4 bg-background">
+      <section className="py-28 md:py-40 px-4 bg-background">
         <div className="max-w-6xl mx-auto">
           <SectionHeader
             eyebrow="Trusted by Our Clients"
             title="Voices of Relaxation"
             subtitle="Hear from those who have experienced the HI-LITE HEAD SPA difference."
           />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {reviews.map((r, i) => (
               <motion.div
                 key={i}
                 {...fadeUp}
                 transition={{ ...fadeUp.transition, delay: i * 0.08 }}
-                className="bg-card border border-border rounded-sm p-8 flex flex-col"
+                className="bg-card border border-border rounded-sm p-10 flex flex-col"
               >
-                <div className="flex gap-0.5 mb-4">
+                <div className="flex gap-1 mb-5">
                   {Array.from({ length: r.rating }).map((_, j) => (
-                    <Star key={j} size={14} className="fill-foreground text-foreground" />
+                    <Star key={j} size={13} className="fill-gold text-gold" />
                   ))}
                 </div>
                 <p className="font-body text-sm text-muted-foreground leading-relaxed flex-1 italic">
                   "{r.text}"
                 </p>
-                <p className="font-body text-sm font-medium text-foreground mt-6">
+                <p className="font-body text-sm font-medium text-foreground mt-8">
                   — {r.name}
                 </p>
               </motion.div>

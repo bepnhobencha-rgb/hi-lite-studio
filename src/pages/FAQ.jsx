@@ -56,25 +56,25 @@ export default function FAQ() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative h-72 md:h-80 flex items-end overflow-hidden">
+      <section className="relative h-80 md:h-[420px] flex items-end overflow-hidden">
         <img
           src={IMAGES.scalp}
           alt="Head spa treatment"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 w-full">
-          <p className="font-body text-xs tracking-[0.3em] uppercase text-white/70 mb-2">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 w-full">
+          <p className="font-body text-xs tracking-[0.35em] uppercase text-gold mb-3">
             Questions & Answers
           </p>
-          <h1 className="font-heading text-4xl md:text-5xl font-light text-white tracking-wide">
+          <h1 className="font-heading text-4xl md:text-6xl font-light text-white tracking-wide">
             Frequently Asked Questions
           </h1>
         </div>
       </section>
 
       {/* FAQ */}
-      <section className="py-20 md:py-28 px-4 bg-background">
+      <section className="py-28 md:py-40 px-4 bg-background">
         <div className="max-w-3xl mx-auto">
           <SectionHeader
             eyebrow="We Are Here to Help"
@@ -85,12 +85,12 @@ export default function FAQ() {
               <AccordionItem
                 key={i}
                 value={`faq-${i}`}
-                className="bg-card border border-border rounded-sm px-6"
+                className="bg-card border border-border rounded-sm px-7"
               >
-                <AccordionTrigger className="font-body text-sm text-foreground py-5 hover:no-underline">
+                <AccordionTrigger className="font-body text-sm text-foreground py-6 hover:no-underline">
                   {faq.q}
                 </AccordionTrigger>
-                <AccordionContent className="font-body text-sm text-muted-foreground leading-relaxed pb-5">
+                <AccordionContent className="font-body text-sm text-muted-foreground leading-relaxed pb-6">
                   {faq.a}
                 </AccordionContent>
               </AccordionItem>
