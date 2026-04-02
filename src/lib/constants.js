@@ -14,8 +14,8 @@ export const BUSINESS = {
   name: "Hi - Lite Studio",
   fullName: "Hi - Lite Studio Anaheim",
   slogan: "Your Sanctuary for Relaxation",
-  address: "9832 Katella Ave, Anaheim, CA 92804",
-  phone: "714-537-1075",
+  address: "5938 Westminster Blvd., Westminster, CA 92683, United States",
+  phone: "+1 (714) 487-9379",
   email: "thinguyenllc2022@gmail.com",
   hours: "Mon – Sun: 9:00 AM – 7:00 PM",
 };

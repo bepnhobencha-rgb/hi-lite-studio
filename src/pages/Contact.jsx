@@ -45,7 +45,7 @@ export default function Contact() {
       <section className="relative h-80 md:h-[420px] flex items-end overflow-hidden">
         <img
           src={IMAGES.interior}
-          alt="HI-LITE HEAD SPA contact"
+          alt="Hi - Lite Studio contact"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10" />
@@ -125,7 +125,7 @@ export default function Contact() {
           >
             <iframe
               title="HI-LITE HEAD SPA Location"
-              src="https://maps.google.com/maps?q=9832+Katella+Ave,+Anaheim,+CA+92804&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=5938+Westminster+Blvd,+Westminster,+CA+92683&t=&z=16&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}

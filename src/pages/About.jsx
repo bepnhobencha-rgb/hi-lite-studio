@@ -18,7 +18,7 @@ export default function About() {
       <section className="relative h-80 md:h-[420px] flex items-end overflow-hidden">
         <img
           src={IMAGES.interior}
-          alt="HI-LITE HEAD SPA interior"
+          alt="Hi - Lite Studio interior"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10" />
@@ -51,10 +51,10 @@ export default function About() {
                 Every ritual we offer is carefully designed to calm the mind and restore the body. From the moment you walk through our doors, you are enveloped in warmth, comfort, and care.
               </p>
               <p>
-                Located in the heart of Anaheim, our spa blends modern techniques with time-honored traditions to deliver an experience unlike any other. We use premium products, personalized care, and a gentle, unhurried approach that honors your need for rest.
-              </p>
-              <p>
-                Conveniently located just 10 minutes from Disneyland, Hi-Lite Head Spa Anaheim offers a peaceful place to relax and recharge after a long day of walking, crowds, and excitement.
+                Located in Westminster, CA, our spa blends modern techniques with time-honored traditions to deliver an experience unlike any other. We use premium products, personalized care, and a gentle, unhurried approach that honors your need for rest.
+                </p>
+                <p>
+                Conveniently located at 5938 Westminster Blvd., Westminster, Hi - Lite Studio offers a peaceful place to relax and recharge.
               </p>
             </div>
           </motion.div>
@@ -64,7 +64,7 @@ export default function About() {
           >
             <img
               src={IMAGES.interior}
-              alt="Inside HI-LITE HEAD SPA"
+              alt="Inside Hi - Lite Studio"
               className="w-full h-[480px] object-cover rounded-sm"
             />
           </motion.div>
