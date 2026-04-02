@@ -48,7 +48,7 @@ export default function Contact() {
           alt="Hi - Lite Studio contact"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/15 to-black/5" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 w-full">
           <p className="font-body text-xs tracking-[0.35em] uppercase text-gold mb-3">
             Get in Touch

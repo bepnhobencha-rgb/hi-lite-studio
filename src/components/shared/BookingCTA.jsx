@@ -16,7 +16,11 @@ export default function BookingCTA({
         transition={{ duration: 0.6 }}
         className="max-w-2xl mx-auto"
       >
-        <div className="w-8 h-px bg-[#D4B996] mx-auto mb-8" />
+        <div className="flex items-center justify-center gap-3 mb-8">
+          <div className="h-px w-12" style={{ background: "linear-gradient(to right, transparent, #D4B996)" }} />
+          <div className="w-1.5 h-1.5 rounded-full bg-[#D4B996]" />
+          <div className="h-px w-12" style={{ background: "linear-gradient(to left, transparent, #D4B996)" }} />
+        </div>
         <h2 className="font-heading text-3xl md:text-5xl font-light tracking-wide mb-6 text-[#2C2C2C]">
           {headline}
         </h2>
@@ -27,7 +31,7 @@ export default function BookingCTA({
           href={BOOKING_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block px-12 py-4 bg-[#D4B996] text-white text-sm font-body font-medium tracking-widest rounded-full shadow-[0_4px_18px_rgba(212,185,150,0.45)] hover:bg-[#C2A57F] transition-all duration-300"
+          className="inline-block px-14 py-4 bg-[#D4B996] text-white text-sm font-body font-medium tracking-widest rounded-full shadow-[0_6px_24px_rgba(212,185,150,0.5)] hover:bg-[#C2A57F] hover:shadow-[0_8px_28px_rgba(212,185,150,0.6)] transition-all duration-300"
         >
           {buttonText}
         </a>

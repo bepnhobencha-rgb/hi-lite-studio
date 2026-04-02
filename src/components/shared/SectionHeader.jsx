@@ -8,18 +8,25 @@ export default function SectionHeader({ eyebrow, title, subtitle }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="text-center mb-16 md:mb-20"
+      className="text-center mb-20 md:mb-24"
     >
       {eyebrow && (
-        <p className="font-body text-xs tracking-[0.35em] uppercase text-gold mb-4">
+        <p className="font-body text-xs tracking-[0.4em] uppercase mb-4"
+          style={{ color: "#C2A57F" }}>
           {eyebrow}
         </p>
       )}
       <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-foreground tracking-wide">
         {title}
       </h2>
+      {/* Gold gradient divider */}
+      <div className="flex items-center justify-center gap-3 mt-5 mb-5">
+        <div className="h-px w-10" style={{ background: "linear-gradient(to right, transparent, #D4B996)" }} />
+        <div className="w-1 h-1 rounded-full" style={{ background: "#D4B996" }} />
+        <div className="h-px w-10" style={{ background: "linear-gradient(to left, transparent, #D4B996)" }} />
+      </div>
       {subtitle && (
-        <p className="font-body text-sm text-muted-foreground mt-5 max-w-lg mx-auto leading-relaxed">
+        <p className="font-body text-sm text-muted-foreground max-w-lg mx-auto leading-relaxed mt-2">
           {subtitle}
         </p>
       )}

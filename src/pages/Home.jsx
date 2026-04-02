@@ -26,7 +26,7 @@ function Hero() {
           alt="Luxury head spa treatment"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/30 to-black/65" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/15 to-black/45" />
       </div>
       <div className="relative z-10 text-center px-4 max-w-3xl mx-auto pt-20">
         <motion.p
@@ -65,7 +65,7 @@ function Hero() {
             href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-12 py-4 bg-white text-neutral-900 text-sm font-body font-medium tracking-widest rounded-full hover:shadow-[0_0_28px_rgba(255,255,255,0.3)] hover:opacity-95 transition-all duration-300"
+            className="px-14 py-4.5 bg-[#D4B996] text-white text-sm font-body font-medium tracking-widest rounded-full shadow-[0_6px_24px_rgba(212,185,150,0.55)] hover:bg-[#C2A57F] hover:shadow-[0_8px_28px_rgba(212,185,150,0.65)] transition-all duration-300"
           >
             Book Your Experience
           </a>
@@ -110,7 +110,7 @@ function ProblemSection() {
   ];
 
   return (
-    <section className="py-28 md:py-40 px-4 bg-background">
+    <section className="py-36 md:py-52 px-4 bg-background">
       <div className="max-w-5xl mx-auto">
         <SectionHeader
           eyebrow="Sound Familiar?"
@@ -123,9 +123,9 @@ function ProblemSection() {
               key={i}
               {...fadeUp}
               transition={{ ...fadeUp.transition, delay: i * 0.1 }}
-              className="text-center p-10 bg-white rounded-sm border border-[#e8dfd4] shadow-sm"
+              className="text-center p-12 bg-white rounded-lg border border-[#e8dfd4] shadow-[0_2px_16px_rgba(212,185,150,0.1)] hover:shadow-[0_4px_24px_rgba(212,185,150,0.18)] transition-shadow duration-300"
             >
-              <item.icon size={28} className="mx-auto mb-5 text-gold" strokeWidth={1.5} />
+              <item.icon size={30} className="mx-auto mb-6 text-[#D4B996]" strokeWidth={1.3} />
               <p className="font-body text-sm text-foreground">{item.text}</p>
             </motion.div>
           ))}
@@ -145,7 +145,7 @@ function BenefitsSection() {
   ];
 
   return (
-    <section className="py-28 md:py-40 px-4 bg-[#F8F5F0]">
+    <section className="py-36 md:py-52 px-4 bg-[#F8F5F0]">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <motion.div {...fadeUp}>
           <p className="font-body text-xs tracking-[0.35em] uppercase text-gold mb-4">
@@ -160,7 +160,7 @@ function BenefitsSection() {
                 key={i}
                 {...fadeUp}
                 transition={{ ...fadeUp.transition, delay: i * 0.1 }}
-                className="flex items-center gap-5 py-4 border-b border-border"
+                className="flex items-center gap-5 py-5 border-b border-[#e8dfd4]"
               >
                 <span className="text-xs font-body text-gold w-6">0{i + 1}</span>
                 <span className="font-body text-foreground">{b}</span>
@@ -189,7 +189,7 @@ function FeaturedServices() {
   const featured = SERVICES.slice(0, 3);
 
   return (
-    <section className="py-28 md:py-40 px-4 bg-background">
+    <section className="py-36 md:py-52 px-4 bg-background">
       <div className="max-w-6xl mx-auto">
         <SectionHeader
           eyebrow="Our Rituals"
@@ -202,7 +202,7 @@ function FeaturedServices() {
               key={i}
               {...fadeUp}
               transition={{ ...fadeUp.transition, delay: i * 0.1 }}
-              className="bg-white border border-[#e8dfd4] rounded-sm p-10 flex flex-col relative shadow-sm"
+              className="bg-white border border-[#e8dfd4] rounded-lg p-10 flex flex-col relative shadow-[0_2px_16px_rgba(212,185,150,0.1)] hover:shadow-[0_6px_28px_rgba(212,185,150,0.2)] transition-shadow duration-300"
             >
               {s.badge && (
                 <span className="absolute top-4 right-4 text-xs font-body tracking-wider text-white bg-[#D4B996] px-3 py-1 rounded-full">
@@ -230,7 +230,7 @@ function FeaturedServices() {
                 href={BOOKING_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-center py-3.5 bg-[#D4B996] text-white text-sm font-body tracking-wider rounded-full shadow-[0_4px_14px_rgba(212,185,150,0.4)] hover:bg-[#C2A57F] transition-all duration-300"
+                className="text-center px-8 py-4 bg-[#D4B996] text-white text-sm font-body tracking-widest rounded-full shadow-[0_6px_20px_rgba(212,185,150,0.45)] hover:bg-[#C2A57F] hover:shadow-[0_8px_24px_rgba(212,185,150,0.55)] transition-all duration-300"
               >
                 Book Now
               </a>
