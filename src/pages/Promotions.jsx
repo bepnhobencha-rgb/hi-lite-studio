@@ -23,9 +23,12 @@ export default function Promotions() {
           src={IMAGES.spaPromo}
           alt="Luxury spa treatment at Hi-Lite Studio"
           className="absolute inset-0 w-full h-full object-cover object-center"
-          style={{ filter: "brightness(0.92) saturate(0.80) contrast(1.06) sepia(0.12)" }}
+          style={{ filter: "brightness(1.10) saturate(0.72) contrast(1.08) sepia(0.07)" }}
         />
-        <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.48) 0%, rgba(0,0,0,0.1) 60%, rgba(0,0,0,0.04) 100%)" }} />
+        {/* Warm champagne tint overlay — lifts shadows, adds luxury warmth */}
+        <div className="absolute inset-0" style={{ background: "rgba(248,245,240,0.10)" }} />
+        {/* Soft gradient only at bottom for text legibility */}
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.30) 0%, rgba(0,0,0,0.06) 50%, rgba(0,0,0,0.0) 100%)" }} />
         <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 pb-16 w-full">
           <p className="font-body text-[10px] tracking-[0.5em] uppercase mb-3" style={{ color: "#D4B996" }}>
             Special Offers
