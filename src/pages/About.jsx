@@ -63,11 +63,10 @@ export default function About() {
             transition={{ ...fadeUp.transition, delay: 0.2 }}
           >
             <img
-              src={IMAGES.treatmentRoom}
-              alt="Hi-Lite Studio treatment room"
-              className="w-full h-[500px] object-cover object-left rounded-2xl"
-              style={{ filter: "brightness(1.06) saturate(0.88) contrast(0.96)" }}
-              style={{ boxShadow: "0 20px 60px rgba(0,0,0,0.1)" }}
+              src={IMAGES.hairResult}
+              alt="Beautiful hair result at Hi-Lite Studio"
+              className="w-full h-[500px] object-cover object-top rounded-2xl"
+              style={{ filter: "brightness(1.06) saturate(0.9) contrast(0.96)", boxShadow: "0 20px 60px rgba(0,0,0,0.1)" }}
             />
           </motion.div>
         </div>

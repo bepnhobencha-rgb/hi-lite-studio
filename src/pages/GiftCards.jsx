@@ -42,16 +42,6 @@ export default function GiftCards() {
       <section className="py-40 md:py-56 px-4 bg-[#F8F5F0]">
         <div className="max-w-4xl mx-auto">
 
-          {/* Gift Card Hero Visual */}
-          <motion.div {...fadeUp} className="mb-20 rounded-2xl overflow-hidden shadow-[0_8px_40px_rgba(0,0,0,0.1)]" style={{ height: "320px" }}>
-            <img
-              src={IMAGES.giftCard}
-              alt="Hi-Lite Studio gift card"
-              className="w-full h-full object-cover object-center"
-              style={{ filter: "brightness(1.08) saturate(0.9) contrast(0.96)" }}
-            />
-          </motion.div>
-
           {/* Intro */}
           <motion.div {...fadeUp} className="text-center mb-24">
             <div className="inline-flex items-center justify-center w-20 h-20 rounded-full mb-8" style={{ background: "linear-gradient(135deg, #faf6f0, #f0e8da)" }}>

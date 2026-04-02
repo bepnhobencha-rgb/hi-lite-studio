@@ -294,14 +294,19 @@ function FeaturedServices() {
 function ImageStrip() {
   return (
     <section className="grid grid-cols-2 md:grid-cols-4 h-72 md:h-96">
-      {[IMAGES.treatmentRoom, IMAGES.ledTreatment, IMAGES.treatmentAction1, IMAGES.hairResult].map((img, i) => (
+      {[
+        { src: IMAGES.reception, filter: "brightness(1.08) saturate(0.92)" },
+        { src: IMAGES.treatmentRoom, filter: "brightness(1.06) saturate(0.88) contrast(0.96)" },
+        { src: IMAGES.hairResult, filter: "brightness(1.06) saturate(0.9)" },
+        { src: IMAGES.scalptool, filter: "brightness(1.08) saturate(0.88)" },
+      ].map((img, i) => (
         <div key={i} className="overflow-hidden relative">
           <img
-            src={img}
-            alt="Hi - Lite Studio experience"
-            className="w-full h-full object-cover hover:scale-107 transition-transform duration-700"
+            src={img.src}
+            alt="Hi-Lite Studio experience"
+            className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+            style={{ filter: img.filter }}
           />
-          <div className="absolute inset-0 bg-black/5 hover:bg-transparent transition-colors duration-500" />
         </div>
       ))}
     </section>
