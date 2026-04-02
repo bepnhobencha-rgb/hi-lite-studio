@@ -125,7 +125,7 @@ export default function Contact() {
           >
             <iframe
               title="HI-LITE HEAD SPA Location"
-              src="https://maps.google.com/maps?q=5938+Westminster+Blvd,+Westminster,+CA+92683&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=5938+Westminster+Blvd,+Westminster,+CA+92683,+United+States&t=&z=17&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
