@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
 import { IMAGES } from "@/lib/constants";
+
 import SectionHeader from "@/components/shared/SectionHeader";
 import BookingCTA from "@/components/shared/BookingCTA";
 
@@ -51,10 +52,10 @@ export default function Reviews() {
       {/* Hero */}
       <section className="relative h-[380px] md:h-[460px] flex items-end overflow-hidden">
         <img
-          src={IMAGES.happyClients}
-          alt="Happy clients at Hi-Lite Studio"
-          className="absolute inset-0 w-full h-full object-cover object-top"
-          style={{ filter: "brightness(1.08) saturate(0.88) contrast(0.96)" }}
+          src={IMAGES.clientTreatment}
+          alt="Client receiving head spa treatment at Hi-Lite Studio"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          style={{ filter: "brightness(1.05) saturate(0.82) contrast(1.02) sepia(0.08)" }}
         />
         <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.48) 0%, rgba(0,0,0,0.1) 60%, rgba(0,0,0,0.04) 100%)" }} />
         <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 pb-16 w-full">
