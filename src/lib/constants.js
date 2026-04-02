@@ -23,8 +23,8 @@ export const IMAGES = {
   treatmentAction2: "https://media.base44.com/images/public/69cdb2c167f73801514de491/f0a1b6b76_Unknown-56.jpg",
   // Bonsai / circular art wall — atmospheric gallery only
   bonsaiWall: "https://media.base44.com/images/public/69cdb2c167f73801514de491/aa9bf892d_Unknown-53.jpg",
-  // Valentine sofa with gold logo decorated
-  valentineSofa: "https://media.base44.com/images/public/69cdb2c167f73801514de491/d12b6885a_Unknown-47.jpg",
+  // Scalp water treatment halo device (gold ring)
+  valentineSofa: "https://media.base44.com/images/public/69cdb2c167f73801514de491/3b95cef09_generated_image.png",
   // Front desk interior with warm lamp
   frontDesk: "https://media.base44.com/images/public/69cdb2c167f73801514de491/2c72b9baa_Unknown-32.jpg",
   // Curly hair scalp treatment device
