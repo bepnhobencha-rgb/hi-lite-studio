@@ -18,6 +18,8 @@ export const IMAGES = {
   clientTreatment: "https://media.base44.com/images/public/69cdb2c167f73801514de491/aac865587_Unknown-63.jpg",
   // Luxury head massage treatment scene — Gallery hero
   luxuryMassage: "https://media.base44.com/images/public/69cdb2c167f73801514de491/1e34e7db8_Gemini_Generated_Image_qs7xblqs7xblqs7x.png",
+  // Warm spa massage close-up — Promotions hero
+  spaPromo: "https://media.base44.com/images/public/69cdb2c167f73801514de491/d9b841d32_Unknown-64.jpg",
   // Group of 4 clients celebrating birthday under gold logo → Reviews / Promotions
   groupClients: "https://media.base44.com/images/public/69cdb2c167f73801514de491/457261d42_Unknown-51.jpg",
 
