@@ -6,7 +6,7 @@ import SectionHeader from "@/components/shared/SectionHeader";
 import BookingCTA from "@/components/shared/BookingCTA";
 
 const galleryImages = [
-  { src: IMAGES.interior, alt: "HI-LITE HEAD SPA interior" },
+  { src: IMAGES.interior, alt: "Hi-Lite Studio interior" },
   { src: IMAGES.hero, alt: "Luxury scalp treatment" },
   { src: IMAGES.treatment1, alt: "Head spa wash treatment" },
   { src: IMAGES.treatment2, alt: "Relaxing scalp therapy" },
@@ -21,30 +21,30 @@ export default function Gallery() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative h-80 md:h-[420px] flex items-end overflow-hidden">
+      <section className="relative h-[380px] md:h-[460px] flex items-end overflow-hidden">
         <img
           src={IMAGES.interior}
-          alt="HI-LITE HEAD SPA gallery"
+          alt="Hi-Lite Studio gallery"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/15 to-black/5" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 w-full">
-          <p className="font-body text-xs tracking-[0.35em] uppercase text-gold mb-3">
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.48) 0%, rgba(0,0,0,0.1) 60%, rgba(0,0,0,0.04) 100%)" }} />
+        <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 pb-16 w-full">
+          <p className="font-body text-[10px] tracking-[0.5em] uppercase mb-3" style={{ color: "#D4B996" }}>
             A Glimpse Inside
           </p>
-          <h1 className="font-heading text-4xl md:text-6xl font-light text-white tracking-wide">
+          <h1 className="font-heading text-4xl md:text-6xl font-light text-white tracking-[0.04em]">
             Gallery
           </h1>
         </div>
       </section>
 
       {/* Gallery Grid */}
-      <section className="py-28 md:py-40 px-4 bg-background">
+      <section className="py-40 md:py-56 px-4 bg-[#F8F5F0]">
         <div className="max-w-6xl mx-auto">
           <SectionHeader
             eyebrow="Our Space"
             title="See the Experience"
-            subtitle="Step inside HI-LITE HEAD SPA and feel the calm before you arrive."
+            subtitle="Step inside Hi-Lite Studio and feel the calm before you arrive."
           />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {galleryImages.map((img, i) => (
@@ -53,8 +53,8 @@ export default function Gallery() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="cursor-pointer overflow-hidden rounded-sm aspect-[4/3]"
+                transition={{ duration: 0.6, delay: i * 0.08 }}
+                className="cursor-pointer overflow-hidden rounded-2xl aspect-[4/3] shadow-[0_4px_20px_rgba(0,0,0,0.07)] hover:shadow-[0_8px_36px_rgba(0,0,0,0.12)] transition-shadow duration-400"
                 onClick={() => setSelected(img)}
               >
                 <img
@@ -75,22 +75,23 @@ export default function Gallery() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[60] bg-black/90 flex items-center justify-center p-4"
+            className="fixed inset-0 z-[60] bg-black/85 flex items-center justify-center p-6"
             onClick={() => setSelected(null)}
           >
             <button
               onClick={() => setSelected(null)}
-              className="absolute top-6 right-6 text-white/80 hover:text-white"
+              className="absolute top-6 right-6 text-white/70 hover:text-white transition-colors"
             >
-              <X size={28} />
+              <X size={26} />
             </button>
             <motion.img
-              initial={{ scale: 0.9, opacity: 0 }}
+              initial={{ scale: 0.92, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
+              exit={{ scale: 0.92, opacity: 0 }}
+              transition={{ duration: 0.3 }}
               src={selected.src}
               alt={selected.alt}
-              className="max-w-full max-h-[85vh] object-contain rounded-sm"
+              className="max-w-full max-h-[88vh] object-contain rounded-2xl"
               onClick={(e) => e.stopPropagation()}
             />
           </motion.div>

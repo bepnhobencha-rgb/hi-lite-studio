@@ -8,42 +8,43 @@ const fadeUp = {
   initial: { opacity: 0, y: 30 },
   whileInView: { opacity: 1, y: 0 },
   viewport: { once: true },
-  transition: { duration: 0.7 },
+  transition: { duration: 0.8 },
 };
 
 export default function About() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative h-80 md:h-[420px] flex items-end overflow-hidden">
+      <section className="relative h-[380px] md:h-[460px] flex items-end overflow-hidden">
         <img
           src={IMAGES.interior}
           alt="Hi - Lite Studio interior"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/15 to-black/5" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 w-full">
-          <p className="font-body text-xs tracking-[0.35em] uppercase text-gold mb-3">
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.48) 0%, rgba(0,0,0,0.1) 60%, rgba(0,0,0,0.04) 100%)" }} />
+        <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 pb-16 w-full">
+          <p className="font-body text-[10px] tracking-[0.5em] uppercase mb-3" style={{ color: "#D4B996" }}>
             Our Story
           </p>
-          <h1 className="font-heading text-4xl md:text-6xl font-light text-white tracking-wide">
+          <h1 className="font-heading text-4xl md:text-6xl font-light text-white tracking-[0.04em]">
             About {BUSINESS.name}
           </h1>
         </div>
       </section>
 
       {/* Story */}
-      <section className="py-28 md:py-40 px-4 bg-background">
-        <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <section className="py-40 md:py-56 px-4 bg-[#F8F5F0]">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <motion.div {...fadeUp}>
-            <p className="font-body text-xs tracking-[0.35em] uppercase text-gold mb-4">
+            <p className="font-body text-[10px] tracking-[0.5em] uppercase mb-5" style={{ color: "#C2A57F" }}>
               Our Philosophy
             </p>
-            <h2 className="font-heading text-3xl md:text-4xl font-light text-foreground tracking-wide mb-8">
+            <h2 className="font-heading text-3xl md:text-4xl font-light text-foreground tracking-wide leading-[1.2] mb-8">
               More Than a Salon. <br />
               <span className="italic">A Sanctuary.</span>
             </h2>
-            <div className="space-y-5 font-body text-sm text-muted-foreground leading-relaxed">
+            <div className="w-8 h-px mb-10" style={{ background: "linear-gradient(to right, #D4B996, #C2A57F)" }} />
+            <div className="space-y-6 font-body text-sm text-[#8E8E8E] leading-[1.95]">
               <p>
                 {BUSINESS.name} was created with a singular vision: to provide a space where you can truly let go. This is not a regular salon — it is a luxury experience focused on stress relief, scalp detox, mental reset, and deep relaxation.
               </p>
@@ -52,12 +53,10 @@ export default function About() {
               </p>
               <p>
                 Located in Westminster, CA, our spa blends modern techniques with time-honored traditions to deliver an experience unlike any other. We use premium products, personalized care, and a gentle, unhurried approach that honors your need for rest.
-                </p>
-                <p>
-                Conveniently located at 5938 Westminster Blvd., Westminster, Hi - Lite Studio offers a peaceful place to relax and recharge.
               </p>
             </div>
           </motion.div>
+
           <motion.div
             {...fadeUp}
             transition={{ ...fadeUp.transition, delay: 0.2 }}
@@ -65,20 +64,21 @@ export default function About() {
             <img
               src={IMAGES.interior}
               alt="Inside Hi - Lite Studio"
-              className="w-full h-[480px] object-cover rounded-sm"
+              className="w-full h-[500px] object-cover rounded-2xl"
+              style={{ boxShadow: "0 20px 60px rgba(0,0,0,0.1)" }}
             />
           </motion.div>
         </div>
       </section>
 
       {/* Values */}
-      <section className="py-28 md:py-36 px-4 bg-white">
+      <section className="py-36 md:py-48 px-4 bg-white">
         <div className="max-w-5xl mx-auto">
           <SectionHeader
             eyebrow="What We Believe"
             title="Our Guiding Values"
           />
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
                 title: "Calm",
@@ -96,14 +96,18 @@ export default function About() {
               <motion.div
                 key={i}
                 {...fadeUp}
-                transition={{ ...fadeUp.transition, delay: i * 0.1 }}
-                className="text-center p-10 border border-[#e8dfd4] rounded-sm bg-[#F8F5F0] shadow-sm"
+                transition={{ ...fadeUp.transition, delay: i * 0.12 }}
+                className="text-center p-12 border border-[#ede8e0] rounded-2xl bg-[#F8F5F0] shadow-[0_2px_20px_rgba(212,185,150,0.08)] hover:shadow-[0_6px_32px_rgba(212,185,150,0.18)] transition-shadow duration-500"
               >
-                <div className="w-8 h-px bg-gold mx-auto mb-6" />
-                <h3 className="font-heading text-2xl font-medium text-foreground mb-4 italic">
+                <div className="flex items-center justify-center gap-2 mb-8">
+                  <div className="h-px w-8" style={{ background: "linear-gradient(to right, transparent, #D4B996)" }} />
+                  <div className="w-1 h-1 rounded-full" style={{ background: "#D4B996" }} />
+                  <div className="h-px w-8" style={{ background: "linear-gradient(to left, transparent, #D4B996)" }} />
+                </div>
+                <h3 className="font-heading text-2xl font-medium text-foreground mb-4 italic tracking-wide">
                   {v.title}
                 </h3>
-                <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                <p className="font-body text-sm text-[#8E8E8E] leading-[1.9]">
                   {v.text}
                 </p>
               </motion.div>

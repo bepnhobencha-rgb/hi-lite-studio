@@ -8,7 +8,7 @@ const fadeUp = {
   initial: { opacity: 0, y: 30 },
   whileInView: { opacity: 1, y: 0 },
   viewport: { once: true },
-  transition: { duration: 0.7 },
+  transition: { duration: 0.8 },
 };
 
 const contactInfo = [
@@ -42,47 +42,49 @@ export default function Contact() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative h-80 md:h-[420px] flex items-end overflow-hidden">
+      <section className="relative h-[380px] md:h-[460px] flex items-end overflow-hidden">
         <img
           src={IMAGES.interior}
-          alt="Hi - Lite Studio contact"
+          alt="Hi-Lite Studio contact"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/15 to-black/5" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 w-full">
-          <p className="font-body text-xs tracking-[0.35em] uppercase text-gold mb-3">
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.48) 0%, rgba(0,0,0,0.1) 60%, rgba(0,0,0,0.04) 100%)" }} />
+        <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 pb-16 w-full">
+          <p className="font-body text-[10px] tracking-[0.5em] uppercase mb-3" style={{ color: "#D4B996" }}>
             Get in Touch
           </p>
-          <h1 className="font-heading text-4xl md:text-6xl font-light text-white tracking-wide">
+          <h1 className="font-heading text-4xl md:text-6xl font-light text-white tracking-[0.04em]">
             Contact Us
           </h1>
         </div>
       </section>
 
       {/* Contact Info */}
-      <section className="py-28 md:py-40 px-4 bg-background">
+      <section className="py-40 md:py-56 px-4 bg-[#F8F5F0]">
         <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20">
           <motion.div {...fadeUp}>
-            <p className="font-body text-xs tracking-[0.35em] uppercase text-gold mb-4">
+            <p className="font-body text-[10px] tracking-[0.5em] uppercase mb-5" style={{ color: "#C2A57F" }}>
               Visit Us
             </p>
-            <h2 className="font-heading text-3xl md:text-4xl font-light text-foreground tracking-wide mb-10">
+            <h2 className="font-heading text-3xl md:text-4xl font-light text-foreground tracking-wide leading-[1.2] mb-4">
               We Would Love <br />
               <span className="italic">to Hear from You</span>
             </h2>
+            <div className="w-8 h-px mb-12" style={{ background: "linear-gradient(to right, #D4B996, #C2A57F)" }} />
+
             <div className="space-y-7">
               {contactInfo.map((item, i) => (
                 <motion.div
                   key={i}
                   {...fadeUp}
                   transition={{ ...fadeUp.transition, delay: i * 0.1 }}
-                  className="flex items-start gap-5 pb-7 border-b border-border"
+                  className="flex items-start gap-5 pb-7 border-b border-[#ede8e0]"
                 >
-                  <div className="p-3 bg-[#F8F5F0] rounded-sm border border-[#e8dfd4]">
-                    <item.icon size={20} className="text-gold" strokeWidth={1.5} />
+                  <div className="p-3.5 bg-white rounded-xl border border-[#ede8e0] shadow-[0_2px_12px_rgba(212,185,150,0.1)]">
+                    <item.icon size={18} strokeWidth={1.5} style={{ color: "#C2A57F" }} />
                   </div>
                   <div>
-                    <p className="font-body text-xs text-muted-foreground tracking-wider uppercase mb-1">
+                    <p className="font-body text-[10px] text-[#9E9E9E] tracking-[0.3em] uppercase mb-1.5">
                       {item.label}
                     </p>
                     {item.href ? (
@@ -90,27 +92,35 @@ export default function Contact() {
                         href={item.href}
                         target={item.label === "Address" ? "_blank" : undefined}
                         rel={item.label === "Address" ? "noopener noreferrer" : undefined}
-                        className="font-body text-foreground hover:underline"
+                        className="font-body text-sm text-foreground hover:underline leading-relaxed"
                       >
                         {item.value}
                       </a>
                     ) : (
-                      <p className="font-body text-foreground">{item.value}</p>
+                      <p className="font-body text-sm text-foreground leading-relaxed">{item.value}</p>
                     )}
                   </div>
                 </motion.div>
               ))}
             </div>
+
             <motion.div
               {...fadeUp}
-              transition={{ ...fadeUp.transition, delay: 0.4 }}
-              className="mt-12"
+              transition={{ ...fadeUp.transition, delay: 0.45 }}
+              className="mt-14"
             >
               <a
                 href={BOOKING_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-12 py-4 bg-[#D4B996] text-white text-sm font-body font-medium tracking-widest rounded-full shadow-[0_4px_18px_rgba(212,185,150,0.45)] hover:bg-[#C2A57F] transition-all duration-300"
+                className="inline-block px-12 py-4 text-sm font-body font-medium tracking-[0.2em] rounded-full transition-all duration-300"
+                style={{
+                  background: "linear-gradient(135deg, #D4B996 0%, #C2A57F 100%)",
+                  color: "#fff",
+                  boxShadow: "0 6px 24px rgba(212,185,150,0.45)",
+                }}
+                onMouseOver={e => { e.currentTarget.style.boxShadow = "0 10px 32px rgba(212,185,150,0.6)"; e.currentTarget.style.transform = "translateY(-2px)"; }}
+                onMouseOut={e => { e.currentTarget.style.boxShadow = "0 6px 24px rgba(212,185,150,0.45)"; e.currentTarget.style.transform = "translateY(0)"; }}
               >
                 Book Now
               </a>
@@ -121,10 +131,10 @@ export default function Contact() {
           <motion.div
             {...fadeUp}
             transition={{ ...fadeUp.transition, delay: 0.2 }}
-            className="rounded-sm overflow-hidden h-[420px] lg:h-full min-h-[420px]"
+            className="rounded-2xl overflow-hidden h-[420px] lg:h-full min-h-[420px] shadow-[0_8px_40px_rgba(0,0,0,0.1)]"
           >
             <iframe
-              title="HI-LITE HEAD SPA Location"
+              title="Hi-Lite Studio Location"
               src="https://maps.google.com/maps?q=5938+Westminster+Blvd,+Westminster,+CA+92683,+United+States&t=&z=17&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="100%"

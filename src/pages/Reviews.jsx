@@ -9,7 +9,7 @@ const reviews = [
   {
     name: "Jessica M.",
     rating: 5,
-    text: "Absolutely incredible experience! From the moment I walked in, I felt so relaxed. The scalp massage was heavenly, and my hair feels amazing. I will definitely be coming back.",
+    text: "Absolutely incredible experience. From the moment I walked in, I felt so relaxed. The scalp massage was heavenly, and my hair feels amazing. I will definitely be coming back.",
   },
   {
     name: "Sarah L.",
@@ -19,7 +19,7 @@ const reviews = [
   {
     name: "Emily T.",
     rating: 5,
-    text: "I got the Royal package and it was worth every penny. The staff was so attentive and professional. I left feeling like a completely new person. Highly recommend!",
+    text: "I got the Royal package and it was worth every penny. The staff was so attentive and professional. I left feeling like a completely new person. Highly recommend.",
   },
   {
     name: "Amanda R.",
@@ -29,12 +29,12 @@ const reviews = [
   {
     name: "Michelle K.",
     rating: 5,
-    text: "Best head spa in Anaheim, hands down! The Deluxe package with the foot massage add-on was the perfect way to unwind after a stressful week.",
+    text: "Best head spa in the area, hands down. The Deluxe package with the foot massage add-on was the perfect way to unwind after a stressful week.",
   },
   {
     name: "Tina W.",
     rating: 5,
-    text: "I have been searching for a proper head spa experience and finally found it here. The Gua Sha treatment was incredibly soothing. My scalp has never felt this clean and healthy.",
+    text: "I have been searching for a proper head spa experience and finally found it here. The Gua Sha treatment was incredibly soothing. My scalp has never felt this clean.",
   },
 ];
 
@@ -42,57 +42,59 @@ const fadeUp = {
   initial: { opacity: 0, y: 30 },
   whileInView: { opacity: 1, y: 0 },
   viewport: { once: true },
-  transition: { duration: 0.6 },
+  transition: { duration: 0.7 },
 };
 
 export default function Reviews() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative h-80 md:h-[420px] flex items-end overflow-hidden">
+      <section className="relative h-[380px] md:h-[460px] flex items-end overflow-hidden">
         <img
           src={IMAGES.treatment2}
           alt="Relaxing head spa"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/15 to-black/5" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 w-full">
-          <p className="font-body text-xs tracking-[0.35em] uppercase text-gold mb-3">
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.48) 0%, rgba(0,0,0,0.1) 60%, rgba(0,0,0,0.04) 100%)" }} />
+        <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 pb-16 w-full">
+          <p className="font-body text-[10px] tracking-[0.5em] uppercase mb-3" style={{ color: "#D4B996" }}>
             What Clients Say
           </p>
-          <h1 className="font-heading text-4xl md:text-6xl font-light text-white tracking-wide">
-            Reviews
+          <h1 className="font-heading text-4xl md:text-6xl font-light text-white tracking-[0.04em]">
+            Client Reviews
           </h1>
         </div>
       </section>
 
       {/* Reviews */}
-      <section className="py-28 md:py-40 px-4 bg-background">
+      <section className="py-40 md:py-56 px-4 bg-[#F8F5F0]">
         <div className="max-w-6xl mx-auto">
           <SectionHeader
             eyebrow="Trusted by Our Clients"
             title="Voices of Relaxation"
-            subtitle="Hear from those who have experienced the HI-LITE HEAD SPA difference."
+            subtitle="Hear from those who have experienced the Hi-Lite Studio difference."
           />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
             {reviews.map((r, i) => (
               <motion.div
                 key={i}
                 {...fadeUp}
-                transition={{ ...fadeUp.transition, delay: i * 0.08 }}
-                className="bg-white border border-[#e8dfd4] rounded-sm p-10 flex flex-col shadow-sm"
+                transition={{ ...fadeUp.transition, delay: i * 0.09 }}
+                className="bg-white border border-[#ede8e0] rounded-2xl p-10 flex flex-col shadow-[0_2px_18px_rgba(212,185,150,0.08)] hover:shadow-[0_6px_30px_rgba(212,185,150,0.16)] transition-shadow duration-400"
               >
-                <div className="flex gap-1 mb-5">
+                <div className="flex gap-1 mb-6">
                   {Array.from({ length: r.rating }).map((_, j) => (
                     <Star key={j} size={13} className="fill-[#D4B996] text-[#D4B996]" />
                   ))}
                 </div>
-                <p className="font-body text-sm text-muted-foreground leading-relaxed flex-1 italic">
+                <p className="font-body text-sm text-[#8E8E8E] leading-[1.95] flex-1 italic">
                   "{r.text}"
                 </p>
-                <p className="font-body text-sm font-medium text-foreground mt-8">
-                  — {r.name}
-                </p>
+                <div className="mt-8 pt-6 border-t border-[#ede8e0]">
+                  <p className="font-body text-sm font-medium text-foreground tracking-wide">
+                    — {r.name}
+                  </p>
+                </div>
               </motion.div>
             ))}
           </div>

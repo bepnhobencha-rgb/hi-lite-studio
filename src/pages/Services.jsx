@@ -8,78 +8,94 @@ const fadeUp = {
   initial: { opacity: 0, y: 30 },
   whileInView: { opacity: 1, y: 0 },
   viewport: { once: true },
-  transition: { duration: 0.6 },
+  transition: { duration: 0.7 },
+};
+
+const goldBtn = {
+  background: "linear-gradient(135deg, #D4B996 0%, #C2A57F 100%)",
+  color: "#fff",
+  boxShadow: "0 6px 20px rgba(212,185,150,0.4)",
 };
 
 export default function Services() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative h-80 md:h-[420px] flex items-end overflow-hidden">
+      <section className="relative h-[380px] md:h-[460px] flex items-end overflow-hidden">
         <img
           src={IMAGES.facial}
           alt="Head spa treatment"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/15 to-black/5" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 w-full">
-          <p className="font-body text-xs tracking-[0.35em] uppercase text-gold mb-3">
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.48) 0%, rgba(0,0,0,0.1) 60%, rgba(0,0,0,0.04) 100%)" }} />
+        <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 pb-16 w-full">
+          <p className="font-body text-[10px] tracking-[0.5em] uppercase mb-3" style={{ color: "#D4B996" }}>
             Our Offerings
           </p>
-          <h1 className="font-heading text-4xl md:text-6xl font-light text-white tracking-wide">
+          <h1 className="font-heading text-4xl md:text-6xl font-light text-white tracking-[0.04em]">
             Services & Rituals
           </h1>
         </div>
       </section>
 
       {/* Services */}
-      <section className="py-28 md:py-40 px-4 bg-background">
-        <div className="max-w-6xl mx-auto">
+      <section className="py-40 md:py-56 px-4 bg-[#F8F5F0]">
+        <div className="max-w-5xl mx-auto">
           <SectionHeader
             eyebrow="Choose Your Ritual"
             title="Head Spa Experiences"
             subtitle="Every session is a journey designed to restore your mind and revive your scalp."
           />
-          <div className="space-y-8">
+          <div className="space-y-7">
             {SERVICES.map((s, i) => (
               <motion.div
                 key={i}
                 {...fadeUp}
                 transition={{ ...fadeUp.transition, delay: i * 0.08 }}
-                className={`relative bg-white border rounded-sm p-10 md:p-12 flex flex-col md:flex-row md:items-center gap-8 shadow-sm ${
-                  s.badge ? "border-[#D4B996]/50" : "border-[#e8dfd4]"
-                }`}
+                className={`relative bg-white rounded-2xl p-10 md:p-12 flex flex-col md:flex-row md:items-center gap-8 transition-shadow duration-400 ${
+                  s.badge
+                    ? "border border-[#D4B996]/40 shadow-[0_4px_28px_rgba(212,185,150,0.18)]"
+                    : "border border-[#ede8e0] shadow-[0_2px_18px_rgba(0,0,0,0.04)]"
+                } hover:shadow-[0_8px_40px_rgba(212,185,150,0.2)]`}
               >
                 {s.badge && (
-                  <span className="absolute top-0 right-0 bg-[#D4B996] text-white text-xs font-body tracking-wider px-5 py-1.5 rounded-bl-sm rounded-tr-sm">
+                  <span
+                    className="absolute top-0 right-6 text-[10px] font-body tracking-[0.18em] text-white uppercase px-5 py-1.5 rounded-b-full"
+                    style={{ background: "linear-gradient(135deg, #D4B996, #C2A57F)" }}
+                  >
                     {s.badge}
                   </span>
                 )}
                 <div className="flex-1">
+                  {/* Gold accent */}
+                  <div className="w-6 h-px mb-5" style={{ background: "linear-gradient(to right, #D4B996, #C2A57F)" }} />
                   <div className="flex flex-wrap items-baseline gap-3 mb-3">
-                    <h3 className="font-heading text-2xl md:text-3xl font-medium text-foreground">
+                    <h3 className="font-heading text-2xl md:text-3xl font-medium text-foreground tracking-wide">
                       {s.name}
                     </h3>
-                    <span className="font-body text-xs text-muted-foreground tracking-wide">
+                    <span className="font-body text-[11px] text-[#9E9E9E] tracking-widest uppercase">
                       {s.duration}
                     </span>
                   </div>
-                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 mt-5">
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2.5 mt-5">
                     {s.features.map((f, j) => (
-                      <li key={j} className="font-body text-sm text-muted-foreground flex items-start gap-2">
-                        <span className="w-1 h-1 rounded-full bg-gold mt-2 shrink-0" />
+                      <li key={j} className="font-body text-sm text-[#8E8E8E] flex items-start gap-2.5 leading-relaxed">
+                        <span className="w-1 h-1 rounded-full mt-2 shrink-0" style={{ background: "#D4B996" }} />
                         {f}
                       </li>
                     ))}
                   </ul>
                 </div>
-                <div className="flex flex-col items-center md:items-end gap-4 md:min-w-[160px]">
+                <div className="flex flex-col items-center md:items-end gap-5 md:min-w-[180px]">
                   <p className="font-heading text-4xl font-light text-foreground">${s.price}</p>
                   <a
                     href={BOOKING_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-10 py-3 bg-[#D4B996] text-white text-sm font-body tracking-wider rounded-full shadow-[0_4px_14px_rgba(212,185,150,0.4)] hover:bg-[#C2A57F] transition-all duration-300"
+                    className="px-10 py-3.5 text-sm font-body tracking-[0.18em] rounded-full transition-all duration-300"
+                    style={goldBtn}
+                    onMouseOver={e => { e.currentTarget.style.boxShadow = "0 10px 28px rgba(212,185,150,0.55)"; e.currentTarget.style.transform = "translateY(-1px)"; }}
+                    onMouseOut={e => { e.currentTarget.style.boxShadow = "0 6px 20px rgba(212,185,150,0.4)"; e.currentTarget.style.transform = "translateY(0)"; }}
                   >
                     Book
                   </a>
@@ -91,11 +107,11 @@ export default function Services() {
       </section>
 
       {/* Add-Ons */}
-      <section className="py-28 md:py-36 px-4 bg-[#F8F5F0]">
+      <section className="py-36 md:py-48 px-4 bg-white">
         <div className="max-w-4xl mx-auto">
           <SectionHeader
             eyebrow="Enhance Your Visit"
-            title="Add-Ons"
+            title="Curated Add-Ons"
             subtitle="Personalize your experience with these premium enhancements."
           />
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -104,10 +120,10 @@ export default function Services() {
                 key={i}
                 {...fadeUp}
                 transition={{ ...fadeUp.transition, delay: i * 0.05 }}
-                className="flex items-center justify-between py-5 px-7 bg-white border border-[#e8dfd4] rounded-sm shadow-sm"
+                className="flex items-center justify-between py-5 px-7 bg-[#F8F5F0] border border-[#ede8e0] rounded-xl"
               >
-                <span className="font-body text-sm text-foreground">{addon.name}</span>
-                <span className="font-heading text-xl font-medium text-gold">${addon.price}</span>
+                <span className="font-body text-sm text-foreground leading-relaxed">{addon.name}</span>
+                <span className="font-heading text-xl font-light ml-4 shrink-0" style={{ color: "#C2A57F" }}>${addon.price}</span>
               </motion.div>
             ))}
           </div>
@@ -116,7 +132,7 @@ export default function Services() {
 
       <BookingCTA
         headline="Find Your Perfect Ritual"
-        subtext="Not sure which service is right for you? Book a session and our specialists will guide you."
+        subtext="Not sure which service is right for you? Our specialists will guide you."
       />
     </div>
   );

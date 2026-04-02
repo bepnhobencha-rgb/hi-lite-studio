@@ -6,7 +6,7 @@ const fadeUp = {
   initial: { opacity: 0, y: 30 },
   whileInView: { opacity: 1, y: 0 },
   viewport: { once: true },
-  transition: { duration: 0.7 },
+  transition: { duration: 0.8 },
 };
 
 const steps = [
@@ -19,53 +19,60 @@ export default function Booking() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative h-80 md:h-[420px] flex items-end overflow-hidden">
+      <section className="relative h-[380px] md:h-[460px] flex items-end overflow-hidden">
         <img
           src={IMAGES.hero}
           alt="Book your head spa"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/15 to-black/5" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 w-full">
-          <p className="font-body text-xs tracking-[0.35em] uppercase text-gold mb-3">
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.48) 0%, rgba(0,0,0,0.1) 60%, rgba(0,0,0,0.04) 100%)" }} />
+        <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 pb-16 w-full">
+          <p className="font-body text-[10px] tracking-[0.5em] uppercase mb-3" style={{ color: "#D4B996" }}>
             Reserve Your Ritual
           </p>
-          <h1 className="font-heading text-4xl md:text-6xl font-light text-white tracking-wide">
+          <h1 className="font-heading text-4xl md:text-6xl font-light text-white tracking-[0.04em]">
             Book Your Experience
           </h1>
         </div>
       </section>
 
       {/* Steps */}
-      <section className="py-28 md:py-40 px-4 bg-background">
+      <section className="py-40 md:py-56 px-4 bg-[#F8F5F0]">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div {...fadeUp}>
-            <p className="font-body text-xs tracking-[0.35em] uppercase text-gold mb-4">
+            <p className="font-body text-[10px] tracking-[0.5em] uppercase mb-5" style={{ color: "#C2A57F" }}>
               Simple & Seamless
             </p>
-            <h2 className="font-heading text-3xl md:text-5xl font-light text-foreground tracking-wide mb-5">
+            <h2 className="font-heading text-3xl md:text-5xl font-light text-foreground tracking-wide mb-5 leading-[1.2]">
               Book Your Session in Seconds
             </h2>
-            <p className="font-body text-sm text-muted-foreground max-w-lg mx-auto mb-20">
+            {/* Divider */}
+            <div className="flex items-center justify-center gap-3 mt-6 mb-6">
+              <div className="h-px w-10" style={{ background: "linear-gradient(to right, transparent, #D4B996)" }} />
+              <div className="w-1 h-1 rounded-full" style={{ background: "#D4B996" }} />
+              <div className="h-px w-10" style={{ background: "linear-gradient(to left, transparent, #D4B996)" }} />
+            </div>
+            <p className="font-body text-sm text-[#8E8E8E] max-w-md mx-auto leading-[1.9] mb-24">
               Reserving your luxury head spa experience is easy. Follow three simple steps and your sanctuary awaits.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
             {steps.map((step, i) => (
               <motion.div
                 key={i}
                 {...fadeUp}
                 transition={{ ...fadeUp.transition, delay: i * 0.15 }}
-                className="p-10 bg-white border border-[#e8dfd4] rounded-sm shadow-sm"
+                className="p-12 bg-white border border-[#ede8e0] rounded-2xl shadow-[0_2px_20px_rgba(212,185,150,0.08)] hover:shadow-[0_6px_32px_rgba(212,185,150,0.18)] transition-shadow duration-400"
               >
-                <span className="font-heading text-4xl font-light text-gold/40">
+                <span className="font-heading text-5xl font-light" style={{ color: "rgba(212,185,150,0.35)" }}>
                   {step.num}
                 </span>
-                <h3 className="font-heading text-xl font-medium text-foreground mt-5 mb-3">
+                <div className="w-5 h-px mt-5 mb-5" style={{ background: "linear-gradient(to right, #D4B996, #C2A57F)" }} />
+                <h3 className="font-heading text-xl font-medium text-foreground mb-3 tracking-wide">
                   {step.title}
                 </h3>
-                <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                <p className="font-body text-sm text-[#8E8E8E] leading-[1.9]">
                   {step.desc}
                 </p>
               </motion.div>
@@ -74,17 +81,24 @@ export default function Booking() {
 
           <motion.div
             {...fadeUp}
-            transition={{ ...fadeUp.transition, delay: 0.3 }}
+            transition={{ ...fadeUp.transition, delay: 0.35 }}
           >
             <a
               href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-16 py-4 bg-[#D4B996] text-white text-sm font-body font-medium tracking-widest rounded-full shadow-[0_4px_18px_rgba(212,185,150,0.45)] hover:bg-[#C2A57F] transition-all duration-300"
+              className="inline-block px-16 py-4.5 text-sm font-body font-medium tracking-[0.22em] rounded-full transition-all duration-300"
+              style={{
+                background: "linear-gradient(135deg, #D4B996 0%, #C2A57F 100%)",
+                color: "#fff",
+                boxShadow: "0 8px 32px rgba(212,185,150,0.5)",
+              }}
+              onMouseOver={e => { e.currentTarget.style.boxShadow = "0 14px 40px rgba(212,185,150,0.65)"; e.currentTarget.style.transform = "translateY(-2px)"; }}
+              onMouseOut={e => { e.currentTarget.style.boxShadow = "0 8px 32px rgba(212,185,150,0.5)"; e.currentTarget.style.transform = "translateY(0)"; }}
             >
-              Book Now
+              Book Now — Reserve Your Ritual
             </a>
-            <p className="font-body text-xs text-muted-foreground mt-5">
+            <p className="font-body text-[11px] text-[#9E9E9E] mt-5 tracking-widest">
               You will be redirected to our secure booking system.
             </p>
           </motion.div>
@@ -92,13 +106,18 @@ export default function Booking() {
       </section>
 
       {/* Assurance */}
-      <section className="py-20 md:py-28 px-4 bg-[#F8F5F0]">
-        <div className="max-w-3xl mx-auto text-center">
+      <section className="py-28 md:py-36 px-4 bg-white border-t border-[#ede8e0]">
+        <div className="max-w-2xl mx-auto text-center">
           <motion.div {...fadeUp}>
+            <div className="flex items-center justify-center gap-3 mb-8">
+              <div className="h-px w-10" style={{ background: "linear-gradient(to right, transparent, #D4B996)" }} />
+              <div className="w-1 h-1 rounded-full" style={{ background: "#D4B996" }} />
+              <div className="h-px w-10" style={{ background: "linear-gradient(to left, transparent, #D4B996)" }} />
+            </div>
             <h3 className="font-heading text-2xl md:text-3xl font-light text-foreground tracking-wide mb-5">
               Your Relaxation, <span className="italic">Guaranteed</span>
             </h3>
-            <p className="font-body text-sm text-muted-foreground leading-relaxed max-w-md mx-auto">
+            <p className="font-body text-sm text-[#8E8E8E] leading-[1.9] max-w-md mx-auto">
               Every session is designed to deliver the ultimate relaxation experience. If you have any questions before booking, do not hesitate to contact us.
             </p>
           </motion.div>
