@@ -23,8 +23,8 @@ export const IMAGES = {
   treatmentAction2: "https://media.base44.com/images/public/69cdb2c167f73801514de491/f0a1b6b76_Unknown-56.jpg",
   // Bonsai / circular art wall — atmospheric gallery only
   bonsaiWall: "https://media.base44.com/images/public/69cdb2c167f73801514de491/aa9bf892d_Unknown-53.jpg",
-  // Scalp water treatment halo device (gold ring)
-  valentineSofa: "https://media.base44.com/images/public/69cdb2c167f73801514de491/3b95cef09_generated_image.png",
+  // Scalp water treatment halo device (gold ring) — real photo
+  valentineSofa: "https://media.base44.com/images/public/69cdb2c167f73801514de491/2301cc963_attaQZg6-SsmCnZ3UfwgolwqdzIJS6AFf8VwdZcpWQKD0w.jpg",
   // Front desk interior with warm lamp
   frontDesk: "https://media.base44.com/images/public/69cdb2c167f73801514de491/2c72b9baa_Unknown-32.jpg",
   // Curly hair scalp treatment device

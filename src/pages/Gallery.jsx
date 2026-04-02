@@ -22,7 +22,7 @@ const galleryImages = [
   { src: IMAGES.treatmentAction2, alt: "Head spa session in progress",                filter: "brightness(1.06) saturate(0.84) contrast(0.96)" },
   // Group 3 — Artistic / colorful (blue/purple accent, placed last)
   { src: IMAGES.bonsaiWall,       alt: "Hi-Lite Studio circular bonsai art wall",     filter: "brightness(1.08) saturate(0.72) contrast(0.93)" },
-  { src: IMAGES.valentineSofa,    alt: "Hi-Lite Studio decorated reception sofa",     filter: "brightness(1.08) saturate(0.82) contrast(0.95)" },
+  { src: IMAGES.valentineSofa,    alt: "Scalp water treatment halo device at Hi-Lite Studio", filter: "brightness(1.1) saturate(0.85) contrast(1.0) sepia(0.06)" },
   { src: IMAGES.scalptoolCurly,   alt: "Scalp treatment device on curly hair",        filter: "brightness(1.08) saturate(0.78) contrast(0.95)" },
 ];
 
