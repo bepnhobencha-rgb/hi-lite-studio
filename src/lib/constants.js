@@ -11,8 +11,8 @@ export const IMAGES = {
 export const BOOKING_URL = "https://app.squareup.com/appointments/book/ziaxhgo8sj2etm/LKNG1X7QRRQ4M/start";
 
 export const BUSINESS = {
-  name: "HI-LITE HEAD SPA",
-  fullName: "HI-LITE HEAD SPA ANAHEIM",
+  name: "Hi - Lite Studio",
+  fullName: "Hi - Lite Studio Anaheim",
   slogan: "Your Sanctuary for Relaxation",
   address: "9832 Katella Ave, Anaheim, CA 92804",
   phone: "714-537-1075",

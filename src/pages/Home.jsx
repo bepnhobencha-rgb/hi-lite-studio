@@ -95,7 +95,7 @@ function DisneylandNote() {
   return (
     <div className="py-8 px-4 bg-card border-b border-border text-center">
       <p className="font-body text-sm text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-        Conveniently located just 10 minutes from Disneyland, Hi-Lite Head Spa Anaheim offers a peaceful place to relax and recharge after a long day of walking, crowds, and excitement.
+        Conveniently located just 10 minutes from Disneyland, Hi - Lite Studio Anaheim offers a peaceful place to relax and recharge after a long day of walking, crowds, and excitement.
       </p>
     </div>
   );
@@ -257,7 +257,7 @@ function ImageStrip() {
         <div key={i} className="overflow-hidden">
           <img
             src={img}
-            alt="HI-LITE HEAD SPA experience"
+            alt="Hi - Lite Studio experience"
             className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
           />
         </div>
