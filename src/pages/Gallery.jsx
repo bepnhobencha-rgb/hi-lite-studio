@@ -34,10 +34,10 @@ export default function Gallery() {
       {/* Hero */}
       <section className="relative h-[380px] md:h-[460px] flex items-end overflow-hidden">
         <img
-          src={IMAGES.reception}
-          alt="Hi-Lite Studio reception"
-          className="absolute inset-0 w-full h-full object-cover object-top"
-          style={{ filter: "brightness(1.05) saturate(0.9)" }}
+          src={IMAGES.luxuryMassage}
+          alt="Luxury head spa treatment at Hi-Lite Studio"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          style={{ filter: "brightness(0.95) saturate(0.85) contrast(1.05) sepia(0.1)" }}
         />
         <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.48) 0%, rgba(0,0,0,0.1) 60%, rgba(0,0,0,0.04) 100%)" }} />
         <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 pb-16 w-full">
