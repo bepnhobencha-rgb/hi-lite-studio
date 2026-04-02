@@ -32,6 +32,7 @@ export const IMAGES = {
 };
 
 export const BOOKING_URL = "https://app.squareup.com/appointments/book/ziaxhgo8sj2etm/L05ZEAHJQQTNT/start";
+export const GIFT_CARD_URL = "https://app.squareup.com/gift/MLS550QW7H88Y/order";
 
 export const BUSINESS = {
   name: "Hi - Lite Studio",

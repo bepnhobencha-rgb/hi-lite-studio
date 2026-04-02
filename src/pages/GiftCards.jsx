@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Gift } from "lucide-react";
-import { IMAGES, BOOKING_URL, BUSINESS } from "@/lib/constants";
+import { IMAGES, GIFT_CARD_URL, BUSINESS } from "@/lib/constants";
 
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
@@ -75,7 +75,7 @@ export default function GiftCards() {
                 Buy a gift card instantly through our online booking system. Choose any amount or service.
               </p>
               <a
-                href={BOOKING_URL}
+                href={GIFT_CARD_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block px-10 py-4 text-sm font-body font-medium tracking-[0.18em] rounded-full transition-all duration-300"
