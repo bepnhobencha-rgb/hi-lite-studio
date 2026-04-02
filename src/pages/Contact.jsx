@@ -78,7 +78,7 @@ export default function Contact() {
                   transition={{ ...fadeUp.transition, delay: i * 0.1 }}
                   className="flex items-start gap-5 pb-7 border-b border-border"
                 >
-                  <div className="p-3 bg-card rounded-sm">
+                  <div className="p-3 bg-[#F8F5F0] rounded-sm border border-[#e8dfd4]">
                     <item.icon size={20} className="text-gold" strokeWidth={1.5} />
                   </div>
                   <div>
@@ -110,7 +110,7 @@ export default function Contact() {
                 href={BOOKING_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-12 py-4 bg-foreground text-background text-sm font-body font-medium tracking-widest rounded-full hover:shadow-[0_0_20px_rgba(0,0,0,0.2)] hover:opacity-85 transition-all duration-300"
+                className="inline-block px-12 py-4 bg-[#D4B996] text-white text-sm font-body font-medium tracking-widest rounded-full shadow-[0_4px_18px_rgba(212,185,150,0.45)] hover:bg-[#C2A57F] transition-all duration-300"
               >
                 Book Now
               </a>

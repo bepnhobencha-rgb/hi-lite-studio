@@ -8,7 +8,7 @@ export default function BookingCTA({
   buttonText = "Book Your Experience"
 }) {
   return (
-    <section className="py-28 md:py-36 px-4 bg-primary text-primary-foreground text-center">
+    <section className="py-28 md:py-36 px-4 bg-[#F8F5F0] text-center border-t border-[#e8dfd4]">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -16,17 +16,18 @@ export default function BookingCTA({
         transition={{ duration: 0.6 }}
         className="max-w-2xl mx-auto"
       >
-        <h2 className="font-heading text-3xl md:text-5xl font-light tracking-wide mb-6">
+        <div className="w-8 h-px bg-[#D4B996] mx-auto mb-8" />
+        <h2 className="font-heading text-3xl md:text-5xl font-light tracking-wide mb-6 text-[#2C2C2C]">
           {headline}
         </h2>
-        <p className="font-body text-sm text-primary-foreground/70 mb-10 max-w-md mx-auto leading-relaxed">
+        <p className="font-body text-sm text-[#8E8E8E] mb-10 max-w-md mx-auto leading-relaxed">
           {subtext}
         </p>
         <a
           href={BOOKING_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block px-12 py-4 bg-primary-foreground text-primary text-sm font-body font-medium tracking-widest rounded-full hover:shadow-[0_0_24px_rgba(255,255,255,0.25)] hover:opacity-95 transition-all duration-300"
+          className="inline-block px-12 py-4 bg-[#D4B996] text-white text-sm font-body font-medium tracking-widest rounded-full shadow-[0_4px_18px_rgba(212,185,150,0.45)] hover:bg-[#C2A57F] transition-all duration-300"
         >
           {buttonText}
         </a>

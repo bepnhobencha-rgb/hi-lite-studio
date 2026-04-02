@@ -57,7 +57,7 @@ export default function Booking() {
                 key={i}
                 {...fadeUp}
                 transition={{ ...fadeUp.transition, delay: i * 0.15 }}
-                className="p-10 bg-card border border-border rounded-sm"
+                className="p-10 bg-white border border-[#e8dfd4] rounded-sm shadow-sm"
               >
                 <span className="font-heading text-4xl font-light text-gold/40">
                   {step.num}
@@ -80,7 +80,7 @@ export default function Booking() {
               href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-16 py-4 bg-foreground text-background text-sm font-body font-medium tracking-widest rounded-full hover:shadow-[0_0_22px_rgba(0,0,0,0.2)] hover:opacity-85 transition-all duration-300"
+              className="inline-block px-16 py-4 bg-[#D4B996] text-white text-sm font-body font-medium tracking-widest rounded-full shadow-[0_4px_18px_rgba(212,185,150,0.45)] hover:bg-[#C2A57F] transition-all duration-300"
             >
               Book Now
             </a>
@@ -92,7 +92,7 @@ export default function Booking() {
       </section>
 
       {/* Assurance */}
-      <section className="py-20 md:py-28 px-4 bg-card">
+      <section className="py-20 md:py-28 px-4 bg-[#F8F5F0]">
         <div className="max-w-3xl mx-auto text-center">
           <motion.div {...fadeUp}>
             <h3 className="font-heading text-2xl md:text-3xl font-light text-foreground tracking-wide mb-5">

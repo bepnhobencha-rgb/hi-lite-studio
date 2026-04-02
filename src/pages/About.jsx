@@ -72,7 +72,7 @@ export default function About() {
       </section>
 
       {/* Values */}
-      <section className="py-28 md:py-36 px-4 bg-card">
+      <section className="py-28 md:py-36 px-4 bg-white">
         <div className="max-w-5xl mx-auto">
           <SectionHeader
             eyebrow="What We Believe"
@@ -97,7 +97,7 @@ export default function About() {
                 key={i}
                 {...fadeUp}
                 transition={{ ...fadeUp.transition, delay: i * 0.1 }}
-                className="text-center p-10 border border-border rounded-sm"
+                className="text-center p-10 border border-[#e8dfd4] rounded-sm bg-[#F8F5F0] shadow-sm"
               >
                 <div className="w-8 h-px bg-gold mx-auto mb-6" />
                 <h3 className="font-heading text-2xl font-medium text-foreground mb-4 italic">

@@ -80,11 +80,11 @@ export default function Reviews() {
                 key={i}
                 {...fadeUp}
                 transition={{ ...fadeUp.transition, delay: i * 0.08 }}
-                className="bg-card border border-border rounded-sm p-10 flex flex-col"
+                className="bg-white border border-[#e8dfd4] rounded-sm p-10 flex flex-col shadow-sm"
               >
                 <div className="flex gap-1 mb-5">
                   {Array.from({ length: r.rating }).map((_, j) => (
-                    <Star key={j} size={13} className="fill-gold text-gold" />
+                    <Star key={j} size={13} className="fill-[#D4B996] text-[#D4B996]" />
                   ))}
                 </div>
                 <p className="font-body text-sm text-muted-foreground leading-relaxed flex-1 italic">

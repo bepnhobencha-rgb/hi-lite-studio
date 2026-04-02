@@ -48,7 +48,7 @@ export default function GiftCards() {
             <motion.div
               {...fadeUp}
               transition={{ ...fadeUp.transition, delay: 0.1 }}
-              className="bg-card border border-border rounded-sm p-12 text-center"
+              className="bg-white border border-[#e8dfd4] rounded-sm p-12 text-center shadow-sm"
             >
               <h3 className="font-heading text-2xl font-medium text-foreground mb-4">
                 Purchase Online
@@ -60,7 +60,7 @@ export default function GiftCards() {
                 href={BOOKING_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-10 py-3.5 bg-foreground text-background text-sm font-body font-medium tracking-widest rounded-full hover:shadow-[0_0_18px_rgba(0,0,0,0.2)] hover:opacity-85 transition-all duration-300"
+                className="inline-block px-10 py-3.5 bg-[#D4B996] text-white text-sm font-body font-medium tracking-widest rounded-full shadow-[0_4px_14px_rgba(212,185,150,0.4)] hover:bg-[#C2A57F] transition-all duration-300"
               >
                 Buy via Booking System
               </a>
@@ -69,7 +69,7 @@ export default function GiftCards() {
             <motion.div
               {...fadeUp}
               transition={{ ...fadeUp.transition, delay: 0.2 }}
-              className="bg-card border border-border rounded-sm p-12 text-center"
+              className="bg-white border border-[#e8dfd4] rounded-sm p-12 text-center shadow-sm"
             >
               <h3 className="font-heading text-2xl font-medium text-foreground mb-4">
                 Contact Us Directly
@@ -79,7 +79,7 @@ export default function GiftCards() {
               </p>
               <a
                 href={`tel:${BUSINESS.phone}`}
-                className="inline-block px-10 py-3.5 border border-foreground text-foreground text-sm font-body font-medium tracking-widest rounded-full hover:bg-foreground hover:text-background hover:shadow-[0_0_18px_rgba(0,0,0,0.15)] transition-all duration-300"
+                className="inline-block px-10 py-3.5 border border-[#D4B996] text-[#D4B996] text-sm font-body font-medium tracking-widest rounded-full hover:bg-[#D4B996] hover:text-white transition-all duration-300"
               >
                 Contact Us for Gift Cards
               </a>
@@ -100,7 +100,7 @@ export default function GiftCards() {
                 (occasion) => (
                   <span
                     key={occasion}
-                    className="px-6 py-2.5 bg-card border border-border rounded-full font-body text-sm text-muted-foreground"
+                    className="px-6 py-2.5 bg-white border border-[#e8dfd4] rounded-full font-body text-sm text-[#8E8E8E]"
                   >
                     {occasion}
                   </span>

@@ -51,7 +51,7 @@ export default function Promotions() {
                   key={i}
                   {...fadeUp}
                   transition={{ ...fadeUp.transition, delay: i * 0.1 }}
-                  className="bg-card border border-border rounded-sm p-10 md:p-12 flex flex-col"
+                  className="bg-white border border-[#e8dfd4] rounded-sm p-10 md:p-12 flex flex-col shadow-sm"
                 >
                   <Icon size={26} className="text-gold mb-5" strokeWidth={1.5} />
                   <h3 className="font-heading text-2xl font-medium text-foreground mb-3">
@@ -68,7 +68,7 @@ export default function Promotions() {
                       href={BOOKING_URL}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-8 py-3 bg-foreground text-background text-xs font-body tracking-wider rounded-full hover:shadow-[0_0_16px_rgba(0,0,0,0.2)] hover:opacity-85 transition-all duration-300"
+                      className="px-8 py-3 bg-[#D4B996] text-white text-xs font-body tracking-wider rounded-full shadow-[0_4px_14px_rgba(212,185,150,0.4)] hover:bg-[#C2A57F] transition-all duration-300"
                     >
                       Book Now
                     </a>

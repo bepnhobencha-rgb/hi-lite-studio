@@ -46,12 +46,12 @@ export default function Services() {
                 key={i}
                 {...fadeUp}
                 transition={{ ...fadeUp.transition, delay: i * 0.08 }}
-                className={`relative bg-card border rounded-sm p-10 md:p-12 flex flex-col md:flex-row md:items-center gap-8 ${
-                  s.badge ? "border-gold/40" : "border-border"
+                className={`relative bg-white border rounded-sm p-10 md:p-12 flex flex-col md:flex-row md:items-center gap-8 shadow-sm ${
+                  s.badge ? "border-[#D4B996]/50" : "border-[#e8dfd4]"
                 }`}
               >
                 {s.badge && (
-                  <span className="absolute top-0 right-0 bg-gold text-gold-foreground text-xs font-body tracking-wider px-5 py-1.5 rounded-bl-sm rounded-tr-sm">
+                  <span className="absolute top-0 right-0 bg-[#D4B996] text-white text-xs font-body tracking-wider px-5 py-1.5 rounded-bl-sm rounded-tr-sm">
                     {s.badge}
                   </span>
                 )}
@@ -79,7 +79,7 @@ export default function Services() {
                     href={BOOKING_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-10 py-3 bg-foreground text-background text-sm font-body tracking-wider rounded-full hover:shadow-[0_0_18px_rgba(0,0,0,0.2)] hover:opacity-85 transition-all duration-300"
+                    className="px-10 py-3 bg-[#D4B996] text-white text-sm font-body tracking-wider rounded-full shadow-[0_4px_14px_rgba(212,185,150,0.4)] hover:bg-[#C2A57F] transition-all duration-300"
                   >
                     Book
                   </a>
@@ -91,7 +91,7 @@ export default function Services() {
       </section>
 
       {/* Add-Ons */}
-      <section className="py-28 md:py-36 px-4 bg-card">
+      <section className="py-28 md:py-36 px-4 bg-[#F8F5F0]">
         <div className="max-w-4xl mx-auto">
           <SectionHeader
             eyebrow="Enhance Your Visit"
@@ -104,7 +104,7 @@ export default function Services() {
                 key={i}
                 {...fadeUp}
                 transition={{ ...fadeUp.transition, delay: i * 0.05 }}
-                className="flex items-center justify-between py-5 px-7 bg-background border border-border rounded-sm"
+                className="flex items-center justify-between py-5 px-7 bg-white border border-[#e8dfd4] rounded-sm shadow-sm"
               >
                 <span className="font-body text-sm text-foreground">{addon.name}</span>
                 <span className="font-heading text-xl font-medium text-gold">${addon.price}</span>

@@ -35,14 +35,14 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-background/95 backdrop-blur-md shadow-sm"
-          : "bg-transparent"
+          ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-[#e8dfd4]"
+          : "bg-white/90 backdrop-blur-sm"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           <Link to="/" className="flex items-center gap-2">
-            <span className="font-heading text-xl lg:text-2xl font-semibold tracking-wider text-foreground">
+            <span className="font-heading text-xl lg:text-2xl font-semibold tracking-wider text-[#2C2C2C]">
               {BUSINESS.name}
             </span>
           </Link>
@@ -55,8 +55,8 @@ export default function Navbar() {
                 to={link.path}
                 className={`px-3 py-2 text-sm font-body tracking-wide transition-colors ${
                   location.pathname === link.path
-                    ? "text-foreground font-medium"
-                    : "text-muted-foreground hover:text-foreground"
+                    ? "text-[#2C2C2C] font-medium"
+                    : "text-[#8E8E8E] hover:text-[#2C2C2C]"
                 }`}
               >
                 {link.label}
@@ -66,7 +66,7 @@ export default function Navbar() {
               href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-4 px-7 py-2.5 bg-foreground text-background text-sm font-body font-medium tracking-wider rounded-full hover:shadow-[0_0_16px_rgba(0,0,0,0.2)] hover:opacity-85 transition-all duration-300"
+              className="ml-4 px-7 py-2.5 bg-[#D4B996] text-white text-sm font-body font-medium tracking-wider rounded-full shadow-[0_4px_14px_rgba(212,185,150,0.4)] hover:bg-[#C2A57F] transition-all duration-300"
             >
               Book Now
             </a>
@@ -75,7 +75,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setOpen(!open)}
-            className="lg:hidden p-2 text-foreground"
+            className="lg:hidden p-2 text-[#2C2C2C]"
             aria-label="Toggle menu"
           >
             {open ? <X size={24} /> : <Menu size={24} />}
@@ -90,17 +90,17 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-background/98 backdrop-blur-md border-t border-border overflow-hidden"
+            className="lg:hidden bg-white border-t border-[#e8dfd4] overflow-hidden"
           >
             <nav className="flex flex-col px-6 py-4 space-y-1">
               {NAV_LINKS.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`py-3 text-base font-body tracking-wide border-b border-border/50 transition-colors ${
+                  className={`py-3 text-base font-body tracking-wide border-b border-[#e8dfd4]/60 transition-colors ${
                     location.pathname === link.path
-                      ? "text-foreground font-medium"
-                      : "text-muted-foreground"
+                      ? "text-[#2C2C2C] font-medium"
+                      : "text-[#8E8E8E]"
                   }`}
                 >
                   {link.label}
@@ -110,7 +110,7 @@ export default function Navbar() {
                 href={BOOKING_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-5 w-full py-3.5 bg-foreground text-background text-center text-sm font-body font-medium tracking-wider rounded-full hover:opacity-85 transition-all duration-300"
+                className="mt-5 w-full py-3.5 bg-[#D4B996] text-white text-center text-sm font-body font-medium tracking-wider rounded-full shadow-[0_4px_14px_rgba(212,185,150,0.4)] hover:bg-[#C2A57F] transition-all duration-300"
               >
                 Book Now
               </a>

@@ -93,7 +93,7 @@ function Hero() {
 
 function DisneylandNote() {
   return (
-    <div className="py-8 px-4 bg-card border-b border-border text-center">
+    <div className="py-8 px-4 bg-white border-b border-[#e8dfd4] text-center">
       <p className="font-body text-sm text-muted-foreground max-w-2xl mx-auto leading-relaxed">
         Conveniently located at 5938 Westminster Blvd., Westminster, CA, Hi - Lite Studio offers a peaceful place to relax and recharge.
       </p>
@@ -123,7 +123,7 @@ function ProblemSection() {
               key={i}
               {...fadeUp}
               transition={{ ...fadeUp.transition, delay: i * 0.1 }}
-              className="text-center p-10 bg-card rounded-sm border border-border"
+              className="text-center p-10 bg-white rounded-sm border border-[#e8dfd4] shadow-sm"
             >
               <item.icon size={28} className="mx-auto mb-5 text-gold" strokeWidth={1.5} />
               <p className="font-body text-sm text-foreground">{item.text}</p>
@@ -145,7 +145,7 @@ function BenefitsSection() {
   ];
 
   return (
-    <section className="py-28 md:py-40 px-4 bg-card">
+    <section className="py-28 md:py-40 px-4 bg-[#F8F5F0]">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <motion.div {...fadeUp}>
           <p className="font-body text-xs tracking-[0.35em] uppercase text-gold mb-4">
@@ -202,10 +202,10 @@ function FeaturedServices() {
               key={i}
               {...fadeUp}
               transition={{ ...fadeUp.transition, delay: i * 0.1 }}
-              className="bg-card border border-border rounded-sm p-10 flex flex-col relative"
+              className="bg-white border border-[#e8dfd4] rounded-sm p-10 flex flex-col relative shadow-sm"
             >
               {s.badge && (
-                <span className="absolute top-4 right-4 text-xs font-body tracking-wider text-gold-foreground bg-gold px-3 py-1 rounded-full">
+                <span className="absolute top-4 right-4 text-xs font-body tracking-wider text-white bg-[#D4B996] px-3 py-1 rounded-full">
                   {s.badge}
                 </span>
               )}
@@ -230,7 +230,7 @@ function FeaturedServices() {
                 href={BOOKING_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-center py-3.5 bg-foreground text-background text-sm font-body tracking-wider rounded-full hover:shadow-[0_0_18px_rgba(0,0,0,0.2)] hover:opacity-85 transition-all duration-300"
+                className="text-center py-3.5 bg-[#D4B996] text-white text-sm font-body tracking-wider rounded-full shadow-[0_4px_14px_rgba(212,185,150,0.4)] hover:bg-[#C2A57F] transition-all duration-300"
               >
                 Book Now
               </a>
