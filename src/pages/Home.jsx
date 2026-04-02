@@ -117,8 +117,11 @@ function Hero() {
 function LocationNote() {
   return (
     <div className="py-7 px-4 bg-white border-b border-[#ede8e0] text-center">
-      <p className="font-body text-[11px] text-[#9E9E9E] max-w-xl mx-auto leading-relaxed tracking-widest uppercase">
+      <p className="font-body text-[11px] text-[#9E9E9E] max-w-2xl mx-auto leading-relaxed tracking-widest uppercase">
         5938 Westminster Blvd., Westminster, CA &nbsp;·&nbsp; Mon – Sun: 9 AM – 7 PM
+      </p>
+      <p className="font-body text-[10px] mt-2 tracking-[0.3em] uppercase" style={{ color: "#C2A57F" }}>
+        Est. 2023 &nbsp;·&nbsp; 15 min from Huntington Beach
       </p>
     </div>
   );

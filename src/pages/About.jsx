@@ -53,7 +53,7 @@ export default function About() {
                 Every ritual we offer is carefully designed to calm the mind and restore the body. From the moment you walk through our doors, you are enveloped in warmth, comfort, and care.
               </p>
               <p>
-                Located in Westminster, CA, our spa blends modern techniques with time-honored traditions to deliver an experience unlike any other. We use premium products, personalized care, and a gentle, unhurried approach that honors your need for rest.
+                Founded in 2023, Hi-Lite Studio was born from a passion for bringing genuine luxury wellness to the heart of Westminster, CA — just 15 minutes from Huntington Beach. Our location was chosen with intention: a peaceful neighborhood retreat that feels worlds away from the everyday rush, yet close enough to be your regular escape.
               </p>
             </div>
           </motion.div>
