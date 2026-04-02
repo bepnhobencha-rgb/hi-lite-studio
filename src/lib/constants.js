@@ -4,8 +4,8 @@ export const IMAGES = {
   reception: "https://media.base44.com/images/public/69cdb2c167f73801514de491/4739d9dff_Unknown-44.jpg",
   // Treatment room with beds + warm arch lighting → Services hero, Booking hero
   treatmentRoom: "https://media.base44.com/images/public/69cdb2c167f73801514de491/bc90681cb_Unknown-31.jpg",
-  // Beautiful long hair result after treatment → Benefits section, About secondary
-  hairResult: "https://media.base44.com/images/public/69cdb2c167f73801514de491/d5d7091ab_Unknown-50.jpg",
+  // Scalp water halo treatment — About Philosophy, Benefits section
+  hairResult: "https://media.base44.com/images/public/69cdb2c167f73801514de491/d7b7e6d47_Unknown-46.jpg",
   // Scalp water treatment tool close-up → Services section visual
   scalptool: "https://media.base44.com/images/public/69cdb2c167f73801514de491/34dc24b95_Unknown-49.jpg",
   // LED facial treatment on client → Services / treatment close-up

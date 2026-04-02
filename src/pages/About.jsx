@@ -64,9 +64,9 @@ export default function About() {
           >
             <img
               src={IMAGES.hairResult}
-              alt="Beautiful hair result at Hi-Lite Studio"
-              className="w-full h-[500px] object-cover object-top rounded-2xl"
-              style={{ filter: "brightness(1.06) saturate(0.9) contrast(0.96)", boxShadow: "0 20px 60px rgba(0,0,0,0.1)" }}
+              alt="Scalp water halo treatment at Hi-Lite Studio"
+              className="w-full h-[500px] object-cover object-center rounded-2xl"
+              style={{ filter: "brightness(1.12) saturate(0.78) contrast(1.04) sepia(0.1) hue-rotate(-5deg)", boxShadow: "0 24px 70px rgba(212,185,150,0.25), 0 4px 20px rgba(0,0,0,0.12)" }}
             />
           </motion.div>
         </div>

@@ -299,7 +299,7 @@ function ImageStrip() {
       {[
         { src: IMAGES.reception, filter: "brightness(1.08) saturate(0.92)" },
         { src: IMAGES.treatmentRoom, filter: "brightness(1.06) saturate(0.88) contrast(0.96)" },
-        { src: IMAGES.hairResult, filter: "brightness(1.06) saturate(0.9)" },
+        { src: IMAGES.hairResult, filter: "brightness(1.12) saturate(0.78) contrast(1.04) sepia(0.1)" },
         { src: IMAGES.scalptool, filter: "brightness(1.08) saturate(0.88)" },
       ].map((img, i) => (
         <div key={i} className="overflow-hidden relative">
