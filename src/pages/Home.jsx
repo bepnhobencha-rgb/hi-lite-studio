@@ -21,7 +21,7 @@ function Hero() {
           src={IMAGES.treatmentAction1}
           alt="Hi-Lite Studio head spa treatment"
           className="w-full h-full object-cover object-center"
-          style={{ filter: "brightness(1.1) saturate(0.85) contrast(0.96)" }}
+          style={{ filter: "brightness(1.0) saturate(0.8) contrast(1.02) sepia(0.08)" }}
         />
         {/* Very soft overlay — 15-20% */}
         <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.08) 40%, rgba(0,0,0,0.38) 100%)" }} />

@@ -18,8 +18,8 @@ export const IMAGES = {
   groupClients: "https://media.base44.com/images/public/69cdb2c167f73801514de491/457261d42_Unknown-51.jpg",
 
   // === GALLERY IMAGES (atmospheric, treatment scenes) ===
-  // Treatment in progress - therapist working on client
-  treatmentAction1: "https://media.base44.com/images/public/69cdb2c167f73801514de491/e1103ffd5_Unknown-57.jpg",
+  // Treatment in progress - therapist working on client (hero)
+  treatmentAction1: "https://media.base44.com/images/public/69cdb2c167f73801514de491/b1a7aa523_generated_image.png",
   treatmentAction2: "https://media.base44.com/images/public/69cdb2c167f73801514de491/f0a1b6b76_Unknown-56.jpg",
   // Bonsai / circular art wall — atmospheric gallery only
   bonsaiWall: "https://media.base44.com/images/public/69cdb2c167f73801514de491/aa9bf892d_Unknown-53.jpg",
