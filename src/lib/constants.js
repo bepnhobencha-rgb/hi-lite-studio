@@ -31,7 +31,7 @@ export const IMAGES = {
   scalptoolCurly: "https://media.base44.com/images/public/69cdb2c167f73801514de491/58c964585_Unknown-52.jpg",
 };
 
-export const BOOKING_URL = "https://app.squareup.com/appointments/book/ziaxhgo8sj2etm/LKNG1X7QRRQ4M/start";
+export const BOOKING_URL = "https://app.squareup.com/appointments/book/ziaxhgo8sj2etm/L05ZEAHJQQTNT/start";
 
 export const BUSINESS = {
   name: "Hi - Lite Studio",
