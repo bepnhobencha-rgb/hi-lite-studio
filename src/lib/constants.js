@@ -1,17 +1,34 @@
 export const IMAGES = {
-  // Real client photos — primary brand images
-  reception: "https://media.base44.com/images/public/69cdb2c167f73801514de491/48a0733cf_Unknown-44.jpg",    // reception sofa + gold logo — hero / about
-  treatmentRoom: "https://media.base44.com/images/public/69cdb2c167f73801514de491/bc90681cb_Unknown-31.jpg", // treatment room beds — services / booking
-  frontDesk: "https://media.base44.com/images/public/69cdb2c167f73801514de491/2c72b9baa_Unknown-32.jpg",    // front desk / reception area — about / gallery
+  // === PRIMARY BRAND IMAGES (clean, luxury-aligned) ===
+  // Reception sofa + gold logo (clean, bright, brand identity) → Home hero, About hero
+  reception: "https://media.base44.com/images/public/69cdb2c167f73801514de491/4739d9dff_Unknown-44.jpg",
+  // Treatment room with beds + warm arch lighting → Services hero, Booking hero
+  treatmentRoom: "https://media.base44.com/images/public/69cdb2c167f73801514de491/bc90681cb_Unknown-31.jpg",
+  // Beautiful long hair result after treatment → Benefits section, About secondary
+  hairResult: "https://media.base44.com/images/public/69cdb2c167f73801514de491/d5d7091ab_Unknown-50.jpg",
+  // Scalp water treatment tool close-up → Services section visual
+  scalptool: "https://media.base44.com/images/public/69cdb2c167f73801514de491/34dc24b95_Unknown-49.jpg",
+  // LED facial treatment on client → Services / treatment close-up
+  ledTreatment: "https://media.base44.com/images/public/69cdb2c167f73801514de491/f54592348_Unknown-54.jpg",
+  // Gift card held up (Mother's Day) → Gift Cards page
+  giftCard: "https://media.base44.com/images/public/69cdb2c167f73801514de491/983804f1f_Unknown-62.jpg",
+  // Happy clients with birthday signs under gold logo → Reviews / About community
+  happyClients: "https://media.base44.com/images/public/69cdb2c167f73801514de491/b70d27da5_Unknown-48.jpg",
+  // Group of 4 clients celebrating birthday under gold logo → Reviews / Promotions
+  groupClients: "https://media.base44.com/images/public/69cdb2c167f73801514de491/457261d42_Unknown-51.jpg",
 
-  // Legacy images kept for gallery and supplemental use
-  hero: "https://media.base44.com/images/public/user_6946325409b1232840422c0d/70a537646_IMG_4176-ThiNguyen.jpeg",
-  treatment1: "https://media.base44.com/images/public/user_6946325409b1232840422c0d/a0d703ae9_IMG_4111-ThiNguyen.jpg",
-  treatment2: "https://media.base44.com/images/public/user_6946325409b1232840422c0d/4fe6da2a3_IMG_4177-ThiNguyen.jpeg",
-  massage: "https://media.base44.com/images/public/user_6946325409b1232840422c0d/71d11e578_IMG_4179-ThiNguyen.jpg",
-  scalp: "https://media.base44.com/images/public/user_6946325409b1232840422c0d/4ea593ac4_IMG_4180-ThiNguyen.jpeg",
-  facial: "https://media.base44.com/images/public/user_6946325409b1232840422c0d/d827ba2f1_IMG_4181-ThiNguyen.jpeg",
-  interior: "https://media.base44.com/images/public/user_6946325409b1232840422c0d/dfd3f2bb1_IMG_4589-ThiNguyen.jpg",
+  // === GALLERY IMAGES (atmospheric, treatment scenes) ===
+  // Treatment in progress - therapist working on client
+  treatmentAction1: "https://media.base44.com/images/public/69cdb2c167f73801514de491/e1103ffd5_Unknown-57.jpg",
+  treatmentAction2: "https://media.base44.com/images/public/69cdb2c167f73801514de491/f0a1b6b76_Unknown-56.jpg",
+  // Bonsai / circular art wall — atmospheric gallery only
+  bonsaiWall: "https://media.base44.com/images/public/69cdb2c167f73801514de491/aa9bf892d_Unknown-53.jpg",
+  // Valentine sofa with gold logo decorated
+  valentineSofa: "https://media.base44.com/images/public/69cdb2c167f73801514de491/d12b6885a_Unknown-47.jpg",
+  // Front desk interior with warm lamp
+  frontDesk: "https://media.base44.com/images/public/69cdb2c167f73801514de491/2c72b9baa_Unknown-32.jpg",
+  // Curly hair scalp treatment device
+  scalptoolCurly: "https://media.base44.com/images/public/69cdb2c167f73801514de491/58c964585_Unknown-52.jpg",
 };
 
 export const BOOKING_URL = "https://app.squareup.com/appointments/book/ziaxhgo8sj2etm/LKNG1X7QRRQ4M/start";

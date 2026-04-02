@@ -6,13 +6,18 @@ import SectionHeader from "@/components/shared/SectionHeader";
 import BookingCTA from "@/components/shared/BookingCTA";
 
 const galleryImages = [
-  { src: IMAGES.reception, alt: "Hi-Lite Studio reception with gold logo", filter: "brightness(1.08) saturate(0.93)" },
-  { src: IMAGES.treatmentRoom, alt: "Hi-Lite Studio treatment room", filter: "brightness(1.05) saturate(0.88) contrast(0.96)" },
-  { src: IMAGES.frontDesk, alt: "Hi-Lite Studio front desk interior", filter: "brightness(1.06) saturate(0.85) contrast(0.95)" },
-  { src: IMAGES.treatment1, alt: "Head spa wash treatment", filter: "" },
-  { src: IMAGES.treatment2, alt: "Relaxing scalp therapy", filter: "" },
-  { src: IMAGES.massage, alt: "Spa massage therapy", filter: "" },
-  { src: IMAGES.scalp, alt: "Scalp massage close-up", filter: "" },
+  { src: IMAGES.reception, alt: "Hi-Lite Studio reception with gold logo", filter: "brightness(1.1) saturate(0.92) contrast(0.96)" },
+  { src: IMAGES.treatmentRoom, alt: "Hi-Lite Studio treatment room with beds", filter: "brightness(1.05) saturate(0.88) contrast(0.96)" },
+  { src: IMAGES.hairResult, alt: "Beautiful hair result after treatment", filter: "brightness(1.06) saturate(0.9)" },
+  { src: IMAGES.ledTreatment, alt: "LED scalp therapy treatment", filter: "brightness(1.08) saturate(0.85)" },
+  { src: IMAGES.scalptool, alt: "Scalp water treatment ritual", filter: "brightness(1.06) saturate(0.88)" },
+  { src: IMAGES.happyClients, alt: "Happy clients at Hi-Lite Studio", filter: "brightness(1.08) saturate(0.88)" },
+  { src: IMAGES.groupClients, alt: "Group celebration at Hi-Lite Studio", filter: "brightness(1.06) saturate(0.88)" },
+  { src: IMAGES.valentineSofa, alt: "Hi-Lite Studio decorated reception sofa", filter: "brightness(1.08) saturate(0.88)" },
+  { src: IMAGES.treatmentAction1, alt: "Spa treatment in progress", filter: "brightness(1.05) saturate(0.85)" },
+  { src: IMAGES.bonsaiWall, alt: "Hi-Lite Studio artistic interior", filter: "brightness(1.1) saturate(0.75) contrast(0.94)" },
+  { src: IMAGES.frontDesk, alt: "Hi-Lite Studio front desk and warm interior", filter: "brightness(1.06) saturate(0.85) contrast(0.95)" },
+  { src: IMAGES.scalptoolCurly, alt: "Scalp treatment device on curly hair", filter: "brightness(1.08) saturate(0.82)" },
 ];
 
 export default function Gallery() {

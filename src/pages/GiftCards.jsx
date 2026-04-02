@@ -22,9 +22,10 @@ export default function GiftCards() {
       {/* Hero */}
       <section className="relative h-[380px] md:h-[460px] flex items-end overflow-hidden">
         <img
-          src={IMAGES.treatment1}
-          alt="Gift card for head spa"
-          className="absolute inset-0 w-full h-full object-cover"
+          src={IMAGES.giftCard}
+          alt="Hi-Lite Studio gift card"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          style={{ filter: "brightness(1.08) saturate(0.9) contrast(0.96)" }}
         />
         <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.48) 0%, rgba(0,0,0,0.1) 60%, rgba(0,0,0,0.04) 100%)" }} />
         <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 pb-16 w-full">
@@ -40,6 +41,16 @@ export default function GiftCards() {
       {/* Gift Card Content */}
       <section className="py-40 md:py-56 px-4 bg-[#F8F5F0]">
         <div className="max-w-4xl mx-auto">
+
+          {/* Gift Card Hero Visual */}
+          <motion.div {...fadeUp} className="mb-20 rounded-2xl overflow-hidden shadow-[0_8px_40px_rgba(0,0,0,0.1)]" style={{ height: "320px" }}>
+            <img
+              src={IMAGES.giftCard}
+              alt="Hi-Lite Studio gift card"
+              className="w-full h-full object-cover object-center"
+              style={{ filter: "brightness(1.08) saturate(0.9) contrast(0.96)" }}
+            />
+          </motion.div>
 
           {/* Intro */}
           <motion.div {...fadeUp} className="text-center mb-24">

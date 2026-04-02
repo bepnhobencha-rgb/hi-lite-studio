@@ -63,9 +63,9 @@ export default function About() {
             transition={{ ...fadeUp.transition, delay: 0.2 }}
           >
             <img
-              src={IMAGES.frontDesk}
-              alt="Hi-Lite Studio front desk and interior"
-              className="w-full h-[500px] object-cover object-top rounded-2xl"
+              src={IMAGES.treatmentRoom}
+              alt="Hi-Lite Studio treatment room"
+              className="w-full h-[500px] object-cover object-left rounded-2xl"
               style={{ filter: "brightness(1.06) saturate(0.88) contrast(0.96)" }}
               style={{ boxShadow: "0 20px 60px rgba(0,0,0,0.1)" }}
             />

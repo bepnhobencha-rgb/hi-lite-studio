@@ -21,7 +21,7 @@ function Hero() {
           src={IMAGES.reception}
           alt="Hi-Lite Studio reception with gold logo"
           className="w-full h-full object-cover object-center"
-          style={{ filter: "brightness(1.08) saturate(0.95) contrast(0.97)" }}
+          style={{ filter: "brightness(1.1) saturate(0.92) contrast(0.96)" }}
         />
         {/* Very soft overlay — 15-20% */}
         <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.08) 40%, rgba(0,0,0,0.38) 100%)" }} />
@@ -200,10 +200,10 @@ function BenefitsSection() {
           className="relative"
         >
           <img
-            src={IMAGES.treatmentRoom}
-            alt="Hi-Lite Studio treatment room"
-            className="w-full h-[520px] object-cover object-left rounded-2xl"
-            style={{ filter: "brightness(1.05) saturate(0.9) contrast(0.96)" }}
+            src={IMAGES.hairResult}
+            alt="Beautiful hair result after Hi-Lite Studio treatment"
+            className="w-full h-[520px] object-cover object-top rounded-2xl"
+            style={{ filter: "brightness(1.06) saturate(0.9) contrast(0.97)" }}
             style={{ boxShadow: "0 20px 60px rgba(0,0,0,0.1)" }}
           />
           <div className="absolute inset-0 rounded-2xl" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.06), transparent)" }} />
@@ -294,7 +294,7 @@ function FeaturedServices() {
 function ImageStrip() {
   return (
     <section className="grid grid-cols-2 md:grid-cols-4 h-72 md:h-96">
-      {[IMAGES.treatment1, IMAGES.treatment2, IMAGES.massage, IMAGES.interior].map((img, i) => (
+      {[IMAGES.treatmentRoom, IMAGES.ledTreatment, IMAGES.treatmentAction1, IMAGES.hairResult].map((img, i) => (
         <div key={i} className="overflow-hidden relative">
           <img
             src={img}
