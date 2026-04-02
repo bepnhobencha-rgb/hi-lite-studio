@@ -1,4 +1,10 @@
 export const IMAGES = {
+  // Real client photos — primary brand images
+  reception: "https://media.base44.com/images/public/69cdb2c167f73801514de491/48a0733cf_Unknown-44.jpg",    // reception sofa + gold logo — hero / about
+  treatmentRoom: "https://media.base44.com/images/public/69cdb2c167f73801514de491/bc90681cb_Unknown-31.jpg", // treatment room beds — services / booking
+  frontDesk: "https://media.base44.com/images/public/69cdb2c167f73801514de491/2c72b9baa_Unknown-32.jpg",    // front desk / reception area — about / gallery
+
+  // Legacy images kept for gallery and supplemental use
   hero: "https://media.base44.com/images/public/user_6946325409b1232840422c0d/70a537646_IMG_4176-ThiNguyen.jpeg",
   treatment1: "https://media.base44.com/images/public/user_6946325409b1232840422c0d/a0d703ae9_IMG_4111-ThiNguyen.jpg",
   treatment2: "https://media.base44.com/images/public/user_6946325409b1232840422c0d/4fe6da2a3_IMG_4177-ThiNguyen.jpeg",

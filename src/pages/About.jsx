@@ -17,9 +17,10 @@ export default function About() {
       {/* Hero */}
       <section className="relative h-[380px] md:h-[460px] flex items-end overflow-hidden">
         <img
-          src={IMAGES.interior}
-          alt="Hi - Lite Studio interior"
-          className="absolute inset-0 w-full h-full object-cover"
+          src={IMAGES.reception}
+          alt="Hi-Lite Studio reception with gold logo"
+          className="absolute inset-0 w-full h-full object-cover object-top"
+          style={{ filter: "brightness(1.05) saturate(0.92)" }}
         />
         <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.48) 0%, rgba(0,0,0,0.1) 60%, rgba(0,0,0,0.04) 100%)" }} />
         <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 pb-16 w-full">
@@ -62,9 +63,10 @@ export default function About() {
             transition={{ ...fadeUp.transition, delay: 0.2 }}
           >
             <img
-              src={IMAGES.interior}
-              alt="Inside Hi - Lite Studio"
-              className="w-full h-[500px] object-cover rounded-2xl"
+              src={IMAGES.frontDesk}
+              alt="Hi-Lite Studio front desk and interior"
+              className="w-full h-[500px] object-cover object-top rounded-2xl"
+              style={{ filter: "brightness(1.06) saturate(0.88) contrast(0.96)" }}
               style={{ boxShadow: "0 20px 60px rgba(0,0,0,0.1)" }}
             />
           </motion.div>

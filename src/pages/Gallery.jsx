@@ -6,13 +6,13 @@ import SectionHeader from "@/components/shared/SectionHeader";
 import BookingCTA from "@/components/shared/BookingCTA";
 
 const galleryImages = [
-  { src: IMAGES.interior, alt: "Hi-Lite Studio interior" },
-  { src: IMAGES.hero, alt: "Luxury scalp treatment" },
-  { src: IMAGES.treatment1, alt: "Head spa wash treatment" },
-  { src: IMAGES.treatment2, alt: "Relaxing scalp therapy" },
-  { src: IMAGES.massage, alt: "Spa massage therapy" },
-  { src: IMAGES.scalp, alt: "Scalp massage close-up" },
-  { src: IMAGES.facial, alt: "Facial and head treatment" },
+  { src: IMAGES.reception, alt: "Hi-Lite Studio reception with gold logo", filter: "brightness(1.08) saturate(0.93)" },
+  { src: IMAGES.treatmentRoom, alt: "Hi-Lite Studio treatment room", filter: "brightness(1.05) saturate(0.88) contrast(0.96)" },
+  { src: IMAGES.frontDesk, alt: "Hi-Lite Studio front desk interior", filter: "brightness(1.06) saturate(0.85) contrast(0.95)" },
+  { src: IMAGES.treatment1, alt: "Head spa wash treatment", filter: "" },
+  { src: IMAGES.treatment2, alt: "Relaxing scalp therapy", filter: "" },
+  { src: IMAGES.massage, alt: "Spa massage therapy", filter: "" },
+  { src: IMAGES.scalp, alt: "Scalp massage close-up", filter: "" },
 ];
 
 export default function Gallery() {
@@ -23,9 +23,10 @@ export default function Gallery() {
       {/* Hero */}
       <section className="relative h-[380px] md:h-[460px] flex items-end overflow-hidden">
         <img
-          src={IMAGES.interior}
-          alt="Hi-Lite Studio gallery"
-          className="absolute inset-0 w-full h-full object-cover"
+          src={IMAGES.reception}
+          alt="Hi-Lite Studio reception"
+          className="absolute inset-0 w-full h-full object-cover object-top"
+          style={{ filter: "brightness(1.05) saturate(0.9)" }}
         />
         <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.48) 0%, rgba(0,0,0,0.1) 60%, rgba(0,0,0,0.04) 100%)" }} />
         <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 pb-16 w-full">
@@ -61,6 +62,7 @@ export default function Gallery() {
                   src={img.src}
                   alt={img.alt}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  style={img.filter ? { filter: img.filter } : {}}
                 />
               </motion.div>
             ))}

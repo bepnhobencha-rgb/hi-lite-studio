@@ -23,9 +23,10 @@ export default function Services() {
       {/* Hero */}
       <section className="relative h-[380px] md:h-[460px] flex items-end overflow-hidden">
         <img
-          src={IMAGES.facial}
-          alt="Head spa treatment"
-          className="absolute inset-0 w-full h-full object-cover"
+          src={IMAGES.treatmentRoom}
+          alt="Hi-Lite Studio treatment room"
+          className="absolute inset-0 w-full h-full object-cover object-left"
+          style={{ filter: "brightness(1.06) saturate(0.88) contrast(0.96)" }}
         />
         <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.48) 0%, rgba(0,0,0,0.1) 60%, rgba(0,0,0,0.04) 100%)" }} />
         <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 pb-16 w-full">
