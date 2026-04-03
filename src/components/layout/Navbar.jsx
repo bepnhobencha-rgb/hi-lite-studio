@@ -66,7 +66,7 @@ export default function Navbar() {
               href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-4 px-7 py-2.5 bg-[#D4B996] text-white text-sm font-body font-medium tracking-wider rounded-full shadow-[0_4px_14px_rgba(212,185,150,0.4)] hover:bg-[#C2A57F] transition-all duration-300"
+              className="ml-4 px-7 py-2.5 bg-[#C4919A] text-white text-sm font-body font-medium tracking-wider rounded-full shadow-[0_4px_14px_rgba(196,145,154,0.4)] hover:bg-[#B37880] transition-all duration-300"
             >
               Book Now
             </a>
@@ -110,7 +110,7 @@ export default function Navbar() {
                 href={BOOKING_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-5 w-full py-3.5 bg-[#D4B996] text-white text-center text-sm font-body font-medium tracking-wider rounded-full shadow-[0_4px_14px_rgba(212,185,150,0.4)] hover:bg-[#C2A57F] transition-all duration-300"
+                className="mt-5 w-full py-3.5 bg-[#C4919A] text-white text-center text-sm font-body font-medium tracking-wider rounded-full shadow-[0_4px_14px_rgba(196,145,154,0.4)] hover:bg-[#B37880] transition-all duration-300"
               >
                 Book Now
               </a>

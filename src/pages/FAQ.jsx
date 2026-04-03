@@ -65,7 +65,7 @@ export default function FAQ() {
         />
         <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.48) 0%, rgba(0,0,0,0.1) 60%, rgba(0,0,0,0.04) 100%)" }} />
         <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 pb-16 w-full">
-          <p className="font-body text-[10px] tracking-[0.5em] uppercase mb-3" style={{ color: "#D4B996" }}>
+          <p className="font-body text-[10px] tracking-[0.5em] uppercase mb-3" style={{ color: "#C4919A" }}>
             Questions & Answers
           </p>
           <h1 className="font-heading text-4xl md:text-6xl font-light text-white tracking-[0.04em]">
@@ -86,7 +86,7 @@ export default function FAQ() {
               <AccordionItem
                 key={i}
                 value={`faq-${i}`}
-                className="bg-white border border-[#ede8e0] rounded-xl px-7 shadow-[0_2px_16px_rgba(212,185,150,0.07)] hover:shadow-[0_4px_24px_rgba(212,185,150,0.13)] transition-shadow duration-300"
+                className="bg-white border border-[#ede8e0] rounded-xl px-7 shadow-[0_2px_16px_rgba(196,145,154,0.07)] hover:shadow-[0_4px_24px_rgba(196,145,154,0.13)] transition-shadow duration-300"
               >
                 <AccordionTrigger className="font-body text-sm text-foreground py-6 hover:no-underline tracking-wide">
                   {faq.q}

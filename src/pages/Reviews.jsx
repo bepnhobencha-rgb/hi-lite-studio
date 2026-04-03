@@ -59,7 +59,7 @@ export default function Reviews() {
         />
         <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.48) 0%, rgba(0,0,0,0.1) 60%, rgba(0,0,0,0.04) 100%)" }} />
         <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 pb-16 w-full">
-          <p className="font-body text-[10px] tracking-[0.5em] uppercase mb-3" style={{ color: "#D4B996" }}>
+          <p className="font-body text-[10px] tracking-[0.5em] uppercase mb-3" style={{ color: "#C4919A" }}>
             What Clients Say
           </p>
           <h1 className="font-heading text-4xl md:text-6xl font-light text-white tracking-[0.04em]">
@@ -82,11 +82,11 @@ export default function Reviews() {
                 key={i}
                 {...fadeUp}
                 transition={{ ...fadeUp.transition, delay: i * 0.09 }}
-                className="bg-white border border-[#ede8e0] rounded-2xl p-10 flex flex-col shadow-[0_2px_18px_rgba(212,185,150,0.08)] hover:shadow-[0_6px_30px_rgba(212,185,150,0.16)] transition-shadow duration-400"
+                className="bg-white border border-[#ede8e0] rounded-2xl p-10 flex flex-col shadow-[0_2px_18px_rgba(196,145,154,0.08)] hover:shadow-[0_6px_30px_rgba(196,145,154,0.16)] transition-shadow duration-400"
               >
                 <div className="flex gap-1 mb-6">
                   {Array.from({ length: r.rating }).map((_, j) => (
-                    <Star key={j} size={13} className="fill-[#D4B996] text-[#D4B996]" />
+                    <Star key={j} size={13} className="fill-[#C4919A] text-[#C4919A]" />
                   ))}
                 </div>
                 <p className="font-body text-sm text-[#8E8E8E] leading-[1.95] flex-1 italic">

@@ -13,7 +13,7 @@ export default function Footer() {
             <h3 className="font-heading text-2xl font-semibold tracking-wider mb-3 text-[#2C2C2C]">
               {BUSINESS.name}
             </h3>
-            <div className="w-8 h-px bg-[#D4B996] mb-4" />
+            <div className="w-8 h-px bg-[#C4919A] mb-4" />
             <p className="font-body text-sm text-[#8E8E8E] italic">
               {BUSINESS.slogan}
             </p>
@@ -50,23 +50,23 @@ export default function Footer() {
             </h4>
             <div className="space-y-4 font-body text-sm text-[#8E8E8E]">
               <div className="flex items-start gap-3">
-                <MapPin size={16} className="mt-0.5 shrink-0 text-[#D4B996]" />
+                <MapPin size={16} className="mt-0.5 shrink-0 text-[#C4919A]" />
                 <span>{BUSINESS.address}</span>
               </div>
               <div className="flex items-center gap-3">
-                <Phone size={16} className="shrink-0 text-[#D4B996]" />
+                <Phone size={16} className="shrink-0 text-[#C4919A]" />
                 <a href={`tel:${BUSINESS.phone}`} className="hover:text-[#2C2C2C] transition-colors">
                   {BUSINESS.phone}
                 </a>
               </div>
               <div className="flex items-center gap-3">
-                <Mail size={16} className="shrink-0 text-[#D4B996]" />
+                <Mail size={16} className="shrink-0 text-[#C4919A]" />
                 <a href={`mailto:${BUSINESS.email}`} className="hover:text-[#2C2C2C] transition-colors">
                   {BUSINESS.email}
                 </a>
               </div>
               <div className="flex items-center gap-3">
-                <Clock size={16} className="shrink-0 text-[#D4B996]" />
+                <Clock size={16} className="shrink-0 text-[#C4919A]" />
                 <span>{BUSINESS.hours}</span>
               </div>
             </div>
@@ -84,7 +84,7 @@ export default function Footer() {
               href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-8 py-3.5 bg-[#D4B996] text-white text-sm font-body font-medium tracking-wider rounded-full shadow-[0_4px_14px_rgba(212,185,150,0.4)] hover:bg-[#C2A57F] transition-all duration-300"
+              className="inline-block px-8 py-3.5 bg-[#C4919A] text-white text-sm font-body font-medium tracking-wider rounded-full shadow-[0_4px_14px_rgba(196,145,154,0.4)] hover:bg-[#B37880] transition-all duration-300"
             >
               Book Now
             </a>

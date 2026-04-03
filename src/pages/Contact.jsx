@@ -51,7 +51,7 @@ export default function Contact() {
         />
         <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.48) 0%, rgba(0,0,0,0.1) 60%, rgba(0,0,0,0.04) 100%)" }} />
         <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 pb-16 w-full">
-          <p className="font-body text-[10px] tracking-[0.5em] uppercase mb-3" style={{ color: "#D4B996" }}>
+          <p className="font-body text-[10px] tracking-[0.5em] uppercase mb-3" style={{ color: "#C4919A" }}>
             Get in Touch
           </p>
           <h1 className="font-heading text-4xl md:text-6xl font-light text-white tracking-[0.04em]">
@@ -64,14 +64,14 @@ export default function Contact() {
       <section className="py-40 md:py-56 px-4 bg-[#F8F5F0]">
         <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20">
           <motion.div {...fadeUp}>
-            <p className="font-body text-[10px] tracking-[0.5em] uppercase mb-5" style={{ color: "#C2A57F" }}>
+            <p className="font-body text-[10px] tracking-[0.5em] uppercase mb-5" style={{ color: "#B37880" }}>
               Visit Us
             </p>
             <h2 className="font-heading text-3xl md:text-4xl font-light text-foreground tracking-wide leading-[1.2] mb-4">
               We Would Love <br />
               <span className="italic">to Hear from You</span>
             </h2>
-            <div className="w-8 h-px mb-12" style={{ background: "linear-gradient(to right, #D4B996, #C2A57F)" }} />
+            <div className="w-8 h-px mb-12" style={{ background: "linear-gradient(to right, #C4919A, #B37880)" }} />
 
             <div className="space-y-7">
               {contactInfo.map((item, i) => (
@@ -81,8 +81,8 @@ export default function Contact() {
                   transition={{ ...fadeUp.transition, delay: i * 0.1 }}
                   className="flex items-start gap-5 pb-7 border-b border-[#ede8e0]"
                 >
-                  <div className="p-3.5 bg-white rounded-xl border border-[#ede8e0] shadow-[0_2px_12px_rgba(212,185,150,0.1)]">
-                    <item.icon size={18} strokeWidth={1.5} style={{ color: "#C2A57F" }} />
+                  <div className="p-3.5 bg-white rounded-xl border border-[#ede8e0] shadow-[0_2px_12px_rgba(196,145,154,0.1)]">
+                    <item.icon size={18} strokeWidth={1.5} style={{ color: "#B37880" }} />
                   </div>
                   <div>
                     <p className="font-body text-[10px] text-[#9E9E9E] tracking-[0.3em] uppercase mb-1.5">
@@ -116,12 +116,12 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 className="inline-block px-12 py-4 text-sm font-body font-medium tracking-[0.2em] rounded-full transition-all duration-300"
                 style={{
-                  background: "linear-gradient(135deg, #D4B996 0%, #C2A57F 100%)",
+                  background: "linear-gradient(135deg, #C4919A 0%, #B37880 100%)",
                   color: "#fff",
-                  boxShadow: "0 6px 24px rgba(212,185,150,0.45)",
+                  boxShadow: "0 6px 24px rgba(196,145,154,0.45)",
                 }}
-                onMouseOver={e => { e.currentTarget.style.boxShadow = "0 10px 32px rgba(212,185,150,0.6)"; e.currentTarget.style.transform = "translateY(-2px)"; }}
-                onMouseOut={e => { e.currentTarget.style.boxShadow = "0 6px 24px rgba(212,185,150,0.45)"; e.currentTarget.style.transform = "translateY(0)"; }}
+                onMouseOver={e => { e.currentTarget.style.boxShadow = "0 10px 32px rgba(196,145,154,0.6)"; e.currentTarget.style.transform = "translateY(-2px)"; }}
+                onMouseOut={e => { e.currentTarget.style.boxShadow = "0 6px 24px rgba(196,145,154,0.45)"; e.currentTarget.style.transform = "translateY(0)"; }}
               >
                 Book Now
               </a>
