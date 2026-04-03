@@ -12,9 +12,9 @@ const fadeUp = {
 };
 
 const goldBtn = {
-  background: "linear-gradient(135deg, #D4B996 0%, #C2A57F 100%)",
+  background: "linear-gradient(135deg, #C4919A 0%, #B37880 100%)",
   color: "#fff",
-  boxShadow: "0 6px 20px rgba(212,185,150,0.4)",
+  boxShadow: "0 6px 20px rgba(196,145,154,0.4)",
 };
 
 export default function Services() {
@@ -30,7 +30,7 @@ export default function Services() {
         />
         <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.48) 0%, rgba(0,0,0,0.1) 60%, rgba(0,0,0,0.04) 100%)" }} />
         <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 pb-16 w-full">
-          <p className="font-body text-[10px] tracking-[0.5em] uppercase mb-3" style={{ color: "#D4B996" }}>
+          <p className="font-body text-[10px] tracking-[0.5em] uppercase mb-3" style={{ color: "#C4919A" }}>
             Our Offerings
           </p>
           <h1 className="font-heading text-4xl md:text-6xl font-light text-white tracking-[0.04em]">
@@ -55,21 +55,21 @@ export default function Services() {
                 transition={{ ...fadeUp.transition, delay: i * 0.08 }}
                 className={`relative bg-white rounded-2xl p-10 md:p-12 flex flex-col md:flex-row md:items-center gap-8 transition-shadow duration-400 ${
                   s.badge
-                    ? "border border-[#D4B996]/40 shadow-[0_4px_28px_rgba(212,185,150,0.18)]"
+                    ? "border border-[#C4919A]/40 shadow-[0_4px_28px_rgba(196,145,154,0.18)]"
                     : "border border-[#ede8e0] shadow-[0_2px_18px_rgba(0,0,0,0.04)]"
-                } hover:shadow-[0_8px_40px_rgba(212,185,150,0.2)]`}
+                } hover:shadow-[0_8px_40px_rgba(196,145,154,0.2)]`}
               >
                 {s.badge && (
                   <span
                     className="absolute top-0 right-6 text-[10px] font-body tracking-[0.18em] text-white uppercase px-5 py-1.5 rounded-b-full"
-                    style={{ background: "linear-gradient(135deg, #D4B996, #C2A57F)" }}
+                    style={{ background: "linear-gradient(135deg, #C4919A, #B37880)" }}
                   >
                     {s.badge}
                   </span>
                 )}
                 <div className="flex-1">
                   {/* Gold accent */}
-                  <div className="w-6 h-px mb-5" style={{ background: "linear-gradient(to right, #D4B996, #C2A57F)" }} />
+                  <div className="w-6 h-px mb-5" style={{ background: "linear-gradient(to right, #C4919A, #B37880)" }} />
                   <div className="flex flex-wrap items-baseline gap-3 mb-3">
                     <h3 className="font-heading text-2xl md:text-3xl font-medium text-foreground tracking-wide">
                       {s.name}
@@ -81,7 +81,7 @@ export default function Services() {
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2.5 mt-5">
                     {s.features.map((f, j) => (
                       <li key={j} className="font-body text-sm text-[#8E8E8E] flex items-start gap-2.5 leading-relaxed">
-                        <span className="w-1 h-1 rounded-full mt-2 shrink-0" style={{ background: "#D4B996" }} />
+                        <span className="w-1 h-1 rounded-full mt-2 shrink-0" style={{ background: "#C4919A" }} />
                         {f}
                       </li>
                     ))}
@@ -95,8 +95,8 @@ export default function Services() {
                     rel="noopener noreferrer"
                     className="px-10 py-3.5 text-sm font-body tracking-[0.18em] rounded-full transition-all duration-300"
                     style={goldBtn}
-                    onMouseOver={e => { e.currentTarget.style.boxShadow = "0 10px 28px rgba(212,185,150,0.55)"; e.currentTarget.style.transform = "translateY(-1px)"; }}
-                    onMouseOut={e => { e.currentTarget.style.boxShadow = "0 6px 20px rgba(212,185,150,0.4)"; e.currentTarget.style.transform = "translateY(0)"; }}
+                    onMouseOver={e => { e.currentTarget.style.boxShadow = "0 10px 28px rgba(196,145,154,0.55)"; e.currentTarget.style.transform = "translateY(-1px)"; }}
+                    onMouseOut={e => { e.currentTarget.style.boxShadow = "0 6px 20px rgba(196,145,154,0.4)"; e.currentTarget.style.transform = "translateY(0)"; }}
                   >
                     Book
                   </a>
@@ -124,7 +124,7 @@ export default function Services() {
                 className="flex items-center justify-between py-5 px-7 bg-[#F8F5F0] border border-[#ede8e0] rounded-xl"
               >
                 <span className="font-body text-sm text-foreground leading-relaxed">{addon.name}</span>
-                <span className="font-heading text-xl font-light ml-4 shrink-0" style={{ color: "#C2A57F" }}>${addon.price}</span>
+                <span className="font-heading text-xl font-light ml-4 shrink-0" style={{ color: "#B37880" }}>${addon.price}</span>
               </motion.div>
             ))}
           </div>

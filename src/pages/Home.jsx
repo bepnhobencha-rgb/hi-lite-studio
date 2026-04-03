@@ -33,7 +33,7 @@ function Hero() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 1 }}
           className="font-body text-[10px] tracking-[0.55em] uppercase mb-8"
-          style={{ color: "#D4B996", letterSpacing: "0.55em" }}
+          style={{ color: "#C4919A", letterSpacing: "0.55em" }}
         >
           Your Sanctuary for Relaxation
         </motion.p>
@@ -56,9 +56,9 @@ function Hero() {
           transition={{ delay: 1, duration: 0.7 }}
           className="flex items-center justify-center gap-3 mt-10 mb-8"
         >
-          <div className="h-px w-16" style={{ background: "linear-gradient(to right, transparent, rgba(212,185,150,0.7))" }} />
-          <div className="w-1.5 h-1.5 rounded-full" style={{ background: "#D4B996" }} />
-          <div className="h-px w-16" style={{ background: "linear-gradient(to left, transparent, rgba(212,185,150,0.7))" }} />
+          <div className="h-px w-16" style={{ background: "linear-gradient(to right, transparent, rgba(196,145,154,0.7))" }} />
+          <div className="w-1.5 h-1.5 rounded-full" style={{ background: "#C4919A" }} />
+          <div className="h-px w-16" style={{ background: "linear-gradient(to left, transparent, rgba(196,145,154,0.7))" }} />
         </motion.div>
 
         <motion.p
@@ -82,12 +82,12 @@ function Hero() {
             rel="noopener noreferrer"
             className="px-14 py-4 text-sm font-body font-medium tracking-[0.2em] rounded-full transition-all duration-400"
             style={{
-              background: "linear-gradient(135deg, #D4B996 0%, #C2A57F 100%)",
+              background: "linear-gradient(135deg, #C4919A 0%, #B37880 100%)",
               color: "#fff",
-              boxShadow: "0 8px 32px rgba(212,185,150,0.55), 0 2px 8px rgba(0,0,0,0.08)",
+              boxShadow: "0 8px 32px rgba(196,145,154,0.5), 0 2px 8px rgba(0,0,0,0.08)",
             }}
-            onMouseOver={e => { e.currentTarget.style.boxShadow = "0 12px 36px rgba(212,185,150,0.7), 0 3px 10px rgba(0,0,0,0.1)"; e.currentTarget.style.transform = "translateY(-2px)"; }}
-            onMouseOut={e => { e.currentTarget.style.boxShadow = "0 8px 32px rgba(212,185,150,0.55), 0 2px 8px rgba(0,0,0,0.08)"; e.currentTarget.style.transform = "translateY(0)"; }}
+            onMouseOver={e => { e.currentTarget.style.boxShadow = "0 12px 36px rgba(196,145,154,0.65), 0 3px 10px rgba(0,0,0,0.1)"; e.currentTarget.style.transform = "translateY(-2px)"; }}
+            onMouseOut={e => { e.currentTarget.style.boxShadow = "0 8px 32px rgba(196,145,154,0.5), 0 2px 8px rgba(0,0,0,0.08)"; e.currentTarget.style.transform = "translateY(0)"; }}
           >
             Book Your Experience
           </a>
@@ -108,7 +108,7 @@ function Hero() {
         transition={{ delay: 1.8 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
-        <div className="w-px h-16" style={{ background: "linear-gradient(to bottom, rgba(212,185,150,0.6), transparent)" }} />
+        <div className="w-px h-16" style={{ background: "linear-gradient(to bottom, rgba(196,145,154,0.6), transparent)" }} />
       </motion.div>
     </section>
   );
@@ -120,7 +120,7 @@ function LocationNote() {
       <p className="font-body text-[11px] text-[#9E9E9E] max-w-2xl mx-auto leading-relaxed tracking-widest uppercase">
         5938 Westminster Blvd., Westminster, CA &nbsp;·&nbsp; Mon – Sun: 9 AM – 7 PM
       </p>
-      <p className="font-body text-[10px] mt-2 tracking-[0.3em] uppercase" style={{ color: "#C2A57F" }}>
+      <p className="font-body text-[10px] mt-2 tracking-[0.3em] uppercase" style={{ color: "#B37880" }}>
         Est. 2023 &nbsp;·&nbsp; 15 min from Huntington Beach
       </p>
     </div>
@@ -149,10 +149,10 @@ function ProblemSection() {
               key={i}
               {...fadeUp}
               transition={{ ...fadeUp.transition, delay: i * 0.1 }}
-              className="text-center p-12 bg-white rounded-xl border border-[#ede8e0] shadow-[0_2px_20px_rgba(212,185,150,0.08)] hover:shadow-[0_6px_28px_rgba(212,185,150,0.16)] transition-shadow duration-500"
+              className="text-center p-12 bg-white rounded-xl border border-[#ede8e0] shadow-[0_2px_20px_rgba(196,145,154,0.08)] hover:shadow-[0_6px_28px_rgba(196,145,154,0.16)] transition-shadow duration-500"
             >
-              <div className="inline-flex items-center justify-center w-14 h-14 rounded-full mb-7" style={{ background: "linear-gradient(135deg, #faf6f0, #f3ece1)" }}>
-                <item.icon size={24} strokeWidth={1.3} style={{ color: "#C2A57F" }} />
+              <div className="inline-flex items-center justify-center w-14 h-14 rounded-full mb-7" style={{ background: "linear-gradient(135deg, #fdf5f6, #f5e8ea)" }}>
+                <item.icon size={24} strokeWidth={1.3} style={{ color: "#B37880" }} />
               </div>
               <p className="font-body text-sm text-foreground tracking-wide leading-relaxed">{item.text}</p>
             </motion.div>
@@ -176,7 +176,7 @@ function BenefitsSection() {
     <section className="py-40 md:py-56 px-4 bg-white">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
         <motion.div {...fadeUp}>
-          <p className="font-body text-[10px] tracking-[0.45em] uppercase mb-5" style={{ color: "#C2A57F" }}>
+          <p className="font-body text-[10px] tracking-[0.45em] uppercase mb-5" style={{ color: "#B37880" }}>
             The Ritual
           </p>
           <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-foreground tracking-wide leading-[1.2] mb-12">
@@ -190,7 +190,7 @@ function BenefitsSection() {
                 transition={{ ...fadeUp.transition, delay: i * 0.09 }}
                 className="flex items-center gap-6 py-5 border-b border-[#ede8e0]"
               >
-                <span className="font-body text-[11px] tracking-wider w-6 shrink-0" style={{ color: "#D4B996" }}>0{i + 1}</span>
+                <span className="font-body text-[11px] tracking-wider w-6 shrink-0" style={{ color: "#C4919A" }}>0{i + 1}</span>
                 <span className="font-body text-sm text-foreground tracking-wide">{b}</span>
               </motion.div>
             ))}
@@ -232,18 +232,18 @@ function FeaturedServices() {
               key={i}
               {...fadeUp}
               transition={{ ...fadeUp.transition, delay: i * 0.12 }}
-              className="bg-white border border-[#ede8e0] rounded-2xl p-10 flex flex-col relative shadow-[0_4px_24px_rgba(212,185,150,0.1)] hover:shadow-[0_8px_40px_rgba(212,185,150,0.2)] transition-all duration-500 hover:-translate-y-1"
+              className="bg-white border border-[#ede8e0] rounded-2xl p-10 flex flex-col relative shadow-[0_4px_24px_rgba(196,145,154,0.1)] hover:shadow-[0_8px_40px_rgba(196,145,154,0.2)] transition-all duration-500 hover:-translate-y-1"
             >
               {s.badge && (
                 <span
                   className="absolute top-5 right-5 text-[10px] font-body tracking-[0.15em] text-white uppercase px-4 py-1.5 rounded-full"
-                  style={{ background: "linear-gradient(135deg, #D4B996 0%, #C2A57F 100%)" }}
+                  style={{ background: "linear-gradient(135deg, #C4919A 0%, #B37880 100%)" }}
                 >
                   {s.badge}
                 </span>
               )}
-              {/* Gold top accent line */}
-              <div className="w-8 h-px mb-8" style={{ background: "linear-gradient(to right, #D4B996, #C2A57F)" }} />
+              {/* Rose top accent line */}
+              <div className="w-8 h-px mb-8" style={{ background: "linear-gradient(to right, #C4919A, #B37880)" }} />
               <h3 className="font-heading text-2xl font-medium text-foreground mb-1 tracking-wide">
                 {s.name}
               </h3>
@@ -256,7 +256,7 @@ function FeaturedServices() {
               <ul className="space-y-3 mb-10 flex-1">
                 {s.features.map((f, j) => (
                   <li key={j} className="font-body text-sm text-[#8E8E8E] flex items-start gap-3 leading-relaxed">
-                    <span className="w-1 h-1 rounded-full mt-2 shrink-0" style={{ background: "#D4B996" }} />
+                    <span className="w-1 h-1 rounded-full mt-2 shrink-0" style={{ background: "#C4919A" }} />
                     {f}
                   </li>
                 ))}
@@ -267,12 +267,12 @@ function FeaturedServices() {
                 rel="noopener noreferrer"
                 className="text-center py-4 text-sm font-body tracking-[0.18em] rounded-full transition-all duration-300"
                 style={{
-                  background: "linear-gradient(135deg, #D4B996 0%, #C2A57F 100%)",
+                  background: "linear-gradient(135deg, #C4919A 0%, #B37880 100%)",
                   color: "#fff",
-                  boxShadow: "0 6px 20px rgba(212,185,150,0.4)",
+                  boxShadow: "0 6px 20px rgba(196,145,154,0.4)",
                 }}
-                onMouseOver={e => { e.currentTarget.style.boxShadow = "0 10px 28px rgba(212,185,150,0.55)"; e.currentTarget.style.transform = "translateY(-1px)"; }}
-                onMouseOut={e => { e.currentTarget.style.boxShadow = "0 6px 20px rgba(212,185,150,0.4)"; e.currentTarget.style.transform = "translateY(0)"; }}
+                onMouseOver={e => { e.currentTarget.style.boxShadow = "0 10px 28px rgba(196,145,154,0.55)"; e.currentTarget.style.transform = "translateY(-1px)"; }}
+                onMouseOut={e => { e.currentTarget.style.boxShadow = "0 6px 20px rgba(196,145,154,0.4)"; e.currentTarget.style.transform = "translateY(0)"; }}
               >
                 Book Now
               </a>
@@ -283,7 +283,7 @@ function FeaturedServices() {
           <Link
             to="/services"
             className="inline-flex items-center gap-2.5 font-body text-[11px] tracking-[0.22em] uppercase transition-colors duration-300 hover:opacity-100"
-            style={{ color: "#C2A57F" }}
+            style={{ color: "#B37880" }}
           >
             View All Services <ArrowRight size={12} />
           </Link>

@@ -18,9 +18,9 @@ export default function BookingCTA({
       >
         {/* Gold divider */}
         <div className="flex items-center justify-center gap-3 mb-10">
-          <div className="h-px w-14" style={{ background: "linear-gradient(to right, transparent, #D4B996)" }} />
-          <div className="w-1.5 h-1.5 rounded-full" style={{ background: "#D4B996" }} />
-          <div className="h-px w-14" style={{ background: "linear-gradient(to left, transparent, #D4B996)" }} />
+          <div className="h-px w-14" style={{ background: "linear-gradient(to right, transparent, #C4919A)" }} />
+          <div className="w-1.5 h-1.5 rounded-full" style={{ background: "#C4919A" }} />
+          <div className="h-px w-14" style={{ background: "linear-gradient(to left, transparent, #C4919A)" }} />
         </div>
 
         <h2 className="font-heading text-3xl md:text-5xl font-light tracking-wide mb-6 text-foreground leading-[1.2]">
@@ -35,12 +35,12 @@ export default function BookingCTA({
           rel="noopener noreferrer"
           className="inline-block px-14 py-4 text-sm font-body font-medium tracking-[0.22em] rounded-full transition-all duration-300"
           style={{
-            background: "linear-gradient(135deg, #D4B996 0%, #C2A57F 100%)",
+            background: "linear-gradient(135deg, #C4919A 0%, #B37880 100%)",
             color: "#fff",
-            boxShadow: "0 8px 32px rgba(212,185,150,0.5)",
+            boxShadow: "0 8px 32px rgba(196,145,154,0.45)",
           }}
-          onMouseOver={e => { e.currentTarget.style.boxShadow = "0 14px 42px rgba(212,185,150,0.65)"; e.currentTarget.style.transform = "translateY(-2px)"; }}
-          onMouseOut={e => { e.currentTarget.style.boxShadow = "0 8px 32px rgba(212,185,150,0.5)"; e.currentTarget.style.transform = "translateY(0)"; }}
+          onMouseOver={e => { e.currentTarget.style.boxShadow = "0 14px 42px rgba(196,145,154,0.62)"; e.currentTarget.style.transform = "translateY(-2px)"; }}
+          onMouseOut={e => { e.currentTarget.style.boxShadow = "0 8px 32px rgba(196,145,154,0.45)"; e.currentTarget.style.transform = "translateY(0)"; }}
         >
           {buttonText}
         </a>
