@@ -22,8 +22,8 @@ export default function GiftCards() {
       {/* Hero */}
       <section className="relative h-[380px] md:h-[460px] flex items-end overflow-hidden">
         <img
-          src={IMAGES.giftCard}
-          alt="Hi-Lite Studio gift card"
+          src="https://media.base44.com/images/public/69cdb2c167f73801514de491/b8b4ed81f_Gemini_Generated_Image_nxtkuenxtkuenxtk.png"
+          alt="Hi-Lite Studio gift cards"
           className="absolute inset-0 w-full h-full object-cover object-center"
           style={{ filter: "brightness(1.08) saturate(0.9) contrast(0.96)" }}
         />
