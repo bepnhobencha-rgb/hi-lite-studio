@@ -44,8 +44,8 @@ export default function Contact() {
       {/* Hero */}
       <section className="relative h-[380px] md:h-[460px] flex items-end overflow-hidden">
         <img
-          src={IMAGES.treatmentRoom}
-          alt="Hi-Lite Studio treatment room"
+          src="https://media.base44.com/images/public/69cdb2c167f73801514de491/07aa412a4_Gemini_Generated_Image_ykw98gykw98gykw9.png"
+          alt="Hi-Lite Studio head spa treatment"
           className="absolute inset-0 w-full h-full object-cover object-left"
           style={{ filter: "brightness(1.05) saturate(0.88) contrast(0.96)" }}
         />
