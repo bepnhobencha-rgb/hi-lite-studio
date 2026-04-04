@@ -21,8 +21,8 @@ export default function Booking() {
       {/* Hero */}
       <section className="relative h-[420px] md:h-[520px] flex items-end overflow-hidden">
         <img
-          src="https://media.base44.com/images/public/69cdb2c167f73801514de491/07aa412a4_Gemini_Generated_Image_ykw98gykw98gykw9.png"
-          alt="Hi-Lite Studio luxury spa treatment"
+          src="https://media.base44.com/images/public/69cdb2c167f73801514de491/2c72b9baa_Unknown-32.jpg"
+          alt="Hi-Lite Studio welcoming front desk"
           className="absolute inset-0 w-full h-full object-cover object-center"
           style={{ filter: "brightness(0.88) saturate(0.88) contrast(1.06) sepia(0.12) hue-rotate(-5deg)" }}
         />

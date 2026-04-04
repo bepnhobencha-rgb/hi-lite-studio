@@ -20,9 +20,9 @@ export default function Promotions() {
       {/* Hero */}
       <section className="relative h-[420px] md:h-[520px] flex items-end overflow-hidden">
         <img
-          src="https://media.base44.com/images/public/69cdb2c167f73801514de491/e7a72c70d_Gemini_Generated_Image_7zxufn7zxufn7zxu.png"
-          alt="Luxury spa treatment at Hi-Lite Studio"
-          className="absolute inset-0 w-full h-full object-cover object-top"
+          src="https://media.base44.com/images/public/69cdb2c167f73801514de491/d9b841d32_Unknown-64.jpg"
+          alt="Warm luxury spa promotion at Hi-Lite Studio"
+          className="absolute inset-0 w-full h-full object-cover object-center"
           style={{ filter: "brightness(0.88) saturate(0.88) contrast(1.06) sepia(0.12) hue-rotate(-5deg)" }}
         />
         <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.52) 0%, rgba(0,0,0,0.08) 55%, rgba(0,0,0,0.0) 100%)" }} />
