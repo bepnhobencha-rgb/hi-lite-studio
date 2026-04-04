@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { IMAGES, BOOKING_URL, SERVICES } from "@/lib/constants";
+import { useBrand } from "@/lib/BrandContext";
 import SectionHeader from "@/components/shared/SectionHeader";
 import BookingCTA from "@/components/shared/BookingCTA";
 import { ArrowRight, Sparkles, Droplets, Heart, Brain, Leaf } from "lucide-react";
@@ -14,16 +15,16 @@ const fadeUp = {
 };
 
 function Hero() {
+  const brand = useBrand();
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
         <img
           src={IMAGES.treatmentAction1}
-          alt="Hi-Lite Studio head spa treatment"
+          alt="Hi-Lite head spa treatment"
           className="w-full h-full object-cover object-center"
-          style={{ filter: "brightness(1.0) saturate(0.8) contrast(1.02) sepia(0.08)" }}
+          style={{ filter: brand.imageFilterHero }}
         />
-        {/* Very soft overlay — 15-20% */}
         <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.08) 40%, rgba(0,0,0,0.38) 100%)" }} />
       </div>
 
@@ -33,9 +34,9 @@ function Hero() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 1 }}
           className="font-body text-[10px] tracking-[0.55em] uppercase mb-8"
-          style={{ color: "#C4919A", letterSpacing: "0.55em" }}
+          style={{ color: brand.primary }}
         >
-          Your Sanctuary for Relaxation
+          {brand.heroEyebrow}
         </motion.p>
 
         <motion.h1
@@ -44,21 +45,21 @@ function Hero() {
           transition={{ delay: 0.6, duration: 1 }}
           className="font-heading text-5xl md:text-7xl lg:text-8xl font-light text-white tracking-[0.03em] leading-[1.12]"
         >
-          Reset Your Mind.
+          {brand.heroHeadline[0]}
           <br />
-          <span className="italic font-light">Revive Your Scalp.</span>
+          <span className="italic font-light">{brand.heroHeadline[1]}</span>
         </motion.h1>
 
-        {/* Gold divider */}
+        {/* Brand divider */}
         <motion.div
           initial={{ opacity: 0, scaleX: 0 }}
           animate={{ opacity: 1, scaleX: 1 }}
           transition={{ delay: 1, duration: 0.7 }}
           className="flex items-center justify-center gap-3 mt-10 mb-8"
         >
-          <div className="h-px w-16" style={{ background: "linear-gradient(to right, transparent, rgba(196,145,154,0.7))" }} />
-          <div className="w-1.5 h-1.5 rounded-full" style={{ background: "#C4919A" }} />
-          <div className="h-px w-16" style={{ background: "linear-gradient(to left, transparent, rgba(196,145,154,0.7))" }} />
+          <div className="h-px w-16" style={{ background: `linear-gradient(to right, transparent, ${brand.primary}B2)` }} />
+          <div className="w-1.5 h-1.5 rounded-full" style={{ background: brand.primary }} />
+          <div className="h-px w-16" style={{ background: `linear-gradient(to left, transparent, ${brand.primary}B2)` }} />
         </motion.div>
 
         <motion.p
@@ -67,7 +68,7 @@ function Hero() {
           transition={{ delay: 1, duration: 0.9 }}
           className="font-body text-sm md:text-base text-white/80 max-w-md mx-auto leading-[1.9] tracking-wide"
         >
-          A luxury head spa experience designed to melt stress away, detox your scalp, and restore your energy.
+          {brand.heroSubtext}
         </motion.p>
 
         <motion.div
@@ -82,14 +83,14 @@ function Hero() {
             rel="noopener noreferrer"
             className="px-14 py-4 text-sm font-body font-medium tracking-[0.2em] rounded-full transition-all duration-400"
             style={{
-              background: "linear-gradient(135deg, #C4919A 0%, #B37880 100%)",
+              background: brand.btnGradient,
               color: "#fff",
-              boxShadow: "0 8px 32px rgba(196,145,154,0.5), 0 2px 8px rgba(0,0,0,0.08)",
+              boxShadow: `0 8px 32px rgba(${brand.primaryRgb},0.5), 0 2px 8px rgba(0,0,0,0.08)`,
             }}
-            onMouseOver={e => { e.currentTarget.style.boxShadow = "0 12px 36px rgba(196,145,154,0.65), 0 3px 10px rgba(0,0,0,0.1)"; e.currentTarget.style.transform = "translateY(-2px)"; }}
-            onMouseOut={e => { e.currentTarget.style.boxShadow = "0 8px 32px rgba(196,145,154,0.5), 0 2px 8px rgba(0,0,0,0.08)"; e.currentTarget.style.transform = "translateY(0)"; }}
+            onMouseOver={e => { e.currentTarget.style.boxShadow = `0 12px 36px rgba(${brand.primaryRgb},0.65), 0 3px 10px rgba(0,0,0,0.1)`; e.currentTarget.style.transform = "translateY(-2px)"; }}
+            onMouseOut={e => { e.currentTarget.style.boxShadow = `0 8px 32px rgba(${brand.primaryRgb},0.5), 0 2px 8px rgba(0,0,0,0.08)`; e.currentTarget.style.transform = "translateY(0)"; }}
           >
-            Book Your Experience
+            {brand.ctaButton}
           </a>
           <Link
             to="/services"
@@ -108,19 +109,20 @@ function Hero() {
         transition={{ delay: 1.8 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
-        <div className="w-px h-16" style={{ background: "linear-gradient(to bottom, rgba(196,145,154,0.6), transparent)" }} />
+        <div className="w-px h-16" style={{ background: `linear-gradient(to bottom, ${brand.primary}99, transparent)` }} />
       </motion.div>
     </section>
   );
 }
 
 function LocationNote() {
+  const brand = useBrand();
   return (
     <div className="py-7 px-4 bg-white border-b border-[#ede8e0] text-center">
       <p className="font-body text-[11px] text-[#9E9E9E] max-w-2xl mx-auto leading-relaxed tracking-widest uppercase">
-        5938 Westminster Blvd., Westminster, CA &nbsp;·&nbsp; Mon – Sun: 9 AM – 7 PM
+        {brand.address} &nbsp;·&nbsp; {brand.hours}
       </p>
-      <p className="font-body text-[10px] mt-2 tracking-[0.3em] uppercase" style={{ color: "#B37880" }}>
+      <p className="font-body text-[10px] mt-2 tracking-[0.3em] uppercase" style={{ color: brand.accentText }}>
         Est. 2023 &nbsp;·&nbsp; 15 min from Huntington Beach
       </p>
     </div>
@@ -128,6 +130,7 @@ function LocationNote() {
 }
 
 function ProblemSection() {
+  const brand = useBrand();
   const problems = [
     { icon: Brain, text: "Stress & Mental Fatigue" },
     { icon: Sparkles, text: "Head & Neck Tension" },
@@ -139,9 +142,9 @@ function ProblemSection() {
     <section className="py-40 md:py-56 px-4 bg-[#F8F5F0]">
       <div className="max-w-5xl mx-auto">
         <SectionHeader
-          eyebrow="Sound Familiar?"
-          title="When Life Weighs You Down"
-          subtitle="Modern life takes a toll on your mind and scalp. This is your invitation to let go."
+          eyebrow={brand.problemEyebrow}
+          title={brand.problemTitle}
+          subtitle={brand.problemSubtitle}
         />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {problems.map((item, i) => (
@@ -152,7 +155,7 @@ function ProblemSection() {
               className="text-center p-12 bg-white rounded-xl border border-[#ede8e0] shadow-[0_2px_20px_rgba(196,145,154,0.08)] hover:shadow-[0_6px_28px_rgba(196,145,154,0.16)] transition-shadow duration-500"
             >
               <div className="inline-flex items-center justify-center w-14 h-14 rounded-full mb-7" style={{ background: "linear-gradient(135deg, #fdf5f6, #f5e8ea)" }}>
-                <item.icon size={24} strokeWidth={1.3} style={{ color: "#B37880" }} />
+                <item.icon size={24} strokeWidth={1.3} style={{ color: brand.accentText }} />
               </div>
               <p className="font-body text-sm text-foreground tracking-wide leading-relaxed">{item.text}</p>
             </motion.div>
@@ -164,6 +167,7 @@ function ProblemSection() {
 }
 
 function BenefitsSection() {
+  const brand = useBrand();
   const benefits = [
     "Immediate stress relief",
     "Scalp detox & deep cleanse",
@@ -176,11 +180,11 @@ function BenefitsSection() {
     <section className="py-40 md:py-56 px-4 bg-white">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
         <motion.div {...fadeUp}>
-          <p className="font-body text-[10px] tracking-[0.45em] uppercase mb-5" style={{ color: "#B37880" }}>
-            The Ritual
+          <p className="font-body text-[10px] tracking-[0.45em] uppercase mb-5" style={{ color: brand.accentText }}>
+            {brand.benefitsEyebrow}
           </p>
           <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-foreground tracking-wide leading-[1.2] mb-12">
-            What a Head Spa <br /><span className="italic">Restores in You</span>
+            {brand.benefitsTitle}
           </h2>
           <div className="space-y-0">
             {benefits.map((b, i) => (
@@ -190,7 +194,7 @@ function BenefitsSection() {
                 transition={{ ...fadeUp.transition, delay: i * 0.09 }}
                 className="flex items-center gap-6 py-5 border-b border-[#ede8e0]"
               >
-                <span className="font-body text-[11px] tracking-wider w-6 shrink-0" style={{ color: "#C4919A" }}>0{i + 1}</span>
+                <span className="font-body text-[11px] tracking-wider w-6 shrink-0" style={{ color: brand.primary }}>0{i + 1}</span>
                 <span className="font-body text-sm text-foreground tracking-wide">{b}</span>
               </motion.div>
             ))}
@@ -204,9 +208,9 @@ function BenefitsSection() {
         >
           <img
             src={IMAGES.scalptool}
-            alt="Scalp water treatment ritual at Hi-Lite Studio"
+            alt="Scalp water treatment ritual"
             className="w-full h-[520px] object-cover object-center rounded-2xl"
-            style={{ filter: "brightness(1.08) saturate(0.88) contrast(0.96)", boxShadow: "0 20px 60px rgba(0,0,0,0.1)" }}
+            style={{ filter: brand.imageFilterContent, boxShadow: "0 20px 60px rgba(0,0,0,0.1)" }}
           />
           <div className="absolute inset-0 rounded-2xl" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.06), transparent)" }} />
         </motion.div>
@@ -216,15 +220,16 @@ function BenefitsSection() {
 }
 
 function FeaturedServices() {
+  const brand = useBrand();
   const featured = SERVICES.slice(0, 3);
 
   return (
     <section className="py-40 md:py-56 px-4 bg-[#F8F5F0]">
       <div className="max-w-6xl mx-auto">
         <SectionHeader
-          eyebrow="Our Rituals"
-          title="Signature Experiences"
-          subtitle="Each session is a carefully crafted journey for your mind and scalp."
+          eyebrow={brand.sectionRitualEyebrow}
+          title={brand.sectionRitualTitle}
+          subtitle={brand.sectionRitualSubtitle}
         />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {featured.map((s, i) => (
@@ -237,13 +242,13 @@ function FeaturedServices() {
               {s.badge && (
                 <span
                   className="absolute top-5 right-5 text-[10px] font-body tracking-[0.15em] text-white uppercase px-4 py-1.5 rounded-full"
-                  style={{ background: "linear-gradient(135deg, #C4919A 0%, #B37880 100%)" }}
+                  style={{ background: brand.btnGradient }}
                 >
                   {s.badge}
                 </span>
               )}
-              {/* Rose top accent line */}
-              <div className="w-8 h-px mb-8" style={{ background: "linear-gradient(to right, #C4919A, #B37880)" }} />
+              {/* Brand top accent line */}
+              <div className="w-8 h-px mb-8" style={{ background: brand.btnGradient }} />
               <h3 className="font-heading text-2xl font-medium text-foreground mb-1 tracking-wide">
                 {s.name}
               </h3>
@@ -256,7 +261,7 @@ function FeaturedServices() {
               <ul className="space-y-3 mb-10 flex-1">
                 {s.features.map((f, j) => (
                   <li key={j} className="font-body text-sm text-[#8E8E8E] flex items-start gap-3 leading-relaxed">
-                    <span className="w-1 h-1 rounded-full mt-2 shrink-0" style={{ background: "#C4919A" }} />
+                    <span className="w-1 h-1 rounded-full mt-2 shrink-0" style={{ background: brand.primary }} />
                     {f}
                   </li>
                 ))}
@@ -267,12 +272,12 @@ function FeaturedServices() {
                 rel="noopener noreferrer"
                 className="text-center py-4 text-sm font-body tracking-[0.18em] rounded-full transition-all duration-300"
                 style={{
-                  background: "linear-gradient(135deg, #C4919A 0%, #B37880 100%)",
+                  background: brand.btnGradient,
                   color: "#fff",
-                  boxShadow: "0 6px 20px rgba(196,145,154,0.4)",
+                  boxShadow: `0 6px 20px rgba(${brand.primaryRgb},0.4)`,
                 }}
-                onMouseOver={e => { e.currentTarget.style.boxShadow = "0 10px 28px rgba(196,145,154,0.55)"; e.currentTarget.style.transform = "translateY(-1px)"; }}
-                onMouseOut={e => { e.currentTarget.style.boxShadow = "0 6px 20px rgba(196,145,154,0.4)"; e.currentTarget.style.transform = "translateY(0)"; }}
+                onMouseOver={e => { e.currentTarget.style.boxShadow = `0 10px 28px rgba(${brand.primaryRgb},0.55)`; e.currentTarget.style.transform = "translateY(-1px)"; }}
+                onMouseOut={e => { e.currentTarget.style.boxShadow = `0 6px 20px rgba(${brand.primaryRgb},0.4)`; e.currentTarget.style.transform = "translateY(0)"; }}
               >
                 Book Now
               </a>

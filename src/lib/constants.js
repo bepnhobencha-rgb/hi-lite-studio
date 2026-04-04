@@ -40,11 +40,12 @@ export const IMAGES = {
 export const BOOKING_URL = "https://app.squareup.com/appointments/book/ziaxhgo8sj2etm/L05ZEAHJQQTNT/start";
 export const GIFT_CARD_URL = "https://app.squareup.com/gift/MLS550QW7H88Y/order";
 
+// BUSINESS is kept for legacy use — brand-aware components should use useBrand() instead
 export const BUSINESS = {
   name: "Hi - Lite Studio",
-  fullName: "Hi - Lite Studio Anaheim",
+  fullName: "Hi - Lite Studio Westminster",
   slogan: "Your Sanctuary for Relaxation",
-  address: "5938 Westminster Blvd., Westminster, CA 92683, United States",
+  address: "5938 Westminster Blvd., Westminster, CA 92683",
   phone: "+1 (714) 487-9379",
   email: "thinguyenllc2022@gmail.com",
   hours: "Mon – Sun: 9:00 AM – 7:00 PM",

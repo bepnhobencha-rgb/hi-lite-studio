@@ -1,7 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useBrand } from "@/lib/BrandContext";
 
 export default function SectionHeader({ eyebrow, title, subtitle }) {
+  const brand = useBrand();
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -12,18 +14,18 @@ export default function SectionHeader({ eyebrow, title, subtitle }) {
     >
       {eyebrow && (
         <p className="font-body text-xs tracking-[0.4em] uppercase mb-4"
-          style={{ color: "#B37880" }}>
+          style={{ color: brand.accentText }}>
           {eyebrow}
         </p>
       )}
       <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-foreground tracking-wide">
         {title}
       </h2>
-      {/* Gold gradient divider */}
+      {/* Brand gradient divider */}
       <div className="flex items-center justify-center gap-3 mt-5 mb-5">
-        <div className="h-px w-10" style={{ background: "linear-gradient(to right, transparent, #C4919A)" }} />
-        <div className="w-1 h-1 rounded-full" style={{ background: "#C4919A" }} />
-        <div className="h-px w-10" style={{ background: "linear-gradient(to left, transparent, #C4919A)" }} />
+        <div className="h-px w-10" style={{ background: `linear-gradient(to right, transparent, ${brand.primary})` }} />
+        <div className="w-1 h-1 rounded-full" style={{ background: brand.primary }} />
+        <div className="h-px w-10" style={{ background: `linear-gradient(to left, transparent, ${brand.primary})` }} />
       </div>
       {subtitle && (
         <p className="font-body text-sm text-muted-foreground max-w-lg mx-auto leading-relaxed mt-2">

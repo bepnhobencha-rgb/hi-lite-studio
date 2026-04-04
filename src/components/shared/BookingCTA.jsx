@@ -1,12 +1,17 @@
 import React from "react";
 import { BOOKING_URL } from "@/lib/constants";
+import { useBrand } from "@/lib/BrandContext";
 import { motion } from "framer-motion";
 
 export default function BookingCTA({
-  headline = "Ready for Your Reset?",
-  subtext = "Book your luxury head spa experience and let the stress melt away.",
-  buttonText = "Book Your Experience"
+  headline,
+  subtext,
+  buttonText,
 }) {
+  const brand = useBrand();
+  const resolvedHeadline = headline ?? brand.ctaHeadline;
+  const resolvedSubtext = subtext ?? brand.ctaSubtext;
+  const resolvedButton = buttonText ?? brand.ctaButton;
   return (
     <section className="py-36 md:py-48 px-4 bg-white text-center border-t border-[#ede8e0]">
       <motion.div
@@ -16,18 +21,18 @@ export default function BookingCTA({
         transition={{ duration: 0.7 }}
         className="max-w-2xl mx-auto"
       >
-        {/* Gold divider */}
+        {/* Brand divider */}
         <div className="flex items-center justify-center gap-3 mb-10">
-          <div className="h-px w-14" style={{ background: "linear-gradient(to right, transparent, #C4919A)" }} />
-          <div className="w-1.5 h-1.5 rounded-full" style={{ background: "#C4919A" }} />
-          <div className="h-px w-14" style={{ background: "linear-gradient(to left, transparent, #C4919A)" }} />
+          <div className="h-px w-14" style={{ background: `linear-gradient(to right, transparent, ${brand.primary})` }} />
+          <div className="w-1.5 h-1.5 rounded-full" style={{ background: brand.primary }} />
+          <div className="h-px w-14" style={{ background: `linear-gradient(to left, transparent, ${brand.primary})` }} />
         </div>
 
         <h2 className="font-heading text-3xl md:text-5xl font-light tracking-wide mb-6 text-foreground leading-[1.2]">
-          {headline}
+          {resolvedHeadline}
         </h2>
         <p className="font-body text-sm text-[#8E8E8E] mb-12 max-w-md mx-auto leading-[1.9]">
-          {subtext}
+          {resolvedSubtext}
         </p>
         <a
           href={BOOKING_URL}
@@ -35,14 +40,14 @@ export default function BookingCTA({
           rel="noopener noreferrer"
           className="inline-block px-14 py-4 text-sm font-body font-medium tracking-[0.22em] rounded-full transition-all duration-300"
           style={{
-            background: "linear-gradient(135deg, #C4919A 0%, #B37880 100%)",
+            background: brand.btnGradient,
             color: "#fff",
-            boxShadow: "0 8px 32px rgba(196,145,154,0.45)",
+            boxShadow: `0 8px 32px rgba(${brand.primaryRgb},0.45)`,
           }}
-          onMouseOver={e => { e.currentTarget.style.boxShadow = "0 14px 42px rgba(196,145,154,0.62)"; e.currentTarget.style.transform = "translateY(-2px)"; }}
-          onMouseOut={e => { e.currentTarget.style.boxShadow = "0 8px 32px rgba(196,145,154,0.45)"; e.currentTarget.style.transform = "translateY(0)"; }}
+          onMouseOver={e => { e.currentTarget.style.boxShadow = `0 14px 42px rgba(${brand.primaryRgb},0.62)`; e.currentTarget.style.transform = "translateY(-2px)"; }}
+          onMouseOut={e => { e.currentTarget.style.boxShadow = `0 8px 32px rgba(${brand.primaryRgb},0.45)`; e.currentTarget.style.transform = "translateY(0)"; }}
         >
-          {buttonText}
+          {resolvedButton}
         </a>
       </motion.div>
     </section>

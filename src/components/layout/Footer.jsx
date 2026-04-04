@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
-import { BUSINESS, BOOKING_URL } from "@/lib/constants";
+import { BOOKING_URL } from "@/lib/constants";
+import { useBrand } from "@/lib/BrandContext";
 
 export default function Footer() {
+  const brand = useBrand();
   return (
     <footer className="bg-[#F8F5F0] border-t border-[#e8dfd4]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -11,11 +13,11 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <h3 className="font-heading text-2xl font-semibold tracking-wider mb-3 text-[#2C2C2C]">
-              {BUSINESS.name}
+              {brand.name}
             </h3>
-            <div className="w-8 h-px bg-[#C4919A] mb-4" />
+            <div className="w-8 h-px mb-4" style={{ background: brand.primary }} />
             <p className="font-body text-sm text-[#8E8E8E] italic">
-              {BUSINESS.slogan}
+              {brand.slogan}
             </p>
           </div>
 
@@ -50,24 +52,24 @@ export default function Footer() {
             </h4>
             <div className="space-y-4 font-body text-sm text-[#8E8E8E]">
               <div className="flex items-start gap-3">
-                <MapPin size={16} className="mt-0.5 shrink-0 text-[#C4919A]" />
-                <span>{BUSINESS.address}</span>
+                <MapPin size={16} className="mt-0.5 shrink-0" style={{ color: brand.primary }} />
+                <span>{brand.address}</span>
               </div>
               <div className="flex items-center gap-3">
-                <Phone size={16} className="shrink-0 text-[#C4919A]" />
-                <a href={`tel:${BUSINESS.phone}`} className="hover:text-[#2C2C2C] transition-colors">
-                  {BUSINESS.phone}
+                <Phone size={16} className="shrink-0" style={{ color: brand.primary }} />
+                <a href={`tel:${brand.phone}`} className="hover:text-[#2C2C2C] transition-colors">
+                  {brand.phone}
                 </a>
               </div>
               <div className="flex items-center gap-3">
-                <Mail size={16} className="shrink-0 text-[#C4919A]" />
-                <a href={`mailto:${BUSINESS.email}`} className="hover:text-[#2C2C2C] transition-colors">
-                  {BUSINESS.email}
+                <Mail size={16} className="shrink-0" style={{ color: brand.primary }} />
+                <a href={`mailto:${brand.email}`} className="hover:text-[#2C2C2C] transition-colors">
+                  {brand.email}
                 </a>
               </div>
               <div className="flex items-center gap-3">
-                <Clock size={16} className="shrink-0 text-[#C4919A]" />
-                <span>{BUSINESS.hours}</span>
+                <Clock size={16} className="shrink-0" style={{ color: brand.primary }} />
+                <span>{brand.hours}</span>
               </div>
             </div>
           </div>
@@ -75,16 +77,17 @@ export default function Footer() {
           {/* CTA */}
           <div>
             <h4 className="font-heading text-lg font-medium mb-5 tracking-wide text-[#2C2C2C]">
-              Ready to Relax?
+              {brand.footerCtaTitle}
             </h4>
             <p className="font-body text-sm text-[#8E8E8E] mb-6">
-              Book your luxury head spa experience today.
+              {brand.footerCta}
             </p>
             <a
               href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-8 py-3.5 bg-[#C4919A] text-white text-sm font-body font-medium tracking-wider rounded-full shadow-[0_4px_14px_rgba(196,145,154,0.4)] hover:bg-[#B37880] transition-all duration-300"
+              className="inline-block px-8 py-3.5 text-white text-sm font-body font-medium tracking-wider rounded-full transition-all duration-300"
+              style={{ background: brand.btnGradient, boxShadow: `0 4px 14px rgba(${brand.primaryRgb},0.4)` }}
             >
               Book Now
             </a>
@@ -93,7 +96,7 @@ export default function Footer() {
 
         <div className="mt-20 pt-8 border-t border-[#e8dfd4] text-center">
           <p className="font-body text-xs text-[#8E8E8E] tracking-wide">
-            © {new Date().getFullYear()} {BUSINESS.fullName}. All rights reserved.
+            © {new Date().getFullYear()} {brand.fullName}. All rights reserved.
           </p>
         </div>
       </div>

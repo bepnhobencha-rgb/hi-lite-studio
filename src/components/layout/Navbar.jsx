@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import { BOOKING_URL, BUSINESS } from "@/lib/constants";
+import { BOOKING_URL } from "@/lib/constants";
+import { useBrand } from "@/lib/BrandContext";
 import { motion, AnimatePresence } from "framer-motion";
 
 const NAV_LINKS = [
@@ -17,6 +18,7 @@ const NAV_LINKS = [
 ];
 
 export default function Navbar() {
+  const brand = useBrand();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
@@ -43,7 +45,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           <Link to="/" className="flex items-center gap-2">
             <span className="font-heading text-xl lg:text-2xl font-semibold tracking-wider text-[#2C2C2C]">
-              {BUSINESS.name}
+              {brand.name}
             </span>
           </Link>
 
@@ -66,7 +68,8 @@ export default function Navbar() {
               href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-4 px-7 py-2.5 bg-[#C4919A] text-white text-sm font-body font-medium tracking-wider rounded-full shadow-[0_4px_14px_rgba(196,145,154,0.4)] hover:bg-[#B37880] transition-all duration-300"
+              className="ml-4 px-7 py-2.5 text-white text-sm font-body font-medium tracking-wider rounded-full transition-all duration-300"
+              style={{ background: brand.btnGradient, boxShadow: `0 4px 14px rgba(${brand.primaryRgb},0.4)` }}
             >
               Book Now
             </a>
@@ -110,7 +113,8 @@ export default function Navbar() {
                 href={BOOKING_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-5 w-full py-3.5 bg-[#C4919A] text-white text-center text-sm font-body font-medium tracking-wider rounded-full shadow-[0_4px_14px_rgba(196,145,154,0.4)] hover:bg-[#B37880] transition-all duration-300"
+                className="mt-5 w-full py-3.5 text-white text-center text-sm font-body font-medium tracking-wider rounded-full transition-all duration-300"
+              style={{ background: brand.btnGradient, boxShadow: `0 4px 14px rgba(${brand.primaryRgb},0.4)` }}
               >
                 Book Now
               </a>
