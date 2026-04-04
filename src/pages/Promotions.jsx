@@ -18,18 +18,15 @@ export default function Promotions() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative h-[380px] md:h-[460px] flex items-end overflow-hidden">
+      <section className="relative h-[420px] md:h-[520px] flex items-end overflow-hidden">
         <img
-          src={IMAGES.spaPromo}
+          src="https://media.base44.com/images/public/69cdb2c167f73801514de491/e7a72c70d_Gemini_Generated_Image_7zxufn7zxufn7zxu.png"
           alt="Luxury spa treatment at Hi-Lite Studio"
-          className="absolute inset-0 w-full h-full object-cover object-center"
-          style={{ filter: "brightness(1.10) saturate(0.72) contrast(1.08) sepia(0.07)" }}
+          className="absolute inset-0 w-full h-full object-cover object-top"
+          style={{ filter: "brightness(0.78) saturate(0.75) contrast(1.06) sepia(0.1) hue-rotate(-5deg)" }}
         />
-        {/* Warm champagne tint overlay — lifts shadows, adds luxury warmth */}
-        <div className="absolute inset-0" style={{ background: "rgba(248,245,240,0.10)" }} />
-        {/* Soft gradient only at bottom for text legibility */}
-        <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.30) 0%, rgba(0,0,0,0.06) 50%, rgba(0,0,0,0.0) 100%)" }} />
-        <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 pb-16 w-full">
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.12) 55%, rgba(0,0,0,0.0) 100%)" }} />
+        <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 pb-18 md:pb-20 w-full">
           <p className="font-body text-[10px] tracking-[0.5em] uppercase mb-3" style={{ color: "#C4919A" }}>
             Special Offers
           </p>
