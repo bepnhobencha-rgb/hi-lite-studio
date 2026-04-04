@@ -17,14 +17,14 @@ export default function Services() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative h-[380px] md:h-[460px] flex items-end overflow-hidden">
+      <section className="relative h-[420px] md:h-[520px] flex items-end overflow-hidden">
         <img
           src="https://media.base44.com/images/public/69cdb2c167f73801514de491/405febdc4_Gemini_Generated_Image_mbp56cmbp56cmbp5.png"
           alt="Hi-Lite Studio head spa service"
-          className="absolute inset-0 w-full h-full object-cover object-left"
-          style={{ filter: brand.imageFilterContent }}
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          style={{ filter: "brightness(0.88) saturate(0.88) contrast(1.06) sepia(0.12) hue-rotate(-5deg)" }}
         />
-        <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.48) 0%, rgba(0,0,0,0.1) 60%, rgba(0,0,0,0.04) 100%)" }} />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.52) 0%, rgba(0,0,0,0.08) 55%, rgba(0,0,0,0.0) 100%)" }} />
         <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 pb-16 w-full">
           <p className="font-body text-[10px] tracking-[0.5em] uppercase mb-3" style={{ color: brand.primary }}>
             Our Offerings

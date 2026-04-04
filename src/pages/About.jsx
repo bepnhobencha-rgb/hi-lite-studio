@@ -15,14 +15,14 @@ export default function About() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative h-[380px] md:h-[460px] flex items-end overflow-hidden">
+      <section className="relative h-[420px] md:h-[520px] flex items-end overflow-hidden">
         <img
           src="https://media.base44.com/images/public/69cdb2c167f73801514de491/0efb5ceb0_Unknown-46.jpg"
           alt="Hi-Lite head spa water treatment"
           className="absolute inset-0 w-full h-full object-cover object-center"
-          style={{ filter: "brightness(0.80) saturate(0.70) contrast(1.08) sepia(0.18) hue-rotate(-10deg)" }}
+          style={{ filter: "brightness(0.82) saturate(0.75) contrast(1.08) sepia(0.18) hue-rotate(-10deg)" }}
         />
-        <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.48) 0%, rgba(0,0,0,0.1) 60%, rgba(0,0,0,0.04) 100%)" }} />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.52) 0%, rgba(0,0,0,0.08) 55%, rgba(0,0,0,0.0) 100%)" }} />
         <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 pb-16 w-full">
           <p className="font-body text-[10px] tracking-[0.5em] uppercase mb-3" style={{ color: "#C4919A" }}>
             Our Story
@@ -63,10 +63,10 @@ export default function About() {
             transition={{ ...fadeUp.transition, delay: 0.2 }}
           >
             <img
-              src={IMAGES.hairResult}
+              src="https://media.base44.com/images/public/69cdb2c167f73801514de491/0efb5ceb0_Unknown-46.jpg"
               alt="Scalp water halo treatment at Hi-Lite Studio"
-              className="w-full h-[500px] object-cover object-center rounded-2xl"
-              style={{ filter: "brightness(1.12) saturate(0.78) contrast(1.04) sepia(0.1) hue-rotate(-5deg)", boxShadow: "0 24px 70px rgba(196,145,154,0.25), 0 4px 20px rgba(0,0,0,0.12)" }}
+              className="w-full h-[520px] object-cover object-center rounded-2xl"
+              style={{ filter: "brightness(0.92) saturate(0.85) contrast(1.06) sepia(0.12) hue-rotate(-8deg)", boxShadow: "0 24px 70px rgba(196,145,154,0.25), 0 4px 20px rgba(0,0,0,0.12)" }}
             />
           </motion.div>
         </div>
