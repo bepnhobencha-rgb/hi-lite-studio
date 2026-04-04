@@ -20,10 +20,10 @@ function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
         <img
-          src={IMAGES.treatmentAction1}
+          src="https://media.base44.com/images/public/69cdb2c167f73801514de491/e7a72c70d_Gemini_Generated_Image_7zxufn7zxufn7zxu.png"
           alt="Hi-Lite head spa treatment"
           className="w-full h-full object-cover object-center"
-          style={{ filter: brand.imageFilterHero }}
+          style={{ filter: "brightness(0.82) saturate(0.78) contrast(1.06) sepia(0.12) hue-rotate(-5deg)" }}
         />
         <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.08) 40%, rgba(0,0,0,0.38) 100%)" }} />
       </div>
