@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { SERVICES, ADDONS, BOOKING_URL, IMAGES } from "@/lib/constants";
 import SectionHeader from "@/components/shared/SectionHeader";
 import BookingCTA from "@/components/shared/BookingCTA";
+import { useBrand } from "@/lib/BrandContext";
 
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
@@ -11,13 +12,8 @@ const fadeUp = {
   transition: { duration: 0.7 },
 };
 
-const goldBtn = {
-  background: "linear-gradient(135deg, #C4919A 0%, #B37880 100%)",
-  color: "#fff",
-  boxShadow: "0 6px 20px rgba(196,145,154,0.4)",
-};
-
 export default function Services() {
+  const brand = useBrand();
   return (
     <div>
       {/* Hero */}
@@ -26,11 +22,11 @@ export default function Services() {
           src="https://media.base44.com/images/public/69cdb2c167f73801514de491/405febdc4_Gemini_Generated_Image_mbp56cmbp56cmbp5.png"
           alt="Hi-Lite Studio head spa service"
           className="absolute inset-0 w-full h-full object-cover object-left"
-          style={{ filter: "brightness(1.06) saturate(0.88) contrast(0.96)" }}
+          style={{ filter: brand.imageFilterContent }}
         />
         <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.48) 0%, rgba(0,0,0,0.1) 60%, rgba(0,0,0,0.04) 100%)" }} />
         <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 pb-16 w-full">
-          <p className="font-body text-[10px] tracking-[0.5em] uppercase mb-3" style={{ color: "#C4919A" }}>
+          <p className="font-body text-[10px] tracking-[0.5em] uppercase mb-3" style={{ color: brand.primary }}>
             Our Offerings
           </p>
           <h1 className="font-heading text-4xl md:text-6xl font-light text-white tracking-[0.04em]">
@@ -62,14 +58,14 @@ export default function Services() {
                 {s.badge && (
                   <span
                     className="absolute top-0 right-6 text-[10px] font-body tracking-[0.18em] text-white uppercase px-5 py-1.5 rounded-b-full"
-                    style={{ background: "linear-gradient(135deg, #C4919A, #B37880)" }}
+                    style={{ background: brand.btnGradient }}
                   >
                     {s.badge}
                   </span>
                 )}
                 <div className="flex-1">
-                  {/* Gold accent */}
-                  <div className="w-6 h-px mb-5" style={{ background: "linear-gradient(to right, #C4919A, #B37880)" }} />
+                  {/* Brand accent */}
+                  <div className="w-6 h-px mb-5" style={{ background: brand.btnGradient }} />
                   <div className="flex flex-wrap items-baseline gap-3 mb-3">
                     <h3 className="font-heading text-2xl md:text-3xl font-medium text-foreground tracking-wide">
                       {s.name}
@@ -81,7 +77,7 @@ export default function Services() {
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2.5 mt-5">
                     {s.features.map((f, j) => (
                       <li key={j} className="font-body text-sm text-[#8E8E8E] flex items-start gap-2.5 leading-relaxed">
-                        <span className="w-1 h-1 rounded-full mt-2 shrink-0" style={{ background: "#C4919A" }} />
+                        <span className="w-1 h-1 rounded-full mt-2 shrink-0" style={{ background: brand.primary }} />
                         {f}
                       </li>
                     ))}
@@ -94,9 +90,9 @@ export default function Services() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-10 py-3.5 text-sm font-body tracking-[0.18em] rounded-full transition-all duration-300"
-                    style={goldBtn}
-                    onMouseOver={e => { e.currentTarget.style.boxShadow = "0 10px 28px rgba(196,145,154,0.55)"; e.currentTarget.style.transform = "translateY(-1px)"; }}
-                    onMouseOut={e => { e.currentTarget.style.boxShadow = "0 6px 20px rgba(196,145,154,0.4)"; e.currentTarget.style.transform = "translateY(0)"; }}
+                    style={{ background: brand.btnGradient, color: "#fff", boxShadow: `0 6px 20px rgba(${brand.primaryRgb},0.4)` }}
+                    onMouseOver={e => { e.currentTarget.style.boxShadow = `0 10px 28px rgba(${brand.primaryRgb},0.55)`; e.currentTarget.style.transform = "translateY(-1px)"; }}
+                    onMouseOut={e => { e.currentTarget.style.boxShadow = `0 6px 20px rgba(${brand.primaryRgb},0.4)`; e.currentTarget.style.transform = "translateY(0)"; }}
                   >
                     Book
                   </a>
@@ -124,7 +120,7 @@ export default function Services() {
                 className="flex items-center justify-between py-5 px-7 bg-[#F8F5F0] border border-[#ede8e0] rounded-xl"
               >
                 <span className="font-body text-sm text-foreground leading-relaxed">{addon.name}</span>
-                <span className="font-heading text-xl font-light ml-4 shrink-0" style={{ color: "#B37880" }}>${addon.price}</span>
+                <span className="font-heading text-xl font-light ml-4 shrink-0" style={{ color: brand.accentText }}>${addon.price}</span>
               </motion.div>
             ))}
           </div>

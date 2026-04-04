@@ -288,7 +288,7 @@ function FeaturedServices() {
           <Link
             to="/services"
             className="inline-flex items-center gap-2.5 font-body text-[11px] tracking-[0.22em] uppercase transition-colors duration-300 hover:opacity-100"
-            style={{ color: "#B37880" }}
+            style={{ color: brand.accentText }}
           >
             View All Services <ArrowRight size={12} />
           </Link>
@@ -299,20 +299,21 @@ function FeaturedServices() {
 }
 
 function ImageStrip() {
+  const brand = useBrand();
   return (
     <section className="grid grid-cols-2 md:grid-cols-4 h-72 md:h-96">
       {[
-        { src: IMAGES.reception, filter: "brightness(1.08) saturate(0.92)" },
-        { src: IMAGES.treatmentRoom, filter: "brightness(1.06) saturate(0.88) contrast(0.96)" },
-        { src: IMAGES.hairResult, filter: "brightness(1.12) saturate(0.78) contrast(1.04) sepia(0.1)" },
-        { src: IMAGES.scalptool, filter: "brightness(1.08) saturate(0.88)" },
-      ].map((img, i) => (
+        IMAGES.reception,
+        IMAGES.treatmentRoom,
+        IMAGES.hairResult,
+        IMAGES.scalptool,
+      ].map((src, i) => (
         <div key={i} className="overflow-hidden relative">
           <img
-            src={img.src}
-            alt="Hi-Lite Studio experience"
+            src={src}
+            alt="Hi-Lite experience"
             className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-            style={{ filter: img.filter }}
+            style={{ filter: brand.imageFilterContent }}
           />
         </div>
       ))}
