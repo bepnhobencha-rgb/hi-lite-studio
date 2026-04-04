@@ -17,10 +17,10 @@ export default function About() {
       {/* Hero */}
       <section className="relative h-[380px] md:h-[460px] flex items-end overflow-hidden">
         <img
-          src={IMAGES.reception}
-          alt="Hi-Lite Studio reception with gold logo"
-          className="absolute inset-0 w-full h-full object-cover object-top"
-          style={{ filter: "brightness(1.05) saturate(0.92)" }}
+          src="https://media.base44.com/images/public/69cdb2c167f73801514de491/0efb5ceb0_Unknown-46.jpg"
+          alt="Hi-Lite head spa water treatment"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          style={{ filter: "brightness(0.80) saturate(0.70) contrast(1.08) sepia(0.18) hue-rotate(-10deg)" }}
         />
         <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.48) 0%, rgba(0,0,0,0.1) 60%, rgba(0,0,0,0.04) 100%)" }} />
         <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 pb-16 w-full">
