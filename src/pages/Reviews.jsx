@@ -52,10 +52,10 @@ export default function Reviews() {
       {/* Hero */}
       <section className="relative h-[380px] md:h-[460px] flex items-end overflow-hidden">
         <img
-          src={IMAGES.clientTreatment}
+          src="https://media.base44.com/images/public/69cdb2c167f73801514de491/e7a72c70d_Gemini_Generated_Image_7zxufn7zxufn7zxu.png"
           alt="Client receiving head spa treatment at Hi-Lite Studio"
-          className="absolute inset-0 w-full h-full object-cover object-center"
-          style={{ filter: "brightness(1.05) saturate(0.82) contrast(1.02) sepia(0.08)" }}
+          className="absolute inset-0 w-full h-full object-cover object-top"
+          style={{ filter: "brightness(0.80) saturate(0.76) contrast(1.06) sepia(0.12) hue-rotate(-5deg)" }}
         />
         <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.48) 0%, rgba(0,0,0,0.1) 60%, rgba(0,0,0,0.04) 100%)" }} />
         <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 pb-16 w-full">
