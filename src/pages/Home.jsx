@@ -207,10 +207,10 @@ function BenefitsSection() {
           className="relative"
         >
           <img
-            src={IMAGES.scalptool}
-            alt="Scalp water treatment ritual"
+            src="https://media.base44.com/images/public/69cdb2c167f73801514de491/b5411a213_Unknown-66.jpg"
+            alt="Hi-Lite Head Spa treatment room"
             className="w-full h-[520px] object-cover object-center rounded-2xl"
-            style={{ filter: brand.imageFilterContent, boxShadow: "0 20px 60px rgba(0,0,0,0.1)" }}
+            style={{ filter: "brightness(0.88) saturate(0.72) contrast(1.08) sepia(0.20) hue-rotate(-18deg)", boxShadow: "0 20px 60px rgba(0,0,0,0.1)" }}
           />
           <div className="absolute inset-0 rounded-2xl" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.06), transparent)" }} />
         </motion.div>
@@ -306,7 +306,7 @@ function ImageStrip() {
         IMAGES.reception,
         IMAGES.treatmentRoom,
         IMAGES.hairResult,
-        IMAGES.scalptool,
+        "https://media.base44.com/images/public/69cdb2c167f73801514de491/b5411a213_Unknown-66.jpg",
       ].map((src, i) => (
         <div key={i} className="overflow-hidden relative">
           <img
