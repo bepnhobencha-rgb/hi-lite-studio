@@ -131,7 +131,7 @@ export const PROMOTIONS = [
   {
     title: "First Visit Special",
     description: "Enjoy your first head spa experience at a special introductory rate.",
-    detail: "$100 → $78",
+    detail: "$105 → $90",
   },
   {
     title: "Check-In Reward",
