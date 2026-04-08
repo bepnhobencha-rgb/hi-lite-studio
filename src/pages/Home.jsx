@@ -304,7 +304,7 @@ function ImageStrip() {
     <section className="grid grid-cols-2 md:grid-cols-4 h-72 md:h-96">
       {[
         IMAGES.reception,
-        "https://media.base44.com/images/public/69cdb2c167f73801514de491/b5411a213_Unknown-66.jpg",
+        IMAGES.treatmentRoom,
         IMAGES.hairResult,
         IMAGES.scalptool,
       ].map((src, i) => (
