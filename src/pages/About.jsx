@@ -63,10 +63,10 @@ export default function About() {
             transition={{ ...fadeUp.transition, delay: 0.2 }}
           >
             <img
-              src="https://media.base44.com/images/public/69cdb2c167f73801514de491/0efb5ceb0_Unknown-46.jpg"
-              alt="Scalp water halo treatment at Hi-Lite Studio"
-              className="w-full h-[520px] object-cover object-center rounded-2xl"
-              style={{ filter: "brightness(0.92) saturate(0.85) contrast(1.06) sepia(0.12) hue-rotate(-8deg)", boxShadow: "0 24px 70px rgba(196,145,154,0.25), 0 4px 20px rgba(0,0,0,0.12)" }}
+              src="https://media.base44.com/images/public/69cdb2c167f73801514de491/8e25a2d23_Unknown-65.jpg"
+              alt="Hi-Lite Studio specialist performing head spa treatment"
+              className="w-full h-[520px] object-cover object-top rounded-2xl"
+              style={{ filter: "brightness(0.88) saturate(0.72) contrast(1.08) sepia(0.22) hue-rotate(-15deg)", boxShadow: "0 24px 70px rgba(196,145,154,0.25), 0 4px 20px rgba(0,0,0,0.12)" }}
             />
           </motion.div>
         </div>
