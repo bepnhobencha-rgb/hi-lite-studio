@@ -6,10 +6,10 @@ import BookingCTA from "@/components/shared/BookingCTA";
 import { useBrand } from "@/lib/BrandContext";
 
 const fadeUp = {
-  initial: { opacity: 0, y: 30 },
+  initial: { opacity: 0, y: 20 },
   whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true },
-  transition: { duration: 0.7 },
+  viewport: { once: true, amount: 0.05 },
+  transition: { duration: 0.6 },
 };
 
 export default function Services() {
@@ -36,20 +36,20 @@ export default function Services() {
       </section>
 
       {/* Services */}
-      <section className="py-40 md:py-56 px-4 bg-[#F8F5F0]">
+      <section className="py-16 md:py-28 px-4 bg-[#F8F5F0]">
         <div className="max-w-5xl mx-auto">
           <SectionHeader
             eyebrow="Choose Your Ritual"
             title="Head Spa Experiences"
             subtitle="Every session is a journey designed to restore your mind and revive your scalp."
           />
-          <div className="space-y-7">
+          <div className="space-y-5 md:space-y-7">
             {SERVICES.map((s, i) => (
               <motion.div
                 key={i}
                 {...fadeUp}
                 transition={{ ...fadeUp.transition, delay: i * 0.08 }}
-                className={`relative bg-white rounded-2xl p-10 md:p-12 flex flex-col md:flex-row md:items-center gap-8 transition-shadow duration-400 ${
+                className={`relative bg-white rounded-2xl overflow-hidden flex flex-col md:flex-row md:items-stretch gap-0 transition-shadow duration-400 ${
                   s.badge
                     ? "border border-[#C4919A]/40 shadow-[0_4px_28px_rgba(196,145,154,0.18)]"
                     : "border border-[#ede8e0] shadow-[0_2px_18px_rgba(0,0,0,0.04)]"
@@ -57,7 +57,7 @@ export default function Services() {
               >
                 {s.badge && (
                   <span
-                    className="absolute top-0 right-6 text-[10px] font-body tracking-[0.18em] text-white uppercase px-5 py-1.5 rounded-b-full"
+                    className="absolute top-0 right-5 z-10 text-[10px] font-body tracking-[0.18em] text-white uppercase px-4 py-1.5 rounded-b-full"
                     style={{ background: brand.btnGradient }}
                   >
                     {s.badge}
@@ -65,7 +65,7 @@ export default function Services() {
                 )}
                 {/* Service Image */}
                 {s.image && (
-                  <div className="w-full md:w-52 lg:w-64 h-44 md:h-full shrink-0 rounded-xl overflow-hidden">
+                  <div className="w-full h-48 md:w-48 lg:w-60 md:h-auto shrink-0 overflow-hidden">
                     <img
                       src={s.image}
                       alt={s.name}
@@ -74,39 +74,41 @@ export default function Services() {
                     />
                   </div>
                 )}
-                <div className="flex-1">
-                  {/* Brand accent */}
-                  <div className="w-6 h-px mb-5" style={{ background: brand.btnGradient }} />
-                  <div className="flex flex-wrap items-baseline gap-3 mb-3">
-                    <h3 className="font-heading text-2xl md:text-3xl font-medium text-foreground tracking-wide">
-                      {s.name}
-                    </h3>
-                    <span className="font-body text-[11px] text-[#9E9E9E] tracking-widest uppercase">
-                      {s.duration}
-                    </span>
+                {/* Content */}
+                <div className="flex flex-col md:flex-row md:items-center gap-5 flex-1 p-6 md:p-8 lg:p-10">
+                  <div className="flex-1">
+                    <div className="w-6 h-px mb-4" style={{ background: brand.btnGradient }} />
+                    <div className="flex flex-wrap items-baseline gap-2 mb-3">
+                      <h3 className="font-heading text-xl md:text-2xl lg:text-3xl font-medium text-foreground tracking-wide">
+                        {s.name}
+                      </h3>
+                      <span className="font-body text-[11px] text-[#9E9E9E] tracking-widest uppercase">
+                        {s.duration}
+                      </span>
+                    </div>
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mt-4">
+                      {s.features.map((f, j) => (
+                        <li key={j} className="font-body text-sm text-[#8E8E8E] flex items-start gap-2 leading-relaxed">
+                          <span className="w-1 h-1 rounded-full mt-2 shrink-0" style={{ background: brand.primary }} />
+                          {f}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2.5 mt-5">
-                    {s.features.map((f, j) => (
-                      <li key={j} className="font-body text-sm text-[#8E8E8E] flex items-start gap-2.5 leading-relaxed">
-                        <span className="w-1 h-1 rounded-full mt-2 shrink-0" style={{ background: brand.primary }} />
-                        {f}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="flex flex-col items-center md:items-end gap-5 md:min-w-[180px]">
-                  <p className="font-heading text-4xl font-light text-foreground">${s.price}</p>
-                  <a
-                    href={BOOKING_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-10 py-3.5 text-sm font-body tracking-[0.18em] rounded-full transition-all duration-300"
-                    style={{ background: brand.btnGradient, color: "#fff", boxShadow: `0 6px 20px rgba(${brand.primaryRgb},0.4)` }}
-                    onMouseOver={e => { e.currentTarget.style.boxShadow = `0 10px 28px rgba(${brand.primaryRgb},0.55)`; e.currentTarget.style.transform = "translateY(-1px)"; }}
-                    onMouseOut={e => { e.currentTarget.style.boxShadow = `0 6px 20px rgba(${brand.primaryRgb},0.4)`; e.currentTarget.style.transform = "translateY(0)"; }}
-                  >
-                    Book
-                  </a>
+                  <div className="flex flex-row md:flex-col items-center justify-between md:justify-center md:items-end gap-4 md:min-w-[140px] pt-4 md:pt-0 border-t md:border-t-0 border-[#ede8e0]">
+                    <p className="font-heading text-3xl md:text-4xl font-light text-foreground">${s.price}</p>
+                    <a
+                      href={BOOKING_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-8 py-3 text-xs md:text-sm font-body tracking-[0.18em] rounded-full transition-all duration-300 whitespace-nowrap"
+                      style={{ background: brand.btnGradient, color: "#fff", boxShadow: `0 6px 20px rgba(${brand.primaryRgb},0.4)` }}
+                      onMouseOver={e => { e.currentTarget.style.boxShadow = `0 10px 28px rgba(${brand.primaryRgb},0.55)`; e.currentTarget.style.transform = "translateY(-1px)"; }}
+                      onMouseOut={e => { e.currentTarget.style.boxShadow = `0 6px 20px rgba(${brand.primaryRgb},0.4)`; e.currentTarget.style.transform = "translateY(0)"; }}
+                    >
+                      Book Now
+                    </a>
+                  </div>
                 </div>
               </motion.div>
             ))}
@@ -115,7 +117,7 @@ export default function Services() {
       </section>
 
       {/* Add-Ons */}
-      <section className="py-36 md:py-48 px-4 bg-white">
+      <section className="py-14 md:py-24 px-4 bg-white">
         <div className="max-w-4xl mx-auto">
           <SectionHeader
             eyebrow="Enhance Your Visit"

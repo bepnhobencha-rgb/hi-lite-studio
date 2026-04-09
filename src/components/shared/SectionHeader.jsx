@@ -10,7 +10,7 @@ export default function SectionHeader({ eyebrow, title, subtitle }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="text-center mb-20 md:mb-24"
+      className="text-center mb-10 md:mb-16"
     >
       {eyebrow && (
         <p className="font-body text-xs tracking-[0.4em] uppercase mb-4"
