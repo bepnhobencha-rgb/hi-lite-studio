@@ -207,10 +207,10 @@ function BenefitsSection() {
           className="relative"
         >
           <img
-            src="https://media.base44.com/images/public/69cdb2c167f73801514de491/b5411a213_Unknown-66.jpg"
-            alt="Hi-Lite Head Spa treatment room"
-            className="w-full h-[520px] object-cover object-center rounded-2xl"
-            style={{ filter: "brightness(0.88) saturate(0.72) contrast(1.08) sepia(0.20) hue-rotate(-18deg)", boxShadow: "0 20px 60px rgba(0,0,0,0.1)" }}
+            src="https://media.base44.com/images/public/69cdb2c167f73801514de491/6f8212eff_generated_image.png"
+            alt="Luxury head spa scalp treatment"
+            className="w-full h-[520px] object-cover object-top rounded-2xl"
+            style={{ filter: "brightness(0.92) saturate(0.80) contrast(1.06) sepia(0.14) hue-rotate(-8deg)", boxShadow: "0 24px 70px rgba(196,145,154,0.28), 0 4px 20px rgba(0,0,0,0.12)" }}
           />
           <div className="absolute inset-0 rounded-2xl" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.06), transparent)" }} />
         </motion.div>
