@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Instagram, Music } from "lucide-react";
 import { BOOKING_URL } from "@/lib/constants";
 import { useBrand } from "@/lib/BrandContext";
 
@@ -94,8 +94,28 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-20 pt-8 border-t border-[#e8dfd4] text-center">
-          <p className="font-body text-xs text-[#8E8E8E] tracking-wide">
+        <div className="mt-20 pt-8 border-t border-[#e8dfd4]">
+          <div className="flex items-center justify-center gap-6 mb-6">
+            <a
+              href="https://www.instagram.com/hilitestudio_?igsh=MW5tNnllc3gzZDJiOQ=="
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#8E8E8E] hover:text-[#2C2C2C] transition-colors"
+              aria-label="Instagram"
+            >
+              <Instagram size={20} />
+            </a>
+            <a
+              href="https://www.tiktok.com/@hilitestudio?_r=1&_t=ZS-95P8EcWC1NU"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#8E8E8E] hover:text-[#2C2C2C] transition-colors"
+              aria-label="TikTok"
+            >
+              <Music size={20} />
+            </a>
+          </div>
+          <p className="font-body text-xs text-[#8E8E8E] tracking-wide text-center">
             © {new Date().getFullYear()} {brand.fullName}. All rights reserved.
           </p>
         </div>
