@@ -237,8 +237,20 @@ function FeaturedServices() {
               key={i}
               {...fadeUp}
               transition={{ ...fadeUp.transition, delay: i * 0.12 }}
-              className="bg-white border border-[#ede8e0] rounded-2xl p-10 flex flex-col relative shadow-[0_4px_24px_rgba(196,145,154,0.1)] hover:shadow-[0_8px_40px_rgba(196,145,154,0.2)] transition-all duration-500 hover:-translate-y-1"
+              className="bg-white border border-[#ede8e0] rounded-2xl overflow-hidden flex flex-col relative shadow-[0_4px_24px_rgba(196,145,154,0.1)] hover:shadow-[0_8px_40px_rgba(196,145,154,0.2)] transition-all duration-500 hover:-translate-y-1"
             >
+              {/* Service image */}
+              {s.image && (
+                <div className="w-full h-52 overflow-hidden">
+                  <img
+                    src={s.image}
+                    alt={s.name}
+                    className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-700"
+                    style={{ filter: "brightness(0.90) saturate(0.78) contrast(1.06) sepia(0.16) hue-rotate(-10deg)" }}
+                  />
+                </div>
+              )}
+              <div className="p-10 flex flex-col flex-1">
               {s.badge && (
                 <span
                   className="absolute top-5 right-5 text-[10px] font-body tracking-[0.15em] text-white uppercase px-4 py-1.5 rounded-full"
@@ -281,6 +293,7 @@ function FeaturedServices() {
               >
                 Book Now
               </a>
+              </div>
             </motion.div>
           ))}
         </div>

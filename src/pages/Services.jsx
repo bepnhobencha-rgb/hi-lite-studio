@@ -63,6 +63,17 @@ export default function Services() {
                     {s.badge}
                   </span>
                 )}
+                {/* Service Image */}
+                {s.image && (
+                  <div className="w-full md:w-52 lg:w-64 h-44 md:h-full shrink-0 rounded-xl overflow-hidden">
+                    <img
+                      src={s.image}
+                      alt={s.name}
+                      className="w-full h-full object-cover object-center"
+                      style={{ filter: "brightness(0.90) saturate(0.78) contrast(1.06) sepia(0.16) hue-rotate(-10deg)" }}
+                    />
+                  </div>
+                )}
                 <div className="flex-1">
                   {/* Brand accent */}
                   <div className="w-6 h-px mb-5" style={{ background: brand.btnGradient }} />
