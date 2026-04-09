@@ -56,7 +56,7 @@ export const SERVICES = [
     name: "Hi Lite VVIP",
     duration: "110 mins",
     price: 195,
-    image: "https://media.base44.com/images/public/69cdb2c167f73801514de491/7aa26cbff_generated_image.png",
+    image: "https://media.base44.com/images/public/69cdb2c167f73801514de491/6aa075f3a_generated_image.png",
     features: [
       "Full VIP scalp relaxation ritual",
       "Extended herbal & hot stone therapy",
@@ -70,7 +70,7 @@ export const SERVICES = [
     name: "Hi Lite Royal",
     duration: "90 mins",
     price: 155,
-    image: "https://media.base44.com/images/public/69cdb2c167f73801514de491/9257c7c21_generated_image.png",
+    image: "https://media.base44.com/images/public/69cdb2c167f73801514de491/d46c6966e_generated_image.png",
     features: [
       "Full scalp massage",
       "Herbal & hot stone",
@@ -84,7 +84,7 @@ export const SERVICES = [
     name: "Hi Lite Deluxe",
     duration: "80 mins",
     price: 125,
-    image: "https://media.base44.com/images/public/69cdb2c167f73801514de491/68f14491b_generated_image.png",
+    image: "https://media.base44.com/images/public/69cdb2c167f73801514de491/47ed73a86_generated_image.png",
     features: [
       "Full scalp massage",
       "Hot oil treatment",
@@ -98,7 +98,7 @@ export const SERVICES = [
     name: "Hi Lite Special",
     duration: "70 mins",
     price: 105,
-    image: "https://media.base44.com/images/public/69cdb2c167f73801514de491/71a72736a_generated_image.png",
+    image: "https://media.base44.com/images/public/69cdb2c167f73801514de491/e2d454541_generated_image.png",
     features: [
       "Scalp massage",
       "Neck, shoulder, arms",
@@ -112,7 +112,7 @@ export const SERVICES = [
     name: "Hi Lite Classic",
     duration: "60 mins",
     price: 85,
-    image: "https://media.base44.com/images/public/69cdb2c167f73801514de491/e6f79da90_generated_image.png",
+    image: "https://media.base44.com/images/public/69cdb2c167f73801514de491/364393628_generated_image.png",
     features: [
       "Scalp massage",
       "Neck & shoulder",

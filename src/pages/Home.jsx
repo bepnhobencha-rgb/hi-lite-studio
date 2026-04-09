@@ -246,7 +246,7 @@ function FeaturedServices() {
                     src={s.image}
                     alt={s.name}
                     className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-700"
-                    style={{ filter: "brightness(0.90) saturate(0.78) contrast(1.06) sepia(0.16) hue-rotate(-10deg)" }}
+                    style={{ filter: "brightness(0.95) saturate(0.85) contrast(1.04) sepia(0.10) hue-rotate(5deg)" }}
                   />
                 </div>
               )}
