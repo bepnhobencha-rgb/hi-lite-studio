@@ -108,6 +108,12 @@ export default function Services() {
                     >
                       Book Now
                     </a>
+                    <p className="font-body text-[10px] text-[#AEAEAE] mt-2 text-center md:text-right leading-relaxed">
+                      After hours? Call{" "}
+                      <a href="tel:+17144879379" className="font-medium hover:opacity-80 transition-opacity" style={{ color: brand.primary }}>
+                        (714) 487-9379
+                      </a>
+                    </p>
                   </div>
                 </div>
               </motion.div>
