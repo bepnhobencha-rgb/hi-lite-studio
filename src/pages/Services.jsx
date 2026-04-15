@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { SERVICES, ADDONS, BOOKING_URL, IMAGES } from "@/lib/constants";
 import SectionHeader from "@/components/shared/SectionHeader";
 import BookingCTA from "@/components/shared/BookingCTA";
+import BookingModal from "@/components/shared/BookingModal";
 import { useBrand } from "@/lib/BrandContext";
 
 const fadeUp = {
@@ -14,6 +15,7 @@ const fadeUp = {
 
 export default function Services() {
   const brand = useBrand();
+  const [modalOpen, setModalOpen] = useState(false);
   return (
     <div>
       {/* Hero */}
@@ -97,23 +99,15 @@ export default function Services() {
                   </div>
                   <div className="flex flex-row md:flex-col items-center justify-between md:justify-center md:items-end gap-4 md:min-w-[140px] pt-4 md:pt-0 border-t md:border-t-0 border-[#ede8e0]">
                     <p className="font-heading text-3xl md:text-4xl font-light text-foreground">${s.price}</p>
-                    <a
-                      href={BOOKING_URL}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-8 py-3 text-xs md:text-sm font-body tracking-[0.18em] rounded-full transition-all duration-300 whitespace-nowrap"
-                      style={{ background: brand.btnGradient, color: "#fff", boxShadow: `0 6px 20px rgba(${brand.primaryRgb},0.4)` }}
+                    <button
+                      onClick={() => setModalOpen(true)}
+                      className="px-8 py-3 text-xs md:text-sm font-body tracking-[0.18em] rounded-full transition-all duration-300 whitespace-nowrap cursor-pointer"
+                      style={{ background: brand.btnGradient, color: "#fff", boxShadow: `0 6px 20px rgba(${brand.primaryRgb},0.4)`, border: "none" }}
                       onMouseOver={e => { e.currentTarget.style.boxShadow = `0 10px 28px rgba(${brand.primaryRgb},0.55)`; e.currentTarget.style.transform = "translateY(-1px)"; }}
                       onMouseOut={e => { e.currentTarget.style.boxShadow = `0 6px 20px rgba(${brand.primaryRgb},0.4)`; e.currentTarget.style.transform = "translateY(0)"; }}
                     >
                       Book Now
-                    </a>
-                    <p className="font-body text-[10px] text-[#AEAEAE] mt-2 text-center md:text-right leading-relaxed">
-                      After hours? Call{" "}
-                      <a href="tel:+17144879379" className="font-medium hover:opacity-80 transition-opacity" style={{ color: brand.primary }}>
-                        (714) 487-9379
-                      </a>
-                    </p>
+                    </button>
                   </div>
                 </div>
               </motion.div>
@@ -150,6 +144,7 @@ export default function Services() {
         headline="Find Your Perfect Ritual"
         subtext="Not sure which service is right for you? Our specialists will guide you."
       />
+      <BookingModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
     </div>
   );
 }

@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { IMAGES, BOOKING_URL, SERVICES } from "@/lib/constants";
 import { useBrand } from "@/lib/BrandContext";
 import SectionHeader from "@/components/shared/SectionHeader";
 import BookingCTA from "@/components/shared/BookingCTA";
+import BookingModal from "@/components/shared/BookingModal";
 import { ArrowRight, Sparkles, Droplets, Heart, Brain, Leaf } from "lucide-react";
 
 const fadeUp = {
@@ -14,7 +15,7 @@ const fadeUp = {
   transition: { duration: 0.8 },
 };
 
-function Hero() {
+function Hero({ onBookClick }) {
   const brand = useBrand();
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -77,21 +78,20 @@ function Hero() {
           transition={{ delay: 1.3, duration: 0.7 }}
           className="mt-14 flex flex-col sm:flex-row items-center justify-center gap-5"
         >
-          <a
-            href={BOOKING_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-14 py-4 text-sm font-body font-medium tracking-[0.2em] rounded-full transition-all duration-400"
+          <button
+            onClick={onBookClick}
+            className="px-14 py-4 text-sm font-body font-medium tracking-[0.2em] rounded-full transition-all duration-400 cursor-pointer"
             style={{
               background: brand.btnGradient,
               color: "#fff",
               boxShadow: `0 8px 32px rgba(${brand.primaryRgb},0.5), 0 2px 8px rgba(0,0,0,0.08)`,
+              border: "none",
             }}
             onMouseOver={e => { e.currentTarget.style.boxShadow = `0 12px 36px rgba(${brand.primaryRgb},0.65), 0 3px 10px rgba(0,0,0,0.1)`; e.currentTarget.style.transform = "translateY(-2px)"; }}
             onMouseOut={e => { e.currentTarget.style.boxShadow = `0 8px 32px rgba(${brand.primaryRgb},0.5), 0 2px 8px rgba(0,0,0,0.08)`; e.currentTarget.style.transform = "translateY(0)"; }}
           >
             {brand.ctaButton}
-          </a>
+          </button>
           <Link
             to="/services"
             className="flex items-center gap-2.5 text-white/75 hover:text-white text-sm font-body tracking-widest uppercase transition-colors duration-300"
@@ -219,7 +219,7 @@ function BenefitsSection() {
   );
 }
 
-function FeaturedServices() {
+function FeaturedServices({ onBookClick }) {
   const brand = useBrand();
   const featured = SERVICES.slice(0, 3);
 
@@ -278,21 +278,20 @@ function FeaturedServices() {
                   </li>
                 ))}
               </ul>
-              <a
-                href={BOOKING_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-center py-4 text-sm font-body tracking-[0.18em] rounded-full transition-all duration-300"
+              <button
+                onClick={onBookClick}
+                className="text-center py-4 text-sm font-body tracking-[0.18em] rounded-full transition-all duration-300 cursor-pointer"
                 style={{
                   background: brand.btnGradient,
                   color: "#fff",
                   boxShadow: `0 6px 20px rgba(${brand.primaryRgb},0.4)`,
+                  border: "none",
                 }}
                 onMouseOver={e => { e.currentTarget.style.boxShadow = `0 10px 28px rgba(${brand.primaryRgb},0.55)`; e.currentTarget.style.transform = "translateY(-1px)"; }}
                 onMouseOut={e => { e.currentTarget.style.boxShadow = `0 6px 20px rgba(${brand.primaryRgb},0.4)`; e.currentTarget.style.transform = "translateY(0)"; }}
               >
                 Book Now
-              </a>
+              </button>
               </div>
             </motion.div>
           ))}
@@ -335,15 +334,17 @@ function ImageStrip() {
 }
 
 export default function Home() {
+  const [modalOpen, setModalOpen] = useState(false);
   return (
     <div>
-      <Hero />
+      <Hero onBookClick={() => setModalOpen(true)} />
       <LocationNote />
       <ProblemSection />
       <BenefitsSection />
-      <FeaturedServices />
+      <FeaturedServices onBookClick={() => setModalOpen(true)} />
       <ImageStrip />
       <BookingCTA />
+      <BookingModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
     </div>
   );
 }

@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { BOOKING_URL } from "@/lib/constants";
 import { useBrand } from "@/lib/BrandContext";
 import { motion } from "framer-motion";
+import BookingModal from "@/components/shared/BookingModal";
 
 export default function BookingCTA({
   headline,
@@ -9,6 +10,7 @@ export default function BookingCTA({
   buttonText,
 }) {
   const brand = useBrand();
+  const [modalOpen, setModalOpen] = useState(false);
   const resolvedHeadline = headline ?? brand.ctaHeadline;
   const resolvedSubtext = subtext ?? brand.ctaSubtext;
   const resolvedButton = buttonText ?? brand.ctaButton;
@@ -34,21 +36,20 @@ export default function BookingCTA({
         <p className="font-body text-sm text-[#8E8E8E] mb-12 max-w-md mx-auto leading-[1.9]">
           {resolvedSubtext}
         </p>
-        <a
-          href={BOOKING_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block px-14 py-4 text-sm font-body font-medium tracking-[0.22em] rounded-full transition-all duration-300"
+        <button
+          onClick={() => setModalOpen(true)}
+          className="inline-block px-14 py-4 text-sm font-body font-medium tracking-[0.22em] rounded-full transition-all duration-300 cursor-pointer"
           style={{
             background: brand.btnGradient,
             color: "#fff",
             boxShadow: `0 8px 32px rgba(${brand.primaryRgb},0.45)`,
+            border: "none",
           }}
           onMouseOver={e => { e.currentTarget.style.boxShadow = `0 14px 42px rgba(${brand.primaryRgb},0.62)`; e.currentTarget.style.transform = "translateY(-2px)"; }}
           onMouseOut={e => { e.currentTarget.style.boxShadow = `0 8px 32px rgba(${brand.primaryRgb},0.45)`; e.currentTarget.style.transform = "translateY(0)"; }}
         >
           {resolvedButton}
-        </a>
+        </button>
 
         {/* After-hours call notice */}
         <p className="font-body text-xs text-[#9E9E9E] mt-6 leading-relaxed">
@@ -61,6 +62,8 @@ export default function BookingCTA({
             (714) 487-9379
           </a>
         </p>
+
+        <BookingModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
       </motion.div>
     </section>
   );
