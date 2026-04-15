@@ -102,6 +102,27 @@ export default function Booking() {
             <p className="font-body text-[11px] text-[#9E9E9E] mt-5 tracking-widest">
               You will be redirected to our secure booking system.
             </p>
+
+            {/* After-hours notice */}
+            <div className="mt-10 inline-flex flex-col sm:flex-row items-center gap-3 bg-[#fdf5f6] border border-[#C4919A]/30 rounded-2xl px-8 py-5 max-w-md mx-auto">
+              <span className="text-xl">📞</span>
+              <div className="text-center sm:text-left">
+                <p className="font-body text-sm text-[#2C2C2C] font-medium leading-snug">
+                  Want to book outside business hours?
+                </p>
+                <p className="font-body text-xs text-[#8E8E8E] mt-1">
+                  Call us directly —{" "}
+                  <a
+                    href="tel:+17144879379"
+                    className="font-medium transition-colors"
+                    style={{ color: "#C4919A" }}
+                  >
+                    (714) 487-9379
+                  </a>
+                  {" "}and we'll take care of you.
+                </p>
+              </div>
+            </div>
           </motion.div>
         </div>
       </section>

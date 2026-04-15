@@ -49,6 +49,18 @@ export default function BookingCTA({
         >
           {resolvedButton}
         </a>
+
+        {/* After-hours call notice */}
+        <p className="font-body text-xs text-[#9E9E9E] mt-6 leading-relaxed">
+          Want to book <span className="font-medium text-[#8E8E8E]">outside business hours</span>? Call us directly —{" "}
+          <a
+            href="tel:+17144879379"
+            className="font-medium transition-colors hover:opacity-80"
+            style={{ color: brand.primary }}
+          >
+            (714) 487-9379
+          </a>
+        </p>
       </motion.div>
     </section>
   );
