@@ -1,46 +1,26 @@
 export const IMAGES = {
-  // === PRIMARY BRAND IMAGES (clean, luxury-aligned) ===
-  // Reception sofa + gold logo (clean, bright, brand identity) → Home hero, About hero
-  reception: "https://media.base44.com/images/public/69cdb2c167f73801514de491/4739d9dff_Unknown-44.jpg",
-  // Treatment room with beds + warm arch lighting → Services hero, Booking hero
-  treatmentRoom: "https://media.base44.com/images/public/69cdb2c167f73801514de491/bc90681cb_Unknown-31.jpg",
-  // Scalp water halo treatment — About Philosophy, Benefits section
-  hairResult: "https://media.base44.com/images/public/69cdb2c167f73801514de491/d7b7e6d47_Unknown-46.jpg",
-  // Scalp water treatment tool close-up → Services section visual
-  scalptool: "https://media.base44.com/images/public/69cdb2c167f73801514de491/34dc24b95_Unknown-49.jpg",
-  // LED facial treatment on client → Services / treatment close-up
-  ledTreatment: "https://media.base44.com/images/public/69cdb2c167f73801514de491/f54592348_Unknown-54.jpg",
-  // Gift card held up (Mother's Day) → Gift Cards page
-  giftCard: "https://media.base44.com/images/public/69cdb2c167f73801514de491/983804f1f_Unknown-62.jpg",
-  // Happy clients with birthday signs under gold logo → Reviews / About community
-  happyClients: "https://media.base44.com/images/public/69cdb2c167f73801514de491/b70d27da5_Unknown-48.jpg",
-  // Client receiving scalp water halo treatment — Reviews hero
-  clientTreatment: "https://media.base44.com/images/public/69cdb2c167f73801514de491/aac865587_Unknown-63.jpg",
-  // Luxury head massage treatment scene — Gallery hero
-  luxuryMassage: "https://media.base44.com/images/public/69cdb2c167f73801514de491/1e34e7db8_Gemini_Generated_Image_qs7xblqs7xblqs7x.png",
-  // Warm spa massage close-up — Promotions hero
-  spaPromo: "https://media.base44.com/images/public/69cdb2c167f73801514de491/d9b841d32_Unknown-64.jpg",
-  // Group of 4 clients celebrating birthday under gold logo → Reviews / Promotions
-  groupClients: "https://media.base44.com/images/public/69cdb2c167f73801514de491/457261d42_Unknown-51.jpg",
-
-  // === GALLERY IMAGES (atmospheric, treatment scenes) ===
-  // Treatment in progress - therapist working on client (hero)
-  treatmentAction1: "https://media.base44.com/images/public/69cdb2c167f73801514de491/b1a7aa523_generated_image.png",
-  treatmentAction2: "https://media.base44.com/images/public/69cdb2c167f73801514de491/f0a1b6b76_Unknown-56.jpg",
-  // Bonsai / circular art wall — atmospheric gallery only
-  bonsaiWall: "https://media.base44.com/images/public/69cdb2c167f73801514de491/aa9bf892d_Unknown-53.jpg",
-  // Scalp water treatment halo device (gold ring) — real photo
-  valentineSofa: "https://media.base44.com/images/public/69cdb2c167f73801514de491/2301cc963_attaQZg6-SsmCnZ3UfwgolwqdzIJS6AFf8VwdZcpWQKD0w.jpg",
-  // Front desk interior with warm lamp
-  frontDesk: "https://media.base44.com/images/public/69cdb2c167f73801514de491/2c72b9baa_Unknown-32.jpg",
-  // Curly hair scalp treatment device
-  scalptoolCurly: "https://media.base44.com/images/public/69cdb2c167f73801514de491/58c964585_Unknown-52.jpg",
+  reception: "/images/reception.jpg",
+  treatmentRoom: "/images/treatmentRoom.jpg",
+  hairResult: "/images/hairResult.jpg",
+  scalptool: "/images/scalptool.jpg",
+  ledTreatment: "/images/ledTreatment.jpg",
+  giftCard: "/images/giftCard.jpg",
+  happyClients: "/images/happyClients.jpg",
+  clientTreatment: "/images/clientTreatment.jpg",
+  luxuryMassage: "/images/luxuryMassage.png",
+  spaPromo: "/images/spaPromo.jpg",
+  groupClients: "/images/groupClients.jpg",
+  treatmentAction1: "/images/treatmentAction1.png",
+  treatmentAction2: "/images/treatmentAction2.jpg",
+  bonsaiWall: "/images/bonsaiWall.jpg",
+  valentineSofa: "/images/valentineSofa.jpg",
+  frontDesk: "/images/frontDesk.jpg",
+  scalptoolCurly: "/images/scalptoolCurly.jpg",
 };
 
 export const BOOKING_URL = "https://app.squareup.com/appointments/book/ziaxhgo8sj2etm/L05ZEAHJQQTNT/start";
 export const GIFT_CARD_URL = "https://app.squareup.com/gift/MLS550QW7H88Y/order";
 
-// BUSINESS is kept for legacy use — brand-aware components should use useBrand() instead
 export const BUSINESS = {
   name: "Hi - Lite Studio",
   fullName: "Hi - Lite Studio Westminster",
@@ -56,7 +36,7 @@ export const SERVICES = [
     name: "Hi Lite VVIP",
     duration: "110 mins",
     price: 195,
-    image: "https://media.base44.com/images/public/69cdb2c167f73801514de491/6aa075f3a_generated_image.png",
+    image: "/images/service-vvip.png",
     features: [
       "Full VIP scalp relaxation ritual",
       "Extended herbal & hot stone therapy",
@@ -70,7 +50,7 @@ export const SERVICES = [
     name: "Hi Lite Royal",
     duration: "90 mins",
     price: 155,
-    image: "https://media.base44.com/images/public/69cdb2c167f73801514de491/d46c6966e_generated_image.png",
+    image: "/images/service-royal.png",
     features: [
       "Full scalp massage",
       "Herbal & hot stone",
@@ -83,8 +63,8 @@ export const SERVICES = [
   {
     name: "Hi Lite Deluxe",
     duration: "80 mins",
-    price: 125,
-    image: "https://media.base44.com/images/public/69cdb2c167f73801514de491/47ed73a86_generated_image.png",
+    price:,
+    image: "/images/service-deluxe.png",
     features: [
       "Full scalp massage",
       "Hot oil treatment",
@@ -98,7 +78,7 @@ export const SERVICES = [
     name: "Hi Lite Special",
     duration: "70 mins",
     price: 105,
-    image: "https://media.base44.com/images/public/69cdb2c167f73801514de491/e2d454541_generated_image.png",
+    image: "/images/service-special.png",
     features: [
       "Scalp massage",
       "Neck, shoulder, arms",
@@ -112,7 +92,7 @@ export const SERVICES = [
     name: "Hi Lite Classic",
     duration: "60 mins",
     price: 85,
-    image: "https://media.base44.com/images/public/69cdb2c167f73801514de491/364393628_generated_image.png",
+    image: "/images/service-classic.png",
     features: [
       "Scalp massage",
       "Neck & shoulder",
