@@ -63,7 +63,7 @@ export const SERVICES = [
   {
     name: "Hi Lite Deluxe",
     duration: "80 mins",
-    price:,
+    price: 125,
     image: "/images/service-deluxe.png",
     features: [
       "Full scalp massage",
