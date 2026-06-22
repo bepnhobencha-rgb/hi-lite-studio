@@ -18,7 +18,7 @@ export const IMAGES = {
   scalptoolCurly: "/images/scalptoolCurly.jpg",
 };
 
-export const BOOKING_URL = "https://app.squareup.com/appointments/book/ziaxhgo8sj2etm/L05ZEAHJQQTNT/start";
+export const BOOKING_URL = "https://www.nailiq.ca/hilite-studio";
 export const GIFT_CARD_URL = "https://app.squareup.com/gift/MLS550QW7H88Y/order";
 
 export const BUSINESS = {
