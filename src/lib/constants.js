@@ -19,7 +19,7 @@ export const IMAGES = {
 };
 
 export const BOOKING_URL = "https://www.nailiq.ca/hilite-studio";
-export const GIFT_CARD_URL = "https://app.squareup.com/gift/MLS550QW7H88Y/order";
+export const GIFT_CARD_URL = "https://app.squareup.com/gift/MLQNNC8XCPG48/order";
 
 export const BUSINESS = {
   name: "Hi - Lite Studio",
